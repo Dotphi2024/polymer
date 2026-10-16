@@ -701,21 +701,21 @@ $process_images = [
                     <tbody>
                         <tr>
                             <td class="fw-bold text-center">1</td>
-                            <td class="fw-semibold">Multi-Platen Hydraulic Vulcanizing Presses</td>
+                            <td class="fw-semibold">Multi-Daylight Hydraulic Vulcanizing Presses</td>
                             <td><span class="badge bg-primary">4 Units</span></td>
                             <td>Up to 1200 Metric Tonnes with Digital PLC</td>
                             <td>Vulcanization &amp; Curing of Elastomeric Bearings</td>
                         </tr>
                         <tr>
                             <td class="fw-bold text-center">2</td>
-                            <td class="fw-semibold">Two-Roll Open Rubber Mixing Mills</td>
+                            <td class="fw-semibold">Two-Roll Rubber Mixing Mills</td>
                             <td><span class="badge bg-primary">2 Units</span></td>
                             <td>16" x 42" &amp; 14" x 36" Water Cooled</td>
                             <td>Elastomer Compounding &amp; Sheeting</td>
                         </tr>
                         <tr>
                             <td class="fw-bold text-center">3</td>
-                            <td class="fw-semibold">Enclosed Grit Shot Blasting Unit</td>
+                            <td class="fw-semibold">Enclosed Shot Blasting Machine</td>
                             <td><span class="badge bg-primary">1 Unit</span></td>
                             <td>Sa 2.5 Standard Surface Anchor Profile</td>
                             <td>Steel Laminate Scale Removal &amp; Surface Prep</td>
@@ -729,28 +729,28 @@ $process_images = [
                         </tr>
                         <tr>
                             <td class="fw-bold text-center">5</td>
-                            <td class="fw-semibold">Precision CNC Bearing Moulds</td>
+                            <td class="fw-semibold">Precision Bearing Moulds</td>
                             <td><span class="badge bg-primary">50+ Sets</span></td>
                             <td>All Standard IRC / RDSO Geometries</td>
                             <td>Moulding &amp; Dimensional Control</td>
                         </tr>
                         <tr>
                             <td class="fw-bold text-center">6</td>
-                            <td class="fw-semibold">Tensile Testing Machine (UTM)</td>
+                            <td class="fw-semibold">Universal Testing Machine (UTM)-used for Tensile Test, Tear Test ,Elongation and Adhesion.</td>
                             <td><span class="badge bg-primary">1 Unit</span></td>
                             <td>Calibrated Electronic UTM with Extensometer</td>
                             <td>Tensile Strength (&ge;17 MPa) &amp; Elongation (&ge;400%)</td>
                         </tr>
                         <tr>
                             <td class="fw-bold text-center">7</td>
-                            <td class="fw-semibold">Accelerated Thermal Ageing Oven</td>
+                            <td class="fw-semibold">Thermal Ageing Oven</td>
                             <td><span class="badge bg-primary">1 Unit</span></td>
                             <td>Air-circulated Digital Oven (up to 200°C)</td>
                             <td>70°C / 72h Thermal Ageing Resistance Tests</td>
                         </tr>
                         <tr>
                             <td class="fw-bold text-center">8</td>
-                            <td class="fw-semibold">Shore-A Hardness Durometers &amp; Thickness Gauges</td>
+                            <td class="fw-semibold">Shore A Hardness Tester and Thickness Gauges</td>
                             <td><span class="badge bg-primary">Multiple</span></td>
                             <td>Calibrated with Master Test Blocks</td>
                             <td>Routine QC &amp; Stage-Wise Inspection</td>

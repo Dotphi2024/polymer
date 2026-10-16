@@ -137,25 +137,25 @@ Explore the documents below for details of our certifications, approvals and qua
                 </div>
             </div>
 
-            <!-- 6. Pollution Control Compliance (MPCB) -->
+            <!-- 6. RDSO Indian Railways Approval -->
             <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".35s">
                 <div class="cert-modern-card p-4 bg-white rounded-4 shadow-sm border text-center h-100 d-flex flex-column justify-content-between position-relative">
                     <span class="position-absolute top-0 end-0 m-3 badge rounded-pill fw-bold" style="background: var(--theme-subtle); color: var(--theme-primary); font-size: 11px;">06</span>
                     <div>
                         <div class="cert-icon-circle d-inline-flex p-3 rounded-circle mb-3" style="background: var(--theme-subtle); color: var(--theme-primary); width: 64px; height: 64px; align-items: center; justify-content: center;">
-                            <i class="fa-solid fa-leaf fa-2x"></i>
+                            <i class="fa-solid fa-train fa-2x"></i>
                         </div>
-                        <h5 class="fw-bold text-dark mb-2" style="font-family: 'Saira-Medium', sans-serif; font-size: 17px;">Pollution Consent (MPCB)</h5>
+                        <h5 class="fw-bold text-dark mb-2" style="font-family: 'Saira-Medium', sans-serif; font-size: 17px;">RDSO Approval Letter</h5>
                         <p class="small text-muted mb-3" style="font-size: 13px; line-height: 1.6;">
-                            Maharashtra Pollution Control Board (MPCB) environmental consent &amp; green emission standard compliance.
+                            Research Designs &amp; Standards Organisation (RDSO) technical approval conforming to Indian Railways BS-131 standard.
                         </p>
                     </div>
-                    <a href="assets/pp_data/Page 01/POLYMER DETAILS/PP DETAILS/MPCB POLLUTION CERTIFICATE.pdf"
+                    <a href="assets/pp_data/Page 01/POLYMER DETAILS/NEW_RDSO.pdf"
                         class="btn btn-outline-primary btn-sm rounded-pill fw-bold open-cert-modal d-inline-flex align-items-center justify-content-center gap-1.5"
-                        data-doc-url="assets/pp_data/Page 01/POLYMER DETAILS/PP DETAILS/MPCB POLLUTION CERTIFICATE.pdf"
-                        data-doc-title="Maharashtra Pollution Control Board (MPCB) Consent"
+                        data-doc-url="assets/pp_data/Page 01/POLYMER DETAILS/NEW_RDSO.pdf"
+                        data-doc-title="RDSO Indian Railways Technical Approval"
                         data-doc-type="pdf">
-                        <i class="fa-solid fa-file-shield"></i> <span>View Pollution Consent</span>
+                        <i class="fa-solid fa-file-pdf"></i> <span>View RDSO Letter</span>
                     </a>
                 </div>
             </div>

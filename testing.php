@@ -537,9 +537,9 @@ $testing_slider_images = [
 
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".2s">
                 <div class="lab-card shadow-sm h-100">
-                    <img src="assets/pp_data/Machine_Images/webp/IMG20260913164437.webp" alt="Accelerated Thermal Ageing Oven">
+                    <img src="assets/pp_data/Machine_Images/webp/IMG20260913164437.webp" alt="Thermal Ageing Oven">
                     <div class="p-3">
-                        <h6 class="fw-bold text-dark mb-1" style="font-family: 'Oswald', sans-serif; font-size: 17px;">Accelerated Thermal Ageing Oven</h6>
+                        <h6 class="fw-bold text-dark mb-1" style="font-family: 'Oswald', sans-serif; font-size: 17px;">Thermal Ageing Oven</h6>
                         <p class="small text-muted mb-0">Digital temperature-controlled circulating oven for 70°C / 72-hour thermal stability tests.</p>
                     </div>
                 </div>

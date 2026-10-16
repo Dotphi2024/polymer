@@ -5,41 +5,30 @@ include_once 'partials/header.php';
 
 // Specialized Technical & Quality Accreditations (Non-duplicate, distinct from the 8 Home page statutory certs)
 $quality_approvals = [
+    // [
+    //     "num" => "01",
+    //     "title" => "RDSO Indian Railways Technical Approval",
+    //     "cat_label" => "Indian Railways Standards",
+    //     "desc" => "Research Designs and Standards Organisation (RDSO) technical approval conforming to RDSO BS-131 standard for railway bridges.",
+    //     "icon" => "fa-train",
+    //     "doc" => "assets/pp_data/Page 01/POLYMER DETAILS/NEW_RDSO.pdf",
+    //     "type" => "pdf",
+    //     "badge" => "RDSO BS-131 Approved",
+    //     "color" => "#dc2626"
+    // ],
     [
         "num" => "01",
-        "title" => "RDSO Indian Railways Technical Approval",
-        "cat_label" => "Indian Railways Standards",
-        "desc" => "Research Designs and Standards Organisation (RDSO) technical approval conforming to RDSO BS-131 standard for railway bridges.",
-        "icon" => "fa-train",
-        "doc" => "assets/pp_data/Page 01/POLYMER DETAILS/NEW_RDSO.pdf",
+        "title" => "Pollution Consent (MPCB)",
+        "cat_label" => "Environmental Compliance",
+        "desc" => "Maharashtra Pollution Control Board (MPCB) environmental consent & green emission standard compliance.",
+        "icon" => "fa-leaf",
+        "doc" => "assets/pp_data/Page 01/POLYMER DETAILS/PP DETAILS/MPCB POLLUTION CERTIFICATE.pdf",
         "type" => "pdf",
-        "badge" => "RDSO BS-131 Approved",
-        "color" => "#dc2626"
+        "badge" => "MPCB Approved",
+        "color" => "#16a34a"
     ],
-    // [
-    //     "num" => "02",
-    //     "title" => "Company Credential & NHAI QAP",
-    //     "cat_label" => "Highway & Bridge QAP",
-    //     "desc" => "Comprehensive Quality Assurance Plan (QAP) conforming to IRC:83 (Part II) approved by NHAI, Metro, and Major Infrastructure clients.",
-    //     "icon" => "fa-file-shield",
-    //     "doc" => "assets/pp_data/Page 01/Credential_Polymer_Products.pdf",
-    //     "type" => "pdf",
-    //     "badge" => "IRC:83 (Pt II) Compliant",
-    //     "color" => "#2563eb"
-    // ],
-    // [
-    //     "num" => "03",
-    //     "title" => "Dynamic Prestress Sister Concern Letter",
-    //     "cat_label" => "Corporate Synergy & Credential",
-    //     "desc" => "Official corporate relationship and manufacturing division credential letter backed by Dynamic Prestress (I) Pvt. Ltd.",
-    //     "icon" => "fa-handshake",
-    //     "doc" => "assets/pp_data/Page 02/sister cons latter - 2026.pdf",
-    //     "type" => "pdf",
-    //     "badge" => "Group Synergy Credential",
-    //     "color" => "#4f46e5"
-    // ],
     [
-        "num" => "04",
+        "num" => "03",
         "title" => "Plant Model & Infrastructure Plan",
         "cat_label" => "Manufacturing Architecture",
         "desc" => "Detailed civil and structural model layout of Nashik manufacturing floor, press bays, testing laboratory, and dispatch zones.",
@@ -49,7 +38,7 @@ $quality_approvals = [
         "badge" => "DISH Plant Architecture",
         "color" => "#0d9488"
     ]
-];
+]; 
 
 // NHAI & Major Infrastructure Client Approval Letters
 $client_approvals = [
@@ -225,7 +214,7 @@ $client_approvals = [
                 </div>
                 <div>
                     <h6 class="fw-bold text-dark mb-0" style="font-size: 15px;">Primary Statutory &amp; Factory Registrations (8 Documents)</h6>
-                    <small class="text-muted" style="font-size: 13px;">GST, PAN, UDYAM MSME, DISH Factory Plan, Stability, MPCB Pollution Consent, ISO 9001:2027, and V-Chem Bond are showcased directly on our Home page.</small>
+                    <small class="text-muted" style="font-size: 13px;">GST, PAN, UDYAM MSME, DISH Factory Plan, Stability, RDSO Approval Letter, ISO 9001:2027, and V-Chem Bond are showcased directly on our Home page.</small>
                 </div>
             </div>
             <a href="index.php#statutory-certs" class="btn btn-sm btn-outline-primary rounded-pill fw-bold px-4 py-2">
@@ -324,7 +313,7 @@ $client_approvals = [
 
         <div class="row g-4 justify-content-center">
             <?php foreach ($quality_approvals as $idx => $q): ?>
-            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="<?php echo (0.1 + ($idx * 0.05)); ?>s">
+            <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="<?php echo (0.1 + ($idx * 0.05)); ?>s">
                 <div class="quality-card-modern p-4 shadow-sm h-100 d-flex flex-column justify-content-between position-relative">
                     <span class="position-absolute top-0 end-0 m-3 badge rounded-pill fw-bold"
                         style="background: var(--theme-subtle); color: var(--theme-primary); font-size: 11px;">

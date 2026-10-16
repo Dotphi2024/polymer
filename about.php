@@ -463,14 +463,14 @@ include_once 'partials/header.php';
                     <div class="team-card-modern h-100 d-flex flex-column justify-content-between position-relative shadow-sm">
                         <div>
                             <div class="team-photo-wrap large-height position-relative">
-                                <img src="assets/pp_data/Page 02/Emp Details/Directors/CMP Sir.jpg" alt="Chetan Maruti Prabhu - Production Incharge" class="team-card-img">
+                                <img src="assets/pp_data/Page 02/Emp Details/Directors/CMP Sir.jpg" alt="Chetan Maruti Prabhu - Production & Procurement Incharge" class="team-card-img">
                                 <div class="team-photo-overlay"></div>
-                                <div class="team-badge-icon" title="Production Incharge">
+                                <div class="team-badge-icon" title="Production & Procurement Incharge">
                                     <i class="fa-solid fa-gears"></i>
                                 </div>
                                 <div class="team-role-tag">
                                     <span class="badge px-3 py-1.5 rounded-pill">
-                                        <i class="fa-solid fa-industry me-1"></i> Production Incharge
+                                        <i class="fa-solid fa-industry me-1"></i> Production & Procurement Incharge
                                     </span>
                                 </div>
                             </div>
@@ -786,7 +786,7 @@ include_once 'partials/header.php';
                                     style="width: 48px; height: 48px; background: #ffffffff ; color: var(--theme-primary);">
                                     <i class="fa-solid fa-user-gear fs-5"></i>
                                 </div>
-                                <h2 class="fw-bold mb-0 text-white" style="font-family: 'Oswald', sans-serif; font-size: 36px; line-height: 1;">25</h2>
+                                <h2 class="fw-bold mb-0 text-white" style="font-family: 'Oswald', sans-serif; font-size: 36px; line-height: 1;">50+</h2>
                                 <h6 class="fw-bold text-white mt-1 mb-1" style="font-size: 14px;">Skilled Labours</h6>
                                 <small class="text-white-100 d-block" style="font-size: 11.5px;">Hydraulic press vulcanizing, grit blasting &amp; mold operators</small>
                             </div>
@@ -800,7 +800,7 @@ include_once 'partials/header.php';
                                     style="width: 48px; height: 48px; background: #ffffffff; color: var(--theme-primary);">
                                     <i class="fa-solid fa-users-line fs-5"></i>
                                 </div>
-                                <h2 class="fw-bold mb-0 text-white" style="font-family: 'Oswald', sans-serif; font-size: 36px; line-height: 1;">25</h2>
+                                <h2 class="fw-bold mb-0 text-white" style="font-family: 'Oswald', sans-serif; font-size: 36px; line-height: 1;">40+</h2>
                                 <h6 class="fw-bold text-white mt-1 mb-1" style="font-size: 14px;">Semi-Skilled Labours</h6>
                                 <small class="text-white-100 d-block" style="font-size: 11.5px;">Elastomer compounding prep, cutting &amp; edge trimming</small>
                             </div>
@@ -814,7 +814,7 @@ include_once 'partials/header.php';
                                     style="width: 48px; height: 48px; background: #ffffffff; color: var(--theme-primary);">
                                     <i class="fa-solid fa-hand-holding-hand fs-5"></i>
                                 </div>
-                                <h2 class="fw-bold mb-0 text-white" style="font-family: 'Oswald', sans-serif; font-size: 36px; line-height: 1;">20</h2>
+                                <h2 class="fw-bold mb-0 text-white" style="font-family: 'Oswald', sans-serif; font-size: 36px; line-height: 1;">40+</h2>
                                 <h6 class="fw-bold text-white mt-1 mb-1" style="font-size: 14px;">Helpers</h6>
                                 <small class="text-white-100 d-block" style="font-size: 11.5px;">Material handling, test-rig movement &amp; dispatch packing</small>
                             </div>

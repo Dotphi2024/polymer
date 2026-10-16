@@ -79,7 +79,7 @@ include_once 'partials/header.php';
                         <div class="d-flex align-items-baseline">
                             <h2 class="stat-number fw-bold mb-0 text-dark"
                                 style="font-family: 'Saira-Medium', sans-serif; font-size: 36px; color: var(--theme-primary) !important; line-height: 1;">
-                                <span class="count">45</span>+
+                                <span class="count">50</span>+
                             </h2>
                         </div>
                         <h6 class="fw-bold text-dark mt-1 mb-0" style="font-size: 15px;">Years of Excellence</h6>
@@ -99,7 +99,7 @@ include_once 'partials/header.php';
                         <div class="d-flex align-items-baseline">
                             <h2 class="stat-number fw-bold mb-0 text-dark"
                                 style="font-family: 'Saira-Medium', sans-serif; font-size: 36px; color: var(--theme-primary) !important; line-height: 1;">
-                                <span class="count">450</span>+
+                                <span class="count">10,000</span>+
                             </h2>
                         </div>
                         <h6 class="fw-bold text-dark mt-1 mb-0" style="font-size: 15px;">Projects Delivered</h6>
@@ -200,14 +200,14 @@ include_once 'partials/header.php';
                             <div>
                                 <h6 class="fw-bold text-dark mb-0" style="font-size:15px;">Total Bearings Supplied
                                 </h6>
-                                <small class="text-muted" style="font-size:12px;">Over 450+ Major Projects</small>
+                                <small class="text-muted" style="font-size:12px;">Over 10,000+ Major Projects</small>
                             </div>
                         </div>
                         <div class="d-flex align-items-end justify-content-between mt-1">
                             <div>
                                 <h2 class="fw-bold mb-0"
                                     style="font-size:36px; color:var(--theme-primary); line-height:1; font-family:'Oswald', sans-serif;">
-                                    50,000+</h2>
+                                    5,00,000+</h2>
                                 <small class="fw-bold text-success" style="font-size:12px;"><i
                                         class="fa-solid fa-arrow-trend-up me-1"></i> &uarr; 100% Quality
                                     Tested</small>
@@ -665,16 +665,41 @@ The project credentials below highlight our experience across these sectors, inc
                                         "Elastomeric Bearing Testing for Khan River Bridge has conducted here at Dynamic (Polymer Products) as per code and found satisfactory."
                                     </p>
                                 </blockquote>
-                                <div class="d-flex align-items-center gap-3 pt-2">
-                                    <div class="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold shadow-sm"
-                                        style="width:50px; height:50px; min-width:50px; background: var(--theme-primary); font-size: 16px; font-family:'Oswald', sans-serif;">
-                                        DO
+                                <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 pt-3 border-top mt-3">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold shadow-sm flex-shrink-0"
+                                            style="width:50px; height:50px; min-width:50px; background: var(--theme-primary); font-size: 16px; font-family:'Oswald', sans-serif;">
+                                            DO
+                                        </div>
+                                        <div>
+                                            <h6 class="fw-bold text-dark text-uppercase mb-0"
+                                                style="font-size: 15px; font-family:'Oswald', sans-serif; letter-spacing:0.5px;">
+                                                Dhruv Ozal</h6>
+                                            <small class="text-muted" style="font-size: 13px;">Rajkamal Builders Infra Pvt. Ltd. &bull; Khan River Bridge, Ahmedabad</small>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h6 class="fw-bold text-dark text-uppercase mb-0"
-                                            style="font-size: 15px; font-family:'Oswald', sans-serif; letter-spacing:0.5px;">
-                                            Dhruv Ozal</h6>
-                                        <small class="text-muted" style="font-size: 13px;">Rajkamal Builders Infra Pvt. Ltd. &bull; Khan River Bridge, Ahmedabad</small>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <!-- Testimonial Image Thumbnail Area -->
+                                        <a href="assets/img/img/testimonials/dhruv-ozal.webp" 
+                                            class="testimonial-thumb-link open-testimonial-modal d-none d-sm-inline-flex position-relative rounded-3 overflow-hidden border shadow-sm"
+                                            data-doc-url="assets/img/img/testimonials/dhruv-ozal.webp"
+                                            data-client="Dhruv Ozal"
+                                            data-org="Rajkamal Builders Infra Pvt. Ltd. &bull; Khan River Bridge, Ahmedabad"
+                                            data-quote="Elastomeric Bearing Testing for Khan River Bridge has conducted here at Dynamic (Polymer Products) as per code and found satisfactory."
+                                            title="Click to view original testimonial">
+                                            <img src="assets/img/img/testimonials/dhruv-ozal.webp" alt="Dhruv Ozal Review" class="testimonial-thumb-img">
+                                            <span class="thumb-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                                        </a>
+                                        <!-- View Original Button -->
+                                        <button type="button" 
+                                            class="btn btn-outline-primary btn-sm rounded-pill fw-bold open-testimonial-modal d-inline-flex align-items-center gap-2 px-3 py-2 shadow-sm"
+                                            data-doc-url="assets/img/img/testimonials/dhruv-ozal.webp"
+                                            data-client="Dhruv Ozal"
+                                            data-org="Rajkamal Builders Infra Pvt. Ltd. &bull; Khan River Bridge, Ahmedabad"
+                                            data-quote="Elastomeric Bearing Testing for Khan River Bridge has conducted here at Dynamic (Polymer Products) as per code and found satisfactory.">
+                                            <i class="fa-solid fa-file-lines"></i>
+                                            <span>View Original</span>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -693,16 +718,41 @@ The project credentials below highlight our experience across these sectors, inc
                                         "We have good experience with Polymer Products team. They have managed work very well and performed all tests with us in proper manner. Quality of Material (Bearing) tested &amp; results are satisfactory."
                                     </p>
                                 </blockquote>
-                                <div class="d-flex align-items-center gap-3 pt-2">
-                                    <div class="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold shadow-sm"
-                                        style="width:50px; height:50px; min-width:50px; background: var(--theme-primary); font-size: 16px; font-family:'Oswald', sans-serif;">
-                                        NS
+                                <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 pt-3 border-top mt-3">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold shadow-sm flex-shrink-0"
+                                            style="width:50px; height:50px; min-width:50px; background: var(--theme-primary); font-size: 16px; font-family:'Oswald', sans-serif;">
+                                            NS
+                                        </div>
+                                        <div>
+                                            <h6 class="fw-bold text-dark text-uppercase mb-0"
+                                                style="font-size: 15px; font-family:'Oswald', sans-serif; letter-spacing:0.5px;">
+                                                Neeraj Sansiya</h6>
+                                            <small class="text-muted" style="font-size: 13px;">Material Engineer, SQC of MPRRDA Kukshi PIU-2, Dist. Dhar, Madhya Pradesh</small>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h6 class="fw-bold text-dark text-uppercase mb-0"
-                                            style="font-size: 15px; font-family:'Oswald', sans-serif; letter-spacing:0.5px;">
-                                            Neeraj Sansiya</h6>
-                                        <small class="text-muted" style="font-size: 13px;">Material Engineer, SQC of MPRRDA Kukshi PIU-2, Dist. Dhar, Madhya Pradesh</small>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <!-- Testimonial Image Thumbnail Area -->
+                                        <a href="assets/img/img/testimonials/neeraj-sansiya.webp" 
+                                            class="testimonial-thumb-link open-testimonial-modal d-none d-sm-inline-flex position-relative rounded-3 overflow-hidden border shadow-sm"
+                                            data-doc-url="assets/img/img/testimonials/neeraj-sansiya.webp"
+                                            data-client="Neeraj Sansiya"
+                                            data-org="Material Engineer, SQC of MPRRDA Kukshi PIU-2, Dist. Dhar, Madhya Pradesh"
+                                            data-quote="We have good experience with Polymer Products team. They have managed work very well and performed all tests with us in proper manner. Quality of Material (Bearing) tested &amp; results are satisfactory."
+                                            title="Click to view original testimonial">
+                                            <img src="assets/img/img/testimonials/neeraj-sansiya.webp" alt="Neeraj Sansiya Review" class="testimonial-thumb-img">
+                                            <span class="thumb-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                                        </a>
+                                        <!-- View Original Button -->
+                                        <button type="button" 
+                                            class="btn btn-outline-primary btn-sm rounded-pill fw-bold open-testimonial-modal d-inline-flex align-items-center gap-2 px-3 py-2 shadow-sm"
+                                            data-doc-url="assets/img/img/testimonials/neeraj-sansiya.webp"
+                                            data-client="Neeraj Sansiya"
+                                            data-org="Material Engineer, SQC of MPRRDA Kukshi PIU-2, Dist. Dhar, Madhya Pradesh"
+                                            data-quote="We have good experience with Polymer Products team. They have managed work very well and performed all tests with us in proper manner. Quality of Material (Bearing) tested &amp; results are satisfactory.">
+                                            <i class="fa-solid fa-file-lines"></i>
+                                            <span>View Original</span>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -721,16 +771,41 @@ The project credentials below highlight our experience across these sectors, inc
                                         "Visited PP Polymers for the testing of Elastomeric bearing (72 Nos) for Barrage (FOB) &amp; it was excellent experience and the staff was co-operative, well knowledged and completed the testing procedure overall at the amazing exp."
                                     </p>
                                 </blockquote>
-                                <div class="d-flex align-items-center gap-3 pt-2">
-                                    <div class="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold shadow-sm"
-                                        style="width:50px; height:50px; min-width:50px; background: var(--theme-primary); font-size: 16px; font-family:'Oswald', sans-serif;">
-                                        AS
+                                <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 pt-3 border-top mt-3">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold shadow-sm flex-shrink-0"
+                                            style="width:50px; height:50px; min-width:50px; background: var(--theme-primary); font-size: 16px; font-family:'Oswald', sans-serif;">
+                                            AS
+                                        </div>
+                                        <div>
+                                            <h6 class="fw-bold text-dark text-uppercase mb-0"
+                                                style="font-size: 15px; font-family:'Oswald', sans-serif; letter-spacing:0.5px;">
+                                                Abhishek Singh</h6>
+                                            <small class="text-muted" style="font-size: 13px;">Sr. Bridge Engineer, Unique Construction Surat (Barrage FOB Project)</small>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h6 class="fw-bold text-dark text-uppercase mb-0"
-                                            style="font-size: 15px; font-family:'Oswald', sans-serif; letter-spacing:0.5px;">
-                                            Abhishek Singh</h6>
-                                        <small class="text-muted" style="font-size: 13px;">Sr. Bridge Engineer, Unique Construction Surat (Barrage FOB Project)</small>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <!-- Testimonial Image Thumbnail Area -->
+                                        <a href="assets/img/img/testimonials/abhishek-singh.webp" 
+                                            class="testimonial-thumb-link open-testimonial-modal d-none d-sm-inline-flex position-relative rounded-3 overflow-hidden border shadow-sm"
+                                            data-doc-url="assets/img/img/testimonials/abhishek-singh.webp"
+                                            data-client="Abhishek Singh"
+                                            data-org="Sr. Bridge Engineer, Unique Construction Surat (Barrage FOB Project)"
+                                            data-quote="Visited PP Polymers for the testing of Elastomeric bearing (72 Nos) for Barrage (FOB) &amp; it was excellent experience and the staff was co-operative, well knowledged and completed the testing procedure overall at the amazing exp."
+                                            title="Click to view original testimonial">
+                                            <img src="assets/img/img/testimonials/abhishek-singh.webp" alt="Abhishek Singh Review" class="testimonial-thumb-img">
+                                            <span class="thumb-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                                        </a>
+                                        <!-- View Original Button -->
+                                        <button type="button" 
+                                            class="btn btn-outline-primary btn-sm rounded-pill fw-bold open-testimonial-modal d-inline-flex align-items-center gap-2 px-3 py-2 shadow-sm"
+                                            data-doc-url="assets/img/img/testimonials/abhishek-singh.webp"
+                                            data-client="Abhishek Singh"
+                                            data-org="Sr. Bridge Engineer, Unique Construction Surat (Barrage FOB Project)"
+                                            data-quote="Visited PP Polymers for the testing of Elastomeric bearing (72 Nos) for Barrage (FOB) &amp; it was excellent experience and the staff was co-operative, well knowledged and completed the testing procedure overall at the amazing exp.">
+                                            <i class="fa-solid fa-file-lines"></i>
+                                            <span>View Original</span>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -749,16 +824,41 @@ The project credentials below highlight our experience across these sectors, inc
                                         "Representative of Mahad Municipal Council &amp; representative of T&amp;T Construction jointly visited the plant. Tests are carried out as per required standards. Co-operated &amp; brief explanation given by the company representative. Thanking you. Best luck for great future."
                                     </p>
                                 </blockquote>
-                                <div class="d-flex align-items-center gap-3 pt-2">
-                                    <div class="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold shadow-sm"
-                                        style="width:50px; height:50px; min-width:50px; background: var(--theme-primary); font-size: 16px; font-family:'Oswald', sans-serif;">
-                                        PK
+                                <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 pt-3 border-top mt-3">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold shadow-sm flex-shrink-0"
+                                            style="width:50px; height:50px; min-width:50px; background: var(--theme-primary); font-size: 16px; font-family:'Oswald', sans-serif;">
+                                            PK
+                                        </div>
+                                        <div>
+                                            <h6 class="fw-bold text-dark text-uppercase mb-0"
+                                                style="font-size: 15px; font-family:'Oswald', sans-serif; letter-spacing:0.5px;">
+                                                Praveen Vasant Kadam</h6>
+                                            <small class="text-muted" style="font-size: 13px;">Municipal Engineer, Mahad Municipal Council, Tal-Mahad, Dist-Raigad</small>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h6 class="fw-bold text-dark text-uppercase mb-0"
-                                            style="font-size: 15px; font-family:'Oswald', sans-serif; letter-spacing:0.5px;">
-                                            Praveen Vasant Kadam</h6>
-                                        <small class="text-muted" style="font-size: 13px;">Municipal Engineer, Mahad Municipal Council, Tal-Mahad, Dist-Raigad</small>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <!-- Testimonial Image Thumbnail Area -->
+                                        <a href="assets/img/img/testimonials/pravin-vasant-kadam.webp" 
+                                            class="testimonial-thumb-link open-testimonial-modal d-none d-sm-inline-flex position-relative rounded-3 overflow-hidden border shadow-sm"
+                                            data-doc-url="assets/img/img/testimonials/pravin-vasant-kadam.webp"
+                                            data-client="Praveen Vasant Kadam"
+                                            data-org="Municipal Engineer, Mahad Municipal Council, Tal-Mahad, Dist-Raigad"
+                                            data-quote="Representative of Mahad Municipal Council &amp; representative of T&amp;T Construction jointly visited the plant. Tests are carried out as per required standards. Co-operated &amp; brief explanation given by the company representative. Thanking you. Best luck for great future."
+                                            title="Click to view original testimonial">
+                                            <img src="assets/img/img/testimonials/pravin-vasant-kadam.webp" alt="Praveen Vasant Kadam Review" class="testimonial-thumb-img">
+                                            <span class="thumb-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                                        </a>
+                                        <!-- View Original Button -->
+                                        <button type="button" 
+                                            class="btn btn-outline-primary btn-sm rounded-pill fw-bold open-testimonial-modal d-inline-flex align-items-center gap-2 px-3 py-2 shadow-sm"
+                                            data-doc-url="assets/img/img/testimonials/pravin-vasant-kadam.webp"
+                                            data-client="Praveen Vasant Kadam"
+                                            data-org="Municipal Engineer, Mahad Municipal Council, Tal-Mahad, Dist-Raigad"
+                                            data-quote="Representative of Mahad Municipal Council &amp; representative of T&amp;T Construction jointly visited the plant. Tests are carried out as per required standards. Co-operated &amp; brief explanation given by the company representative. Thanking you. Best luck for great future.">
+                                            <i class="fa-solid fa-file-lines"></i>
+                                            <span>View Original</span>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -777,16 +877,41 @@ The project credentials below highlight our experience across these sectors, inc
                                         "Today visit the Polymer Products lab for testing the Elastomeric Bearings for our projects. Testing experience is good as per testing staff and testing is passed."
                                     </p>
                                 </blockquote>
-                                <div class="d-flex align-items-center gap-3 pt-2">
-                                    <div class="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold shadow-sm"
-                                        style="width:50px; height:50px; min-width:50px; background: var(--theme-primary); font-size: 16px; font-family:'Oswald', sans-serif;">
-                                        KR
+                                <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 pt-3 border-top mt-3">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold shadow-sm flex-shrink-0"
+                                            style="width:50px; height:50px; min-width:50px; background: var(--theme-primary); font-size: 16px; font-family:'Oswald', sans-serif;">
+                                            KR
+                                        </div>
+                                        <div>
+                                            <h6 class="fw-bold text-dark text-uppercase mb-0"
+                                                style="font-size: 15px; font-family:'Oswald', sans-serif; letter-spacing:0.5px;">
+                                                Er. Khalid Raza</h6>
+                                            <small class="text-muted" style="font-size: 13px;">Site Engineer, Vishal Construction Saikheda</small>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h6 class="fw-bold text-dark text-uppercase mb-0"
-                                            style="font-size: 15px; font-family:'Oswald', sans-serif; letter-spacing:0.5px;">
-                                            Er. Khalid Raza</h6>
-                                        <small class="text-muted" style="font-size: 13px;">Site Engineer, Vishal Construction Saikheda</small>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <!-- Testimonial Image Thumbnail Area -->
+                                        <a href="assets/img/img/testimonials/khalid-raza.webp" 
+                                            class="testimonial-thumb-link open-testimonial-modal d-none d-sm-inline-flex position-relative rounded-3 overflow-hidden border shadow-sm"
+                                            data-doc-url="assets/img/img/testimonials/khalid-raza.webp"
+                                            data-client="Er. Khalid Raza"
+                                            data-org="Site Engineer, Vishal Construction Saikheda"
+                                            data-quote="Today visit the Polymer Products lab for testing the Elastomeric Bearings for our projects. Testing experience is good as per testing staff and testing is passed."
+                                            title="Click to view original testimonial">
+                                            <img src="assets/img/img/testimonials/khalid-raza.webp" alt="Er. Khalid Raza Review" class="testimonial-thumb-img">
+                                            <span class="thumb-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                                        </a>
+                                        <!-- View Original Button -->
+                                        <button type="button" 
+                                            class="btn btn-outline-primary btn-sm rounded-pill fw-bold open-testimonial-modal d-inline-flex align-items-center gap-2 px-3 py-2 shadow-sm"
+                                            data-doc-url="assets/img/img/testimonials/khalid-raza.webp"
+                                            data-client="Er. Khalid Raza"
+                                            data-org="Site Engineer, Vishal Construction Saikheda"
+                                            data-quote="Today visit the Polymer Products lab for testing the Elastomeric Bearings for our projects. Testing experience is good as per testing staff and testing is passed.">
+                                            <i class="fa-solid fa-file-lines"></i>
+                                            <span>View Original</span>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -797,6 +922,81 @@ The project credentials below highlight our experience across these sectors, inc
         </div>
     </div>
 </section>
+
+<!-- Testimonial Document Viewer Modal Popup -->
+<div class="modal fade" id="testimonialModal" tabindex="-1" aria-labelledby="testimonialModalLabel" aria-hidden="true" style="z-index: 10550;">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden" style="border: 1px solid rgba(255, 255, 255, 0.1);">
+            <!-- Modal Header -->
+            <div class="modal-header text-white px-4 py-3" style="background: var(--theme-primary, #0b57d0);">
+                <div class="d-flex align-items-center">
+                    <div class="modal-icon-wrap me-3 p-2 bg-white bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 42px; height: 42px;">
+                        <i class="fa-solid fa-file-lines text-white fs-5"></i>
+                    </div>
+                    <div>
+                        <h5 class="modal-title fw-bold text-white mb-0" id="testimonialModalLabel">Original Client Testimonial &amp; Testing Feedback</h5>
+                        <small id="testimonialModalClient" class="text-white text-opacity-75" style="font-size: 13px;">Verified Testing Witness Record</small>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <button type="button" class="btn-close btn-close-white ms-2 testimonial-modal-dismiss" data-bs-dismiss="modal" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+            </div>
+
+            <!-- Quote Snippet Strip -->
+            <div class="px-4 py-3 bg-light border-bottom d-flex align-items-start gap-3">
+                <div class="text-primary opacity-50 flex-shrink-0 pt-1">
+                    <i class="fa-solid fa-quote-left fs-3"></i>
+                </div>
+                <div>
+                    <p class="mb-1 fw-semibold text-dark fst-italic" id="testimonialModalQuote" style="font-size: 15px; line-height: 1.6;"></p>
+                    <small class="text-muted fw-bold text-uppercase" id="testimonialModalOrg" style="font-size: 12px; letter-spacing: 0.5px;"></small>
+                </div>
+            </div>
+
+            <!-- Modal Body - Document Display Area -->
+            <div class="modal-body p-0 position-relative d-flex align-items-center justify-content-center" style="background: #0f172a; min-height: 520px;">
+                <!-- Loading Spinner -->
+                <div id="testimonialModalLoader" class="position-absolute top-50 start-50 translate-middle text-center py-5" style="z-index: 5;">
+                    <div class="spinner-border text-primary mb-2" role="status" style="width: 3rem; height: 3rem;">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p class="text-white-50 small mb-0">Loading original document preview...</p>
+                </div>
+
+                <!-- Error Container -->
+                <div id="testimonialModalError" class="p-4 text-center text-white" style="display: none; z-index: 4;">
+                    <i class="fa-solid fa-triangle-exclamation fa-2x mb-2 text-warning"></i>
+                    <h6 class="text-white">Unable to display document preview</h6>
+                    <p class="text-white-50 small mb-3" id="testimonialModalErrorText"></p>
+                    <a id="testimonialModalDirectLink" href="#" target="_blank" class="btn btn-outline-light btn-sm rounded-pill px-3">
+                        <i class="fa-solid fa-arrow-up-right-from-square me-1"></i> Open Image Directly
+                    </a>
+                </div>
+
+                <!-- Main Image Preview Container -->
+                <div id="testimonialModalImgWrap" class="p-3 p-md-4 w-100 h-100 d-flex align-items-center justify-content-center" style="min-height: 520px; overflow-y: auto;">
+                    <img id="testimonialModalImage" src="" alt="Original Testimonial Document" 
+                        class="img-fluid rounded-3 shadow-lg"
+                        style="max-height: 72vh; max-width: 95%; width: auto; height: auto; object-fit: contain; background: #fff; margin: auto; display: block; border: 1px solid rgba(255,255,255,0.15);">
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="modal-footer bg-white px-4 py-3 border-top d-flex justify-content-between align-items-center flex-wrap gap-2">
+                <span class="text-muted small">
+                    <i class="fa-solid fa-circle-check text-success me-1"></i> Verified Original Witness Record &bull; Polymer Products Nashik Facility
+                </span>
+                <div class="d-flex align-items-center gap-2">
+                    <a id="testimonialModalOpenTab" href="#" target="_blank" class="btn btn-outline-primary btn-sm rounded-pill fw-bold px-3">
+                        <i class="fa-solid fa-arrow-up-right-from-square me-1"></i> View Full Image
+                    </a>
+                    <button type="button" class="btn btn-dark btn-sm rounded-pill px-4 fw-bold testimonial-modal-dismiss" data-bs-dismiss="modal" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <style>
     .testimonial-card-prozen {
@@ -850,6 +1050,56 @@ The project credentials below highlight our experience across these sectors, inc
         transform: scale(1.05);
         box-shadow: 0 8px 20px var(--theme-glow);
     }
+
+    /* Testimonial Original Document Thumbnail & Button Styling */
+    .testimonial-thumb-link {
+        width: 44px;
+        height: 44px;
+        border-color: #cbd5e1 !important;
+        background: #f8fafc;
+        transition: all 0.25s ease;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .testimonial-thumb-link:hover {
+        transform: scale(1.08);
+        border-color: var(--theme-primary) !important;
+        box-shadow: 0 4px 12px var(--theme-glow);
+    }
+
+    .testimonial-thumb-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .thumb-zoom-badge {
+        position: absolute;
+        inset: 0;
+        background: rgba(14, 34, 61, 0.6);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
+
+    .testimonial-thumb-link:hover .thumb-zoom-badge {
+        opacity: 1;
+    }
+
+    .open-testimonial-modal {
+        transition: all 0.25s ease-in-out;
+    }
+
+    .open-testimonial-modal:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px var(--theme-glow) !important;
+    }
 </style>
 
 <script>
@@ -869,6 +1119,122 @@ The project credentials below highlight our experience across these sectors, inc
                 },
             });
         }
+
+        // Testimonial Modal Preview Logic
+        const testModalEl = document.getElementById('testimonialModal');
+        if (!testModalEl) return;
+
+        const modalClient = document.getElementById('testimonialModalClient');
+        const modalQuote = document.getElementById('testimonialModalQuote');
+        const modalOrg = document.getElementById('testimonialModalOrg');
+        const modalImage = document.getElementById('testimonialModalImage');
+        const modalImgWrap = document.getElementById('testimonialModalImgWrap');
+        const modalLoader = document.getElementById('testimonialModalLoader');
+        const modalError = document.getElementById('testimonialModalError');
+        const modalErrorText = document.getElementById('testimonialModalErrorText');
+        const modalDirectLink = document.getElementById('testimonialModalDirectLink');
+        const modalOpenTab = document.getElementById('testimonialModalOpenTab');
+
+        function getTestModalInstance() {
+            if (typeof bootstrap !== 'undefined' && bootstrap.Modal) {
+                return bootstrap.Modal.getOrCreateInstance(testModalEl);
+            }
+            return null;
+        }
+
+        function unlockTestimonialScroll() {
+            if (modalImage) modalImage.src = '';
+            if (modalLoader) modalLoader.style.display = 'none';
+            if (modalError) modalError.style.display = 'none';
+            if (modalImgWrap) modalImgWrap.style.display = 'none';
+
+            document.body.classList.remove('modal-open');
+            document.body.style.removeProperty('overflow');
+            document.body.style.removeProperty('overflow-y');
+            document.body.style.removeProperty('padding-right');
+            document.documentElement.style.removeProperty('overflow');
+            document.documentElement.style.removeProperty('overflow-y');
+
+            document.querySelectorAll('.modal-backdrop').forEach(function (backdrop) {
+                backdrop.remove();
+            });
+        }
+
+        // Event Delegation for both original and Swiper-cloned slides
+        document.addEventListener('click', function (e) {
+            const btn = e.target.closest('.open-testimonial-modal');
+            if (!btn) return;
+            e.preventDefault();
+
+            const url = btn.getAttribute('data-doc-url') || btn.getAttribute('href');
+            const client = btn.getAttribute('data-client') || 'Client Testimonial';
+            const org = btn.getAttribute('data-org') || '';
+            const quote = btn.getAttribute('data-quote') || '';
+
+            if (!url) return;
+
+            if (modalClient) modalClient.textContent = client + (org ? ' • ' + org : '');
+            if (modalQuote) modalQuote.textContent = quote ? '"' + quote + '"' : '';
+            if (modalOrg) modalOrg.textContent = org;
+            if (modalOpenTab) modalOpenTab.href = url;
+            if (modalDirectLink) modalDirectLink.href = url;
+
+            // Reset display state
+            if (modalLoader) modalLoader.style.display = 'block';
+            if (modalError) modalError.style.display = 'none';
+            if (modalImage) modalImage.style.display = 'none';
+            if (modalImgWrap) modalImgWrap.style.display = 'flex';
+
+            function showImage() {
+                if (modalLoader) modalLoader.style.display = 'none';
+                if (modalError) modalError.style.display = 'none';
+                if (modalImgWrap) modalImgWrap.style.display = 'flex';
+                if (modalImage) modalImage.style.display = 'block';
+            }
+
+            function showError() {
+                if (modalLoader) modalLoader.style.display = 'none';
+                if (modalImage) modalImage.style.display = 'none';
+                if (modalError) modalError.style.display = 'block';
+                if (modalErrorText) {
+                    modalErrorText.textContent = 'Document image path: ' + url;
+                }
+            }
+
+            if (modalImage) {
+                modalImage.onload = showImage;
+                modalImage.onerror = showError;
+                modalImage.src = url;
+
+                // If already cached and loaded
+                if (modalImage.complete && modalImage.naturalWidth > 0) {
+                    showImage();
+                }
+            }
+
+            const bsModal = getTestModalInstance();
+            if (bsModal) {
+                bsModal.show();
+            } else if (typeof $ !== 'undefined') {
+                $(testModalEl).modal('show');
+            }
+        });
+
+        testModalEl.querySelectorAll('.testimonial-modal-dismiss, [data-bs-dismiss="modal"], [data-dismiss="modal"]').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                const bsModal = getTestModalInstance();
+                if (bsModal) {
+                    bsModal.hide();
+                } else if (typeof $ !== 'undefined') {
+                    $(testModalEl).modal('hide');
+                }
+                setTimeout(unlockTestimonialScroll, 300);
+            });
+        });
+
+        testModalEl.addEventListener('hidden.bs.modal', function () {
+            unlockTestimonialScroll();
+        });
     });
 </script>
 
