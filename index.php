@@ -1143,10 +1143,13 @@ The project credentials below highlight our experience across these sectors, inc
         }
 
         function unlockTestimonialScroll() {
-            if (modalImage) modalImage.src = '';
+            if (modalImage) {
+                modalImage.onload = null;
+                modalImage.onerror = null;
+                modalImage.src = '';
+            }
             if (modalLoader) modalLoader.style.display = 'none';
             if (modalError) modalError.style.display = 'none';
-            if (modalImgWrap) modalImgWrap.style.display = 'none';
 
             document.body.classList.remove('modal-open');
             document.body.style.removeProperty('overflow');
@@ -1202,8 +1205,28 @@ The project credentials below highlight our experience across these sectors, inc
             }
 
             if (modalImage) {
-                modalImage.onload = showImage;
-                modalImage.onerror = showError;
+                modalImage.onload = null;
+                modalImage.onerror = null;
+
+                modalImage.onload = function () {
+                    showImage();
+                };
+
+                modalImage.onerror = function () {
+                    if (url.indexOf('assets/img/img/testimonials/') !== -1) {
+                        const fallbackUrl = url.replace('assets/img/img/testimonials/', 'assets/img/testimonials/');
+                        modalImage.onerror = function () {
+                            showError();
+                        };
+                        modalImage.onload = function () {
+                            showImage();
+                        };
+                        modalImage.src = fallbackUrl;
+                        return;
+                    }
+                    showError();
+                };
+
                 modalImage.src = url;
 
                 // If already cached and loaded
