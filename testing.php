@@ -936,7 +936,7 @@ $testing_slider_images = [
                             </div>
                         </div>
                         <div class="p-3 bg-white">
-                            <span class="badge bg-primary-subtle text-primary small mb-1">Shear Modulus Test</span>
+                            <span class="badge rounded-pill px-2.5 py-1 small mb-1 fw-semibold" style="background: rgba(2, 132, 199, 0.12); color: var(--theme-primary);">Shear Modulus Test</span>
                             <h6 class="fw-bold text-dark mb-1" style="font-size:14.5px;">Client Engineers Witnessing Dual-Bearing Test</h6>
                             <small class="text-muted" style="font-size:12px;">Inspection team observing horizontal shear deflection readings</small>
                         </div>
@@ -959,7 +959,7 @@ $testing_slider_images = [
                             </div>
                         </div>
                         <div class="p-3 bg-white">
-                            <span class="badge bg-success-subtle text-success small mb-1">1.5x Proof Load</span>
+                            <span class="badge rounded-pill px-2.5 py-1 small mb-1 fw-semibold" style="background: rgba(2, 132, 199, 0.12); color: var(--theme-primary);">1.5x Proof Load</span>
                             <h6 class="fw-bold text-dark mb-1" style="font-size:14.5px;">Stage-Wise Hydraulic Press Inspection</h6>
                             <small class="text-muted" style="font-size:12px;">Vertical proof-load verification under full hydraulic pressure</small>
                         </div>
@@ -982,7 +982,7 @@ $testing_slider_images = [
                             </div>
                         </div>
                         <div class="p-3 bg-white">
-                            <span class="badge bg-danger-subtle text-danger small mb-1">Pressure Verification</span>
+                            <span class="badge rounded-pill px-2.5 py-1 small mb-1 fw-semibold" style="background: rgba(2, 132, 199, 0.12); color: var(--theme-primary);">Pressure Verification</span>
                             <h6 class="fw-bold text-dark mb-1" style="font-size:14.5px;">Live Pressure Gauge &amp; Load Logging</h6>
                             <small class="text-muted" style="font-size:12px;">Calibrated digital pressure transducer and dial recording</small>
                         </div>
@@ -1058,10 +1058,10 @@ $testing_slider_images = [
                     <div class="tpi-cert-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
                         <div>
                             <div class="d-flex align-items-center justify-content-between mb-3">
-                                <span class="badge rounded-pill px-3 py-1.5 small fw-semibold" style="background: rgba(220, 38, 38, 0.12); color: #dc2626;">
+                                <span class="badge rounded-pill px-3 py-1.5 small fw-semibold" style="background: rgba(2, 132, 199, 0.12); color: var(--theme-primary);">
                                     <i class="fa-solid fa-train me-1"></i> RDSO BS-131
                                 </span>
-                                <i class="fa-solid fa-file-pdf text-danger fs-4"></i>
+                                <i class="fa-solid fa-file-pdf fs-4" style="color: var(--theme-primary);"></i>
                             </div>
                             <h5 class="fw-bold text-dark mb-2" style="font-family:'Oswald', sans-serif; font-size:18px;">
                                 RDSO Technical Approval
@@ -1070,7 +1070,7 @@ $testing_slider_images = [
                                 Research Designs and Standards Organisation (Indian Railways) official approval and test compliance conforming to RDSO BS-131 specifications.
                             </p>
                         </div>
-                        <button type="button" class="btn btn-outline-danger btn-sm rounded-pill w-100 fw-bold open-testing-doc-modal d-flex align-items-center justify-content-center gap-1.5"
+                        <button type="button" class="btn btn-outline-primary btn-sm rounded-pill w-100 fw-bold open-testing-doc-modal d-flex align-items-center justify-content-center gap-1.5"
                             data-doc-url="assets/pp_data/Page 01/POLYMER DETAILS/NEW_RDSO.pdf"
                             data-doc-title="RDSO Indian Railways Technical Approval &amp; Inspection Regime"
                             data-doc-type="pdf">
@@ -1087,7 +1087,7 @@ $testing_slider_images = [
                                 <span class="badge rounded-pill px-3 py-1.5 small fw-semibold" style="background: rgba(2, 132, 199, 0.12); color: var(--theme-primary);">
                                     <i class="fa-solid fa-road me-1"></i> IRC:83 (Part II) 2018
                                 </span>
-                                <i class="fa-solid fa-file-pdf text-danger fs-4"></i>
+                                <i class="fa-solid fa-file-pdf fs-4" style="color: var(--theme-primary);"></i>
                             </div>
                             <h5 class="fw-bold text-dark mb-2" style="font-family:'Oswald', sans-serif; font-size:18px;">
                                 NHAI Quality Assurance Plan
@@ -1110,10 +1110,10 @@ $testing_slider_images = [
                     <div class="tpi-cert-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
                         <div>
                             <div class="d-flex align-items-center justify-content-between mb-3">
-                                <span class="badge rounded-pill px-3 py-1.5 small fw-semibold" style="background: rgba(14, 165, 233, 0.12); color: #0284c7;">
+                                <span class="badge rounded-pill px-3 py-1.5 small fw-semibold" style="background: rgba(2, 132, 199, 0.12); color: var(--theme-primary);">
                                     <i class="fa-solid fa-clipboard-check me-1"></i> Railway QAP Format
                                 </span>
-                                <i class="fa-solid fa-file-pdf text-danger fs-4"></i>
+                                <i class="fa-solid fa-file-pdf fs-4" style="color: var(--theme-primary);"></i>
                             </div>
                             <h5 class="fw-bold text-dark mb-2" style="font-family:'Oswald', sans-serif; font-size:18px;">
                                 RDSO Inspection Checklist &amp; QAP
@@ -1136,10 +1136,10 @@ $testing_slider_images = [
                     <div class="tpi-cert-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
                         <div>
                             <div class="d-flex align-items-center justify-content-between mb-3">
-                                <span class="badge rounded-pill px-3 py-1.5 small fw-semibold" style="background: rgba(22, 163, 74, 0.12); color: #16a34a;">
+                                <span class="badge rounded-pill px-3 py-1.5 small fw-semibold" style="background: rgba(2, 132, 199, 0.12); color: var(--theme-primary);">
                                     <i class="fa-solid fa-certificate me-1"></i> ISO 9001:2015
                                 </span>
-                                <i class="fa-solid fa-file-image text-success fs-4"></i>
+                                <i class="fa-solid fa-file-image fs-4" style="color: var(--theme-primary);"></i>
                             </div>
                             <h5 class="fw-bold text-dark mb-2" style="font-family:'Oswald', sans-serif; font-size:18px;">
                                 ISO 9001:2015 Certification
@@ -1148,7 +1148,7 @@ $testing_slider_images = [
                                 Accredited Quality Management System certificate for manufacturing, inspection, proof-load testing, and supply of elastomeric bridge bearings.
                             </p>
                         </div>
-                        <button type="button" class="btn btn-outline-success btn-sm rounded-pill w-100 fw-bold open-testing-doc-modal d-flex align-items-center justify-content-center gap-1.5"
+                        <button type="button" class="btn btn-outline-primary btn-sm rounded-pill w-100 fw-bold open-testing-doc-modal d-flex align-items-center justify-content-center gap-1.5"
                             data-doc-url="assets/pp_data/Page 01/POLYMER DETAILS/ISO CERTIFICATE 2027.png"
                             data-doc-title="ISO 9001:2015 Quality Management System Certificate"
                             data-doc-type="image">
@@ -1162,10 +1162,10 @@ $testing_slider_images = [
                     <div class="tpi-cert-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
                         <div>
                             <div class="d-flex align-items-center justify-content-between mb-3">
-                                <span class="badge rounded-pill px-3 py-1.5 small fw-semibold" style="background: rgba(217, 119, 6, 0.12); color: #d97706;">
+                                <span class="badge rounded-pill px-3 py-1.5 small fw-semibold" style="background: rgba(2, 132, 199, 0.12); color: var(--theme-primary);">
                                     <i class="fa-solid fa-building me-1"></i> EPC Bridge Package
                                 </span>
-                                <i class="fa-solid fa-file-pdf text-danger fs-4"></i>
+                                <i class="fa-solid fa-file-pdf fs-4" style="color: var(--theme-primary);"></i>
                             </div>
                             <h5 class="fw-bold text-dark mb-2" style="font-family:'Oswald', sans-serif; font-size:18px;">
                                 Ashoka Buildcon Ltd. Approval
@@ -1174,7 +1174,7 @@ $testing_slider_images = [
                                 Official project engineer witness clearance and acceptance letter for high-tonnage elastomeric bearings supplied for National Highway bridge corridors.
                             </p>
                         </div>
-                        <button type="button" class="btn btn-outline-warning btn-sm rounded-pill w-100 fw-bold text-dark open-testing-doc-modal d-flex align-items-center justify-content-center gap-1.5"
+                        <button type="button" class="btn btn-outline-primary btn-sm rounded-pill w-100 fw-bold open-testing-doc-modal d-flex align-items-center justify-content-center gap-1.5"
                             data-doc-url="assets/pp_data/Page 01/POLYMER DETAILS/NH APPROVED LETTERS/LETTER/ashoka-3.pdf"
                             data-doc-title="Ashoka Buildcon Ltd. - Bridge Bearing Witness Approval Letter"
                             data-doc-type="pdf">
@@ -1188,10 +1188,10 @@ $testing_slider_images = [
                     <div class="tpi-cert-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
                         <div>
                             <div class="d-flex align-items-center justify-content-between mb-3">
-                                <span class="badge rounded-pill px-3 py-1.5 small fw-semibold" style="background: rgba(100, 116, 139, 0.12); color: #475569;">
+                                <span class="badge rounded-pill px-3 py-1.5 small fw-semibold" style="background: rgba(2, 132, 199, 0.12); color: var(--theme-primary);">
                                     <i class="fa-solid fa-bridge-water me-1"></i> Expressway Corridor
                                 </span>
-                                <i class="fa-solid fa-file-pdf text-danger fs-4"></i>
+                                <i class="fa-solid fa-file-pdf fs-4" style="color: var(--theme-primary);"></i>
                             </div>
                             <h5 class="fw-bold text-dark mb-2" style="font-family:'Oswald', sans-serif; font-size:18px;">
                                 GHV (India) Pvt. Ltd. Approval
@@ -1200,7 +1200,7 @@ $testing_slider_images = [
                                 Approved bridge bearing supplier letter verifying compliance with IRC:83 (Part II) specifications and third-party witness inspection acceptance.
                             </p>
                         </div>
-                        <button type="button" class="btn btn-outline-secondary btn-sm rounded-pill w-100 fw-bold open-testing-doc-modal d-flex align-items-center justify-content-center gap-1.5"
+                        <button type="button" class="btn btn-outline-primary btn-sm rounded-pill w-100 fw-bold open-testing-doc-modal d-flex align-items-center justify-content-center gap-1.5"
                             data-doc-url="assets/pp_data/Page 01/POLYMER DETAILS/NH APPROVED LETTERS/LETTERS/GHV  3.10.23.pdf"
                             data-doc-title="GHV (India) Pvt. Ltd. - Expressway Bearing Inspection Clearance"
                             data-doc-type="pdf">
