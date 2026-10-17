@@ -8604,7 +8604,7 @@ span {
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 220px;
+  min-width: 300px;
   background: var(--ht-white);
   padding: 10px 0;
   border-radius: 12px;
@@ -12916,18 +12916,22 @@ h6,
   scrollbar-width: thin;
   scrollbar-color: var(--theme-primary, #3691bf) #f1f5f9;
 }
+
 .table-responsive::-webkit-scrollbar {
   height: 8px;
 }
+
 .table-responsive::-webkit-scrollbar-track {
   background: #f1f5f9;
   border-radius: 10px;
 }
+
 .table-responsive::-webkit-scrollbar-thumb {
   background: var(--theme-primary, #3691bf);
   border-radius: 10px;
   border: 2px solid #f1f5f9;
 }
+
 .table-responsive::-webkit-scrollbar-thumb:hover {
   background: #0284c7;
 }

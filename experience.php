@@ -302,7 +302,7 @@ include_once 'partials/header.php';
                     <div class="text-primary fs-2 mb-3">
                         <i class="fa-solid fa-calendar-check"></i>
                     </div>
-                    <h5 class="fw-bold text-dark mb-2" style="font-family: 'Oswald', sans-serif;">45+ Years Experience</h5>
+                    <h5 class="fw-bold text-dark mb-2" style="font-family: 'Oswald', sans-serif;">50+ Years Experience</h5>
                     <p class="text-muted small mb-0">
                         Established in 1978, delivering high-performance elastomeric bearings across 4+ decades.
                     </p>

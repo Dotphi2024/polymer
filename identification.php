@@ -598,7 +598,7 @@ include_once 'partials/header.php';
                             <p class="mb-1"><strong>Project Name:</strong> National Highway Bridge / Elevated Viaduct Flyover</p>
                             <p class="mb-1"><strong>Bearing Type:</strong> Steel-Laminated Elastomeric Bearing (CR / NR)</p>
                             <p class="mb-1"><strong>Bearing Size:</strong> 350 mm &times; 450 mm &times; 68 mm</p>
-                            <p class="mb-1"><strong>Proof Load Tested:</strong> Yes (1.5 &times; Design Vertical Load Verified @ 2000 kN)</p>
+                            <!-- <p class="mb-1"><strong>Proof Load Tested:</strong> Yes (1.5 &times; Design Vertical Load Verified @ 2000 kN)</p> -->
                             <p class="mb-0"><strong>Inspector Sign / Stamp:</strong> Authorized Plant QA/QC Verified</p>
                         </div>
                     </div>
@@ -611,7 +611,7 @@ include_once 'partials/header.php';
                 <!-- Real Image of Marking in Plant -->
                 <div class="mt-4 p-3 bg-white rounded-4 border shadow-sm">
                     <img src="assets/pp_data/Machine_Images/20/image-9.webp" alt="Plant Operator applying indelible marking" class="img-fluid rounded-3 w-100" style="height:230px; object-fit:cover;">
-                    <p class="text-center small text-muted mt-2 mb-0">Plant operator applying indelible hot-embossed lot markings on cured bearings</p>
+                    <!-- <p class="text-center small text-muted mt-2 mb-0">Plant operator applying indelible hot-embossed lot markings on cured bearings</p> -->
                 </div>
             </div>
         </div>

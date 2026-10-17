@@ -50,6 +50,75 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <link rel="stylesheet" href="assets/css/theme-switcher.css?v=<?= time() ?>">
     <!--<< Layout.css >>-->
     <link rel="stylesheet" href="assets/css/layout.css?v=<?= time() ?>">
+
+    <style>
+    /* Right-side Nested Submenu Flyout for Desktop Navigation */
+    .ht-menu-main ul li .sub-menu {
+        overflow: visible !important;
+    }
+    .ht-menu-main ul li .sub-menu li.has-dropdown-sub {
+        position: relative;
+    }
+    .ht-menu-main ul li .sub-menu li.has-dropdown-sub > a {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 18px !important;
+    }
+    .ht-menu-main ul li .sub-menu li.has-dropdown-sub .sub-menu-right {
+        position: absolute;
+        top: -8px;
+        left: 100%;
+        min-width: 320px;
+        max-height: 520px;
+        overflow-y: auto;
+        background: #ffffff;
+        padding: 8px 0;
+        margin: 0;
+        list-style: none;
+        border-radius: 14px;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
+        border: 1px solid #e2e8f0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(12px);
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        z-index: 1000;
+    }
+    .ht-menu-main ul li .sub-menu li.has-dropdown-sub:hover > .sub-menu-right {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+    .ht-menu-main ul li .sub-menu li.has-dropdown-sub .sub-menu-right li {
+        display: block;
+        margin: 0;
+    }
+    .ht-menu-main ul li .sub-menu li.has-dropdown-sub .sub-menu-right li a {
+        display: flex;
+        align-items: center;
+        padding: 8px 18px;
+        font-size: 13.5px;
+        font-weight: 500;
+        color: #1e293b;
+        border-left: 3px solid transparent;
+        transition: all 0.2s ease;
+        white-space: nowrap;
+    }
+    .ht-menu-main ul li .sub-menu li.has-dropdown-sub .sub-menu-right li a:hover {
+        color: var(--theme-primary);
+        background: #f0f7ff;
+        border-left: 3px solid var(--theme-primary);
+        padding-left: 22px;
+    }
+    .sub-menu-right::-webkit-scrollbar {
+        width: 6px;
+    }
+    .sub-menu-right::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+    }
+    </style>
 </head>
 
 <body class="body-color">
@@ -137,7 +206,27 @@ $current_page = basename($_SERVER['PHP_SELF']);
                                             Products   <i class="fa-solid fa-chevron-down dropdown-icon"></i>
                                         </a>
                                         <ul class="sub-menu">
-                                            <li><a href="services.php">Proposed Bearing Types & Applications</a></li>
+                                            <li class="has-dropdown-sub">
+                                                <a href="services.php">
+                                                    <span>Proposed Bearing Types &amp; Applications</span>
+                                                    <i class="fa-solid fa-chevron-right ms-2" style="font-size: 11px;"></i>
+                                                </a>
+                                                <ul class="sub-menu-right shadow-lg">
+                                                    <li><a href="services.php#type-a"><i class="fa-solid fa-layer-group text-primary me-2"></i>Type A: Plain Pad / Strip</a></li>
+                                                    <li><a href="services.php#type-b"><i class="fa-solid fa-shield-halved text-primary me-2"></i>Type B: Laminated Bearing</a></li>
+                                                    <li><a href="services.php#type-c"><i class="fa-solid fa-compress text-primary me-2"></i>Type C: Thicker End Laminates</a></li>
+                                                    <li><a href="services.php#type-d"><i class="fa-solid fa-cubes text-primary me-2"></i>Type D: Top Outer Steel Plate</a></li>
+                                                    <li><a href="services.php#type-e"><i class="fa-solid fa-square-binary text-primary me-2"></i>Type E: Both Outer Steel Plates</a></li>
+                                                    <li><a href="services.php#type-f"><i class="fa-solid fa-anchor text-primary me-2"></i>Type F: Positive Anchorage</a></li>
+                                                    <li><a href="services.php#type-g"><i class="fa-solid fa-gauge-high text-primary me-2"></i>Type G: PTFE Sliding Bearing</a></li>
+                                                    <li><a href="services.php#type-h"><i class="fa-solid fa-arrows-left-right text-primary me-2"></i>Type H: Guided Restraints</a></li>
+                                                    <li><a href="services.php#type-i"><i class="fa-solid fa-wave-square text-primary me-2"></i>Type I: Seismic Isolation</a></li>
+                                                    <li><a href="services.php#type-rdso"><i class="fa-solid fa-train text-primary me-2"></i>Type RDSO: Railway Heavy Axle</a></li>
+                                                    <li><a href="services.php#pot-ptfe"><i class="fa-solid fa-circle-dot text-primary me-2"></i>POT / PTFE PAD</a></li>
+                                                    <li><a href="services.php#rubber-bunk"><i class="fa-solid fa-cube text-primary me-2"></i>Rubber Bunk (Buffer Pad)</a></li>
+                                                    <li><a href="services.php#locator"><i class="fa-solid fa-crosshairs text-primary me-2"></i>Locator (Seismic Restraint)</a></li>
+                                                </ul>
+                                            </li>
                                             <li><a href="material-used.php">Raw Materials Used</a></li>
                                             <li><a href="application-codes.php">Application Codes & Standards</a></li>
                                         </ul>
@@ -150,11 +239,15 @@ $current_page = basename($_SERVER['PHP_SELF']);
                                         <ul class="sub-menu">
                                             <li><a href="process.php">Detailed Process Flow</a></li>
                                             <li><a href="process.php#machinery">List of Machinery</a></li>
-                                            <li><a href="testing.php">Testing & QA/QC System (NHAI/RDSO)</a></li>
+                                            <!-- <li><a href="testing.php">Testing & QA/QC System (NHAI/RDSO)</a></li> -->
                                             <li><a href="identification.php">Product Identification System</a></li>
                                         </ul>
                                     </li>
                                     
+                                    <li class="<?php echo in_array($current_page, ['testing.php', 'testing.html']) ? 'active' : ''; ?>">
+                                        <a href="testing.php" class="fw-semibold nav-link-item">Testing &amp; QA/QC</a>
+                                    </li>
+
                                     <li class="<?php echo in_array($current_page, ['experience.php', 'experience.html']) ? 'active' : ''; ?>">
                                         <a href="experience.php" class="fw-semibold nav-link-item">Experience & Supplies</a>
                                     </li>
@@ -228,7 +321,24 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <li class="has-dropdown">
                             <a href="services.php">Products & Specs</a>
                             <ul class="sub-menu">
-                                <li><a href="services.php">Proposed Bearing Types</a></li>
+                                <li class="has-dropdown">
+                                    <a href="services.php" class="fw-bold text-primary">Proposed Bearing Types &amp; Applications</a>
+                                    <ul class="sub-menu ps-3">
+                                        <li><a href="services.php#type-a">&bull; Type A (Plain Pad / Strip)</a></li>
+                                        <li><a href="services.php#type-b">&bull; Type B (Laminated)</a></li>
+                                        <li><a href="services.php#type-c">&bull; Type C (Thicker End Laminates)</a></li>
+                                        <li><a href="services.php#type-d">&bull; Type D (Top Steel Plate)</a></li>
+                                        <li><a href="services.php#type-e">&bull; Type E (Both Outer Steel Plates)</a></li>
+                                        <li><a href="services.php#type-f">&bull; Type F (Positive Anchorage)</a></li>
+                                        <li><a href="services.php#type-g">&bull; Type G (PTFE Sliding)</a></li>
+                                        <li><a href="services.php#type-h">&bull; Type H (Guided Restraint)</a></li>
+                                        <li><a href="services.php#type-i">&bull; Type I (Seismic Isolation)</a></li>
+                                        <li><a href="services.php#type-rdso">&bull; Type RDSO (Railway Heavy Axle)</a></li>
+                                        <li><a href="services.php#pot-ptfe">&bull; POT / PTFE PAD</a></li>
+                                        <li><a href="services.php#rubber-bunk">&bull; Rubber Bunk (Buffer Pad)</a></li>
+                                        <li><a href="services.php#locator">&bull; Locator (Seismic Restraint)</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="material-used.php">Raw Materials Used</a></li>
                                 <li><a href="application-codes.php">Application Codes & Standards</a></li>
                             </ul>
@@ -238,10 +348,11 @@ $current_page = basename($_SERVER['PHP_SELF']);
                             <ul class="sub-menu">
                                 <li><a href="process.php">Detailed Process Flow</a></li>
                                 <li><a href="process.php#machinery">List of Machinery</a></li>
-                                <li><a href="testing.php">Testing & QA/QC System (NHAI/RDSO)</a></li>
+                                <!-- <li><a href="testing.php">Testing & QA/QC System (NHAI/RDSO)</a></li> -->
                                 <li><a href="identification.php">Product Identification System</a></li>
                             </ul>
                         </li>
+                        <li><a href="testing.php">Testing &amp; QA/QC System</a></li>
                         <li><a href="experience.php">Experience & Supplies</a></li>
                         <li><a href="storage-handling.php">Storage & Installation</a></li>
                         <li><a href="application-codes.php">Application Standards</a></li>

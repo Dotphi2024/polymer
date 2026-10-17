@@ -147,11 +147,11 @@ include_once 'partials/header.php';
                 muted 
                 loop 
                 playsinline 
-                poster="assets/img/img/banner/factory-image-1.webp"
+                poster="assets/img/img/banner/type-c-1.webp"
                 class="w-100 d-block"
                 style="height: 480px; object-fit: cover; transition: transform 0.6s ease;">
                 <!-- Replace with your actual video source path -->
-                <source src="https://polymer.b-cdn.net/about-polymer-video.mp4" type="video/mp4">
+                <!-- <source src="https://polymer.b-cdn.net/about-polymer-video.mp4" type="video/mp4"> -->
                 <source src="assets/video/factory-video.webm" type="video/webm">
                 Your browser does not support the video tag.
             </video>

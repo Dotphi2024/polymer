@@ -6,7 +6,7 @@ include_once 'partials/header.php';
 // Array of all 49 plant and process images with metadata
 $process_images = [
     ["file" => "image-1.webp", "title" => "Hydraulic Vulcanizing Press", "cat" => "presses", "desc" => "Multi-daylight hydraulic vulcanizing press with digital PLC temperature controls."],
-    ["file" => "image-2.webp", "title" => "High-Pressure Compression Moulding", "cat" => "presses", "desc" => "Heavy-duty hydraulic clamping for complete elastomeric cross-linking."],
+    ["file" => "image-2.webp", "title" => "Two-Roll Mixing Mill/Rubber Mixing Mill", "cat" => "presses", "desc" => "Heavy-duty hydraulic clamping for complete elastomeric cross-linking."],
     ["file" => "image-3.webp", "title" => "Two-Roll Rubber Mixing Mill", "cat" => "compounding", "desc" => "Water-cooled open mixing mill for precision polymer compounding."],    
     ["file" => "image-4.webp", "title" => "Hydraulic Pressure Control Panel", "cat" => "presses", "desc" => "Digital pressure and cycle timer instrumentation on main press line."],
     ["file" => "image-5.webp", "title" => "Steel Plate Shearing Station", "cat" => "steel", "desc" => "Precision guillotine shearing of IS:2062 internal steel laminates."],
@@ -660,7 +660,7 @@ $process_images = [
 
             <div class="col-lg-3 col-md-6">
                 <div class="p-3 bg-light rounded-4 shadow-sm border h-100 text-center">
-                    <a href="assets/pp_data/Machine_Images/20/image-4.webp" class="popup-image d-block mb-3 overflow-hidden rounded-3" title="Plate Shearing & Shot Blasting - Steel plate guillotine shearing and enclosed grit shot-blasting chamber.">
+                    <a href="assets/pp_data/Machine_Images/20/image-4.webp" class="popup-image d-block mb-3 overflow-hidden rounded-3" title="Straighting m/c for H.r Sheet &Plates - Steel plate guillotine shearing and enclosed grit shot-blasting chamber.">
                         <img src="assets/pp_data/Machine_Images/20/image-4.webp" alt="Steel Preparation" class="img-fluid" style="height:170px; width:100%; object-fit:cover; transition: transform 0.3s ease; cursor: pointer;">
                     </a>
                     <h6 class="fw-bold text-dark mb-1">Plate Shearing &amp; Shot Blasting</h6>
@@ -670,10 +670,10 @@ $process_images = [
 
             <div class="col-lg-3 col-md-6">
                 <div class="p-3 bg-light rounded-4 shadow-sm border h-100 text-center">
-                    <a href="assets/pp_data/Machine_Images/20/image-16.webp" class="popup-image d-block mb-3 overflow-hidden rounded-3" title="In-House Proof Load Testing Rig - Computerized compressive load test frame calibrated for up to 1.5x design load verification.">
+                    <a href="assets/pp_data/Machine_Images/20/image-16.webp" class="popup-image d-block mb-3 overflow-hidden rounded-3" title="Shearing M/c for H.R Sheet - Computerized compressive load test frame calibrated for up to 1.5x design load verification.">
                         <img src="assets/pp_data/Machine_Images/20/image-16.webp" alt="Testing Equipment" class="img-fluid" style="height:170px; width:100%; object-fit:cover; transition: transform 0.3s ease; cursor: pointer;">
                     </a>
-                    <h6 class="fw-bold text-dark mb-1">In-House Proof Load Testing Rig</h6>
+                    <h6 class="fw-bold text-dark mb-1">Shearing M/c for H.R Sheet</h6>
                     <small class="text-muted">Computerized compressive load test frame calibrated for up to 1.5x design load verification.</small>
                 </div>
             </div>

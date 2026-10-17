@@ -3,17 +3,124 @@ $page_title = "Testing & QA/QC System (NHAI & RDSO) - Polymer Products";
 $meta_description = "Quality Assurance Plan (QAP), material testing protocols, 1.5x proof-load verification, and third-party inspection for elastomeric bridge bearings.";
 include_once 'partials/header.php'; 
 
-// Testing & Laboratory Showcase Images Array (High-Resolution Factory Testing Photos)
+// Testing & Laboratory Showcase Images Array (High-Resolution Factory Lab Testing Photos)
 $testing_slider_images = [
-    ["file" => "assets/img/img/banner/2.webp"],
-    ["file" => "assets/img/img/banner/3.webp"],
-    ["file" => "assets/img/img/banner/4.webp"],
-    ["file" => "assets/img/img/banner/5.webp"],
-    ["file" => "assets/img/img/banner/6.webp"]
+    [
+        "file" => "assets/pp_data/Machine_Images/webp/IMG20260913164338.webp",
+        "title" => "Universal Testing Machine (UTM)",
+        "desc" => "Tensile strength, elongation at break, and peel bond adhesion testing."
+    ],
+    [
+        "file" => "assets/pp_data/Machine_Images/webp/IMG20260913164426.webp",
+        "title" => "Oscillating Disc Rheometer (ODR)",
+        "desc" => "Computerized cure characteristics, scorch time, and compounding uniformity."
+    ],
+    [
+        "file" => "assets/pp_data/Machine_Images/webp/IMG20260913164437.webp",
+        "title" => "Computerized Rheometer QC Console",
+        "desc" => "Real-time cure kinetic graph acquisition for elastomer compounding batch records."
+    ],
+    [
+        "file" => "assets/pp_data/Machine_Images/webp/IMG20260913164521.webp",
+        "title" => "ASTM D412 Specimen Punching Frame",
+        "desc" => "Precision Die-C dumbbell coupon cutter for tensile test preparation."
+    ],
+    [
+        "file" => "assets/pp_data/Machine_Images/webp/IMG20260913164548.webp",
+        "title" => "Thermal Ageing Test Oven",
+        "desc" => "Digital circulating air oven for 70°C / 72-hr accelerated heat resistance."
+    ],
+    [
+        "file" => "assets/pp_data/Machine_Images/webp/IMG20260913164602.webp",
+        "title" => "High-Temperature Muffle Furnace",
+        "desc" => "Determining ash content and elastomer content of rubber compounds."
+    ],
+    [
+        "file" => "assets/img/img/banner/irhd-image.png",
+        "title" => "IRHD Hardness Tester (M/c)",
+        "desc" => "International Rubber Hardness Degree tester per IS:3400 / ISO 48."
+    ],
+    [
+        "file" => "assets/img/testing/goodrich-flexometer.jpg",
+        "title" => "Goodrich Flexometer",
+        "desc" => "Heat build-up and dynamic flexing behaviour under cyclic compression."
+    ],
+    [
+        "file" => "assets/img/testing/rubber-density-tester.jpg",
+        "title" => "Rubber Density Tester (Densimeter)",
+        "desc" => "Determining specific gravity and density of elastomer compounds."
+    ],
+    [
+        "file" => "assets/pp_data/Machine_Images/20/image-17.webp",
+        "title" => "Compressive Proof Load Testing Rig",
+        "desc" => "High-tonnage hydraulic frame verifying 1.5x design vertical load."
+    ]
 ];
 ?>
 
 <style>
+.tpi-agency-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.tpi-agency-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(2, 132, 199, 0.10);
+    border-color: var(--theme-primary);
+}
+.tpi-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--theme-subtle);
+    color: var(--theme-primary);
+    font-size: 20px;
+    flex-shrink: 0;
+}
+.witness-photo-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.35s ease;
+    cursor: pointer;
+}
+.witness-photo-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--theme-primary);
+    box-shadow: 0 16px 32px rgba(2, 132, 199, 0.14);
+}
+.witness-photo-wrap {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+    background: #0f172a;
+}
+.witness-photo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.witness-photo-card:hover .witness-photo-wrap img {
+    transform: scale(1.08);
+}
+.tpi-cert-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+.tpi-cert-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+    border-color: var(--theme-primary);
+}
 .testing-hero-badge {
     background: var(--theme-subtle);
     border: 1px solid var(--theme-primary);
@@ -207,6 +314,9 @@ $testing_slider_images = [
                     <a href="#lab-facilities" class="btn btn-outline-light rounded-pill px-4 py-2.5 fw-bold text-uppercase" style="font-size:13px; letter-spacing:0.5px;">
                         <i class="fa-solid fa-flask me-2"></i>In-House Lab
                     </a>
+                    <a href="#third-party-witness" class="btn btn-outline-light rounded-pill px-4 py-2.5 fw-bold text-uppercase" style="font-size:13px; letter-spacing:0.5px;">
+                        <i class="fa-solid fa-users-viewfinder me-2"></i>Third-Party Witness
+                    </a>
                 </div>
             </div>
 
@@ -246,7 +356,7 @@ $testing_slider_images = [
                     Laboratory Testing &amp; Inspection Showcase
                 </h2>
                 <p class="text-muted small mt-1 mb-0" style="max-width: 680px;">
-                    Stage-wise testing rigs, proof load frames, UTM tensile setups, and factory quality verification photos.
+                    Calibrated testing equipment, computerized ODR curemeters, proof load frames, UTM tensile rigs, and rubber compounding QA testing.
                 </p>
             </div>
 
@@ -266,19 +376,27 @@ $testing_slider_images = [
             <div class="swiper-wrapper">
                 <?php foreach ($testing_slider_images as $idx => $tImg): ?>
                 <div class="swiper-slide h-auto">
-                    <div class="testing-slider-card open-testing-doc-modal h-100"
+                    <div class="testing-slider-card open-testing-doc-modal h-100 d-flex flex-column justify-content-between"
                         data-doc-url="<?php echo htmlspecialchars($tImg['file']); ?>"
-                        data-doc-title="Factory Testing &amp; Inspection Photo"
+                        data-doc-title="<?php echo htmlspecialchars($tImg['title']); ?>"
                         data-doc-type="image"
                         role="button"
                         tabindex="0">
                         <div class="testing-slider-img-wrap">
-                            <img src="<?php echo htmlspecialchars($tImg['file']); ?>" alt="Factory Testing Photo <?php echo ($idx + 1); ?>" loading="lazy">
+                            <img src="<?php echo htmlspecialchars($tImg['file']); ?>" alt="<?php echo htmlspecialchars($tImg['title']); ?>" loading="lazy">
                             <div class="testing-slider-overlay">
                                 <span class="btn btn-light btn-sm rounded-pill fw-bold px-3 py-1.5 shadow">
                                     <i class="fa-solid fa-magnifying-glass-plus me-1 text-primary"></i> Click to View
                                 </span>
                             </div>
+                        </div>
+                        <div class="p-3 bg-white border-top">
+                            <h6 class="fw-bold text-dark mb-1 text-truncate" style="font-family:'Oswald', sans-serif; font-size:15px;" title="<?php echo htmlspecialchars($tImg['title']); ?>">
+                                <?php echo htmlspecialchars($tImg['title']); ?>
+                            </h6>
+                            <small class="text-muted d-block text-truncate" style="font-size:12px;" title="<?php echo htmlspecialchars($tImg['desc']); ?>">
+                                <?php echo htmlspecialchars($tImg['desc']); ?>
+                            </small>
                         </div>
                     </div>
                 </div>
@@ -525,9 +643,10 @@ $testing_slider_images = [
         </div>
 
         <div class="row g-4">
+            <!-- 1. Universal Testing Machine (UTM) -->
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".1s">
                 <div class="lab-card shadow-sm h-100">
-                    <img src="assets/pp_data/Machine_Images/webp/IMG20260913164426.webp" alt="Universal Testing Machine (UTM)">
+                    <img src="assets/pp_data/Machine_Images/webp/IMG20260913164338.webp" alt="Universal Testing Machine (UTM)">
                     <div class="p-3">
                         <h6 class="fw-bold text-dark mb-1" style="font-family: 'Oswald', sans-serif; font-size: 17px;">Universal Testing Machine (UTM)</h6>
                         <p class="small text-muted mb-0">Electronic UTM with extensometer for tensile strength and elongation at break testing.</p>
@@ -535,9 +654,10 @@ $testing_slider_images = [
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+            <!-- 2. Thermal Ageing Oven -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".15s">
                 <div class="lab-card shadow-sm h-100">
-                    <img src="assets/pp_data/Machine_Images/webp/IMG20260913164437.webp" alt="Thermal Ageing Oven">
+                    <img src="assets/pp_data/Machine_Images/webp/IMG20260913164548.webp" alt="Thermal Ageing Oven">
                     <div class="p-3">
                         <h6 class="fw-bold text-dark mb-1" style="font-family: 'Oswald', sans-serif; font-size: 17px;">Thermal Ageing Oven</h6>
                         <p class="small text-muted mb-0">Digital temperature-controlled circulating oven for 70°C / 72-hour thermal stability tests.</p>
@@ -545,9 +665,10 @@ $testing_slider_images = [
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+            <!-- 3. Compressive Proof Load Frame -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".2s">
                 <div class="lab-card shadow-sm h-100">
-                    <img src="assets/pp_data/Machine_Images/webp/IMG20260913162728.webp" alt="Compressive Proof Load Frame">
+                    <img src="assets/pp_data/Machine_Images/20/image-17.webp" alt="Compressive Proof Load Frame">
                     <div class="p-3">
                         <h6 class="fw-bold text-dark mb-1" style="font-family: 'Oswald', sans-serif; font-size: 17px;">Compressive Proof Load Frame</h6>
                         <p class="small text-muted mb-0">High-tonnage hydraulic test rig verifying 1.5x design vertical load without bulging failure.</p>
@@ -555,32 +676,556 @@ $testing_slider_images = [
                 </div>
             </div>
 
+            <!-- 4. IRHD Hardness Tester -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".25s">
+                <div class="lab-card shadow-sm h-100">
+                    <img src="assets/img/img/banner/irhd-image.png" alt="IRHD Hardness Tester (International Rubber Hardness Degree)">
+                    <div class="p-3">
+                        <h6 class="fw-bold text-dark mb-1" style="font-family: 'Oswald', sans-serif; font-size: 17px;">IRHD Hardness Tester</h6>
+                        <p class="small text-muted mb-0">International Rubber Hardness Degree (IRHD) tester for micro/macro hardness testing of bearing elastomers per IS:3400.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Goodrich Flexometer -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                <div class="lab-card shadow-sm h-100">
+                    <img src="assets/img/testing/goodrich-flexometer.jpg" alt="Goodrich Flexometer">
+                    <div class="p-3">
+                        <h6 class="fw-bold text-dark mb-1" style="font-family: 'Oswald', sans-serif; font-size: 17px;">Goodrich Flexometer</h6>
+                        <p class="small text-muted mb-0">In-house testing of rubber compounds to evaluate heat build-up and flexing behaviour under repeated cyclic compression.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Muffle Furnace -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".35s">
+                <div class="lab-card shadow-sm h-100">
+                    <img src="assets/pp_data/Machine_Images/webp/IMG20260913164602.webp" alt="Muffle Furnace">
+                    <div class="p-3">
+                        <h6 class="fw-bold text-dark mb-1" style="font-family: 'Oswald', sans-serif; font-size: 17px;">Muffle Furnace</h6>
+                        <p class="small text-muted mb-0">Used for laboratory testing, such as determining ash content of rubber compounds, where applicable.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Rubber Density Tester (Densimeter) -->
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".4s">
                 <div class="lab-card shadow-sm h-100">
-                    <img src="assets/pp_data/Machine_Images/webp/IMG20260913162650.webp" alt="Durometers & Thickness Gauges">
+                    <img src="assets/img/testing/rubber-density-tester.jpg" alt="Rubber Density Tester (Densimeter)">
                     <div class="p-3">
-                        <h6 class="fw-bold text-dark mb-1" style="font-family: 'Oswald', sans-serif; font-size: 17px;">Durometers &amp; Thickness Gauges</h6>
-                        <p class="small text-muted mb-0">Calibrated Shore-A durometers and digital micrometers for stage-wise dimensional control.</p>
+                        <h6 class="fw-bold text-dark mb-1" style="font-family: 'Oswald', sans-serif; font-size: 17px;">Rubber Density Tester (Densimeter)</h6>
+                        <p class="small text-muted mb-0">Used to determine the density or specific gravity of rubber compounds and specimens.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Oscillating Disc Rheometer (ODR) -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".45s">
+                <div class="lab-card shadow-sm h-100">
+                    <img src="assets/pp_data/Machine_Images/webp/IMG20260913164426.webp" alt="Oscillating Disc Rheometer (ODR)">
+                    <div class="p-3">
+                        <h6 class="fw-bold text-dark mb-1" style="font-family: 'Oswald', sans-serif; font-size: 17px;">Oscillating Disc Rheometer (ODR)</h6>
+                        <p class="small text-muted mb-0">Precision rheometer evaluating scorch time, optimum cure time (Tc90), and batch-to-batch compounding consistency.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Third Party Inspection Support -->
-        <div class="mt-5 p-4 rounded-4 border shadow-sm wow fadeInUp" data-wow-delay=".2s" style="background:#f0f7ff;">
+    </div>
+</section>
+
+<!-- ============================================================
+     6. Third-Party Witness Inspection, Accredited Agencies & Certificates
+     ============================================================ -->
+<section class="py-5" id="third-party-witness" style="background: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+    <div class="container-fluid px-3 px-lg-5 py-3">
+        
+        <!-- Section Header -->
+        <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay=".1s">
+            <span class="badge px-3 py-1.5 rounded-pill font-monospace fw-bold text-uppercase mb-2"
+                style="background: var(--theme-subtle); color: var(--theme-primary); font-size: 12px; letter-spacing: 1px;">
+                Stage-Wise Quality Surveillance
+            </span>
+            <h2 class="fw-bold text-dark text-uppercase" style="font-family:'Oswald', sans-serif; font-size: clamp(26px, 3.2vw, 36px);">
+                Third-Party Witness Inspection &amp; Accredited Agencies
+            </h2>
+            <p class="text-muted mx-auto mb-0" style="max-width:760px; font-size:15px; line-height: 1.8;">
+                We regularly facilitate independent third-party inspection (TPI) authorities and client representatives for raw-compound sampling, dimensional verification, dual-bearing shear modulus testing, and 100% finished bearing proof-load testing at our Nashik plant.
+            </p>
+        </div>
+
+        <!-- Accredited Third-Party Inspection Agencies Grid -->
+        <div class="row g-4 mb-5">
+            <!-- 1. RITES Ltd. -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".1s">
+                <div class="tpi-agency-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="tpi-icon-box">
+                                <i class="fa-solid fa-train"></i>
+                            </div>
+                            <span class="badge rounded-pill px-3 py-1.5 small fw-semibold" style="background: rgba(2, 132, 199, 0.12); color: var(--theme-primary);">
+                                Indian Railways &amp; Metro
+                            </span>
+                        </div>
+                        <h5 class="fw-bold text-dark mb-1" style="font-family:'Oswald', sans-serif; font-size:19px;">RITES Ltd.</h5>
+                        <small class="text-primary fw-semibold d-block mb-2">Ministry of Railways &bull; QA Division</small>
+                        <p class="small text-muted mb-0" style="line-height:1.7; font-size:13.5px;">
+                            Stage-wise raw compounding verification, vulcanizing cycle witness, dual-bearing shear modulus testing (G = 0.8–1.2 MPa), and 100% finished proof load test witnessing for Indian Railways and Metro rail bridge projects.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-3 border-top d-flex align-items-center text-success small fw-semibold">
+                        <i class="fa-solid fa-circle-check me-1.5"></i> Regular Stage-Wise Witness
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. DNV GL -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".15s">
+                <div class="tpi-agency-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="tpi-icon-box">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <span class="badge rounded-pill px-3 py-1.5 small fw-semibold" style="background: rgba(2, 132, 199, 0.12); color: var(--theme-primary);">
+                                Global Inspection Authority
+                            </span>
+                        </div>
+                        <h5 class="fw-bold text-dark mb-1" style="font-family:'Oswald', sans-serif; font-size:19px;">DNV (Det Norske Veritas)</h5>
+                        <small class="text-primary fw-semibold d-block mb-2">Independent International Surveillance</small>
+                        <p class="small text-muted mb-0" style="line-height:1.7; font-size:13.5px;">
+                            Independent third-party technical surveillance, quality system compliance audits, and proof load verification ensuring complete conformity to international and national standards.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-3 border-top d-flex align-items-center text-success small fw-semibold">
+                        <i class="fa-solid fa-circle-check me-1.5"></i> Third-Party Surveillance
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. SGS India -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                <div class="tpi-agency-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="tpi-icon-box">
+                                <i class="fa-solid fa-flask-vial"></i>
+                            </div>
+                            <span class="badge rounded-pill px-3 py-1.5 small fw-semibold" style="background: rgba(2, 132, 199, 0.12); color: var(--theme-primary);">
+                                Material &amp; Compound QA
+                            </span>
+                        </div>
+                        <h5 class="fw-bold text-dark mb-1" style="font-family:'Oswald', sans-serif; font-size:19px;">SGS India Pvt. Ltd.</h5>
+                        <small class="text-primary fw-semibold d-block mb-2">Testing, Inspection &amp; Certification</small>
+                        <p class="small text-muted mb-0" style="line-height:1.7; font-size:13.5px;">
+                            Independent sampling of rubber compounds for tensile strength, elongation at break, polymer identification, ash content, and accelerated thermal ageing verification.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-3 border-top d-flex align-items-center text-success small fw-semibold">
+                        <i class="fa-solid fa-circle-check me-1.5"></i> Chemical &amp; Tensile Witness
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Engineers India Limited (EIL) -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".25s">
+                <div class="tpi-agency-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="tpi-icon-box">
+                                <i class="fa-solid fa-industry"></i>
+                            </div>
+                            <span class="badge rounded-pill px-3 py-1.5 small fw-semibold" style="background: rgba(2, 132, 199, 0.12); color: var(--theme-primary);">
+                                Public Sector Enterprise
+                            </span>
+                        </div>
+                        <h5 class="fw-bold text-dark mb-1" style="font-family:'Oswald', sans-serif; font-size:19px;">Engineers India Limited (EIL)</h5>
+                        <small class="text-primary fw-semibold d-block mb-2">Govt. Infrastructure Surveillance</small>
+                        <p class="small text-muted mb-0" style="line-height:1.7; font-size:13.5px;">
+                            Rigorous third-party quality control inspections, factory audit compliance, raw material testing verification, and bearing release certification for prestigious mega projects.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-3 border-top d-flex align-items-center text-success small fw-semibold">
+                        <i class="fa-solid fa-circle-check me-1.5"></i> Major Infrastructure Witness
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. TÜV Rheinland / TÜV SÜD -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                <div class="tpi-agency-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="tpi-icon-box">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                            <span class="badge rounded-pill px-3 py-1.5 small fw-semibold" style="background: rgba(2, 132, 199, 0.12); color: var(--theme-primary);">
+                                Calibration &amp; Type Testing
+                            </span>
+                        </div>
+                        <h5 class="fw-bold text-dark mb-1" style="font-family:'Oswald', sans-serif; font-size:19px;">TÜV Rheinland / TÜV SÜD</h5>
+                        <small class="text-primary fw-semibold d-block mb-2">Technical Auditing &amp; Certification</small>
+                        <p class="small text-muted mb-0" style="line-height:1.7; font-size:13.5px;">
+                            Calibration audits of plant testing rigs (750T hydraulic press, UTM, proof-load frames) and type testing witness verification under rigorous cyclic shear conditions.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-3 border-top d-flex align-items-center text-success small fw-semibold">
+                        <i class="fa-solid fa-circle-check me-1.5"></i> Rig Calibration &amp; Audit
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Bureau Veritas (BVQI) -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".35s">
+                <div class="tpi-agency-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="tpi-icon-box">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <span class="badge rounded-pill px-3 py-1.5 small fw-semibold" style="background: rgba(2, 132, 199, 0.12); color: var(--theme-primary);">
+                                Quality Management &amp; Inspection
+                            </span>
+                        </div>
+                        <h5 class="fw-bold text-dark mb-1" style="font-family:'Oswald', sans-serif; font-size:19px;">Bureau Veritas (BVQI)</h5>
+                        <small class="text-primary fw-semibold d-block mb-2">Quality Compliance &amp; Inspection</small>
+                        <p class="small text-muted mb-0" style="line-height:1.7; font-size:13.5px;">
+                            Finished elastomeric bearing dimensional tolerance verification, elastomer-to-steel bond peel testing, and official inspection release notes for bridge projects.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-3 border-top d-flex align-items-center text-success small fw-semibold">
+                        <i class="fa-solid fa-circle-check me-1.5"></i> Release Note Verification
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Factory Third-Party Witness Testing Photographs -->
+        <div class="mb-5">
+            <div class="d-flex flex-wrap align-items-end justify-content-between mb-4 gap-3">
+                <div>
+                    <span class="badge px-3 py-1.5 rounded-pill font-monospace fw-bold text-uppercase mb-2"
+                        style="background: var(--theme-subtle); color: var(--theme-primary); font-size: 12px; letter-spacing: 1px;">
+                        Factory Floor Verification
+                    </span>
+                    <h3 class="fw-bold text-dark text-uppercase mb-0" style="font-family:'Oswald', sans-serif; font-size: clamp(22px, 2.5vw, 28px);">
+                         Client Witness Inspection Photos
+                    </h3>
+                    <p class="text-muted small mt-1 mb-0">
+                        Inspecting officers and client engineers observing proof-load verification and shear testing on the 750-Ton hydraulic test rig.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".1s">
+                    <div class="witness-photo-card open-testing-doc-modal h-100 shadow-sm"
+                        data-doc-url="assets/img/img/banner/3.webp"
+                        data-doc-title="Client Engineers & Inspecting Officers Witnessing Dual-Bearing Shear Modulus Test"
+                        data-doc-type="image"
+                        role="button"
+                        tabindex="0">
+                        <div class="witness-photo-wrap">
+                            <img src="assets/img/img/banner/3.webp" alt="Client Engineers & Inspecting Officers Witnessing Test" loading="lazy">
+                            <div class="testing-slider-overlay">
+                                <span class="btn btn-light btn-sm rounded-pill fw-bold px-3 py-1.5 shadow">
+                                    <i class="fa-solid fa-magnifying-glass-plus me-1 text-primary"></i> View Photo
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white">
+                            <span class="badge bg-primary-subtle text-primary small mb-1">Shear Modulus Test</span>
+                            <h6 class="fw-bold text-dark mb-1" style="font-size:14.5px;">Client Engineers Witnessing Dual-Bearing Test</h6>
+                            <small class="text-muted" style="font-size:12px;">Inspection team observing horizontal shear deflection readings</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".15s">
+                    <div class="witness-photo-card open-testing-doc-modal h-100 shadow-sm"
+                        data-doc-url="assets/img/img/banner/4.webp"
+                        data-doc-title="Stage-Wise Inspection on 750-Ton Computerized Hydraulic Test Rig"
+                        data-doc-type="image"
+                        role="button"
+                        tabindex="0">
+                        <div class="witness-photo-wrap">
+                            <img src="assets/img/img/banner/4.webp" alt="Stage-Wise Inspection on Test Rig" loading="lazy">
+                            <div class="testing-slider-overlay">
+                                <span class="btn btn-light btn-sm rounded-pill fw-bold px-3 py-1.5 shadow">
+                                    <i class="fa-solid fa-magnifying-glass-plus me-1 text-primary"></i> View Photo
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white">
+                            <span class="badge bg-success-subtle text-success small mb-1">1.5x Proof Load</span>
+                            <h6 class="fw-bold text-dark mb-1" style="font-size:14.5px;">Stage-Wise Hydraulic Press Inspection</h6>
+                            <small class="text-muted" style="font-size:12px;">Vertical proof-load verification under full hydraulic pressure</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                    <div class="witness-photo-card open-testing-doc-modal h-100 shadow-sm"
+                        data-doc-url="assets/img/img/banner/6.webp"
+                        data-doc-title="Load & Deflection Data Logging with Project Authority Officials"
+                        data-doc-type="image"
+                        role="button"
+                        tabindex="0">
+                        <div class="witness-photo-wrap">
+                            <img src="assets/img/img/banner/6.webp" alt="Load & Deflection Data Logging" loading="lazy">
+                            <div class="testing-slider-overlay">
+                                <span class="btn btn-light btn-sm rounded-pill fw-bold px-3 py-1.5 shadow">
+                                    <i class="fa-solid fa-magnifying-glass-plus me-1 text-primary"></i> View Photo
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white">
+                            <span class="badge bg-danger-subtle text-danger small mb-1">Pressure Verification</span>
+                            <h6 class="fw-bold text-dark mb-1" style="font-size:14.5px;">Live Pressure Gauge &amp; Load Logging</h6>
+                            <small class="text-muted" style="font-size:12px;">Calibrated digital pressure transducer and dial recording</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".25s">
+                    <div class="witness-photo-card open-testing-doc-modal h-100 shadow-sm"
+                        data-doc-url="assets/img/img/banner/5.webp"
+                        data-doc-title="Deflection Dial Gauge & Platen Parallelism Inspection"
+                        data-doc-type="image"
+                        role="button"
+                        tabindex="0">
+                        <div class="witness-photo-wrap" style="height:200px;">
+                            <img src="assets/img/img/banner/5.webp" alt="Deflection Dial Gauge & Platen Parallelism Inspection" loading="lazy">
+                            <div class="testing-slider-overlay">
+                                <span class="btn btn-light btn-sm rounded-pill fw-bold px-3 py-1.5 shadow">
+                                    <i class="fa-solid fa-magnifying-glass-plus me-1 text-primary"></i> View Photo
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white">
+                            <h6 class="fw-bold text-dark mb-1" style="font-size:14.5px;">Platen Parallelism &amp; Dial Gauge Verification</h6>
+                            <small class="text-muted" style="font-size:12px;">Verifying zero bulging failure and absence of elastomer splitting</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="witness-photo-card open-testing-doc-modal h-100 shadow-sm"
+                        data-doc-url="assets/img/img/banner/2.webp"
+                        data-doc-title="High-Capacity 750-Ton Shear & Compressive Proof Load Testing Machine"
+                        data-doc-type="image"
+                        role="button"
+                        tabindex="0">
+                        <div class="witness-photo-wrap" style="height:200px;">
+                            <img src="assets/img/img/banner/2.webp" alt="High-Capacity 750-Ton Shear & Compressive Proof Load Testing Machine" loading="lazy">
+                            <div class="testing-slider-overlay">
+                                <span class="btn btn-light btn-sm rounded-pill fw-bold px-3 py-1.5 shadow">
+                                    <i class="fa-solid fa-magnifying-glass-plus me-1 text-primary"></i> View Photo
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white">
+                            <h6 class="fw-bold text-dark mb-1" style="font-size:14.5px;">750-Ton Shear &amp; Compression Testing Frame</h6>
+                            <small class="text-muted" style="font-size:12px;">Equipped with dual horizontal jacks for simultaneous pair shear testing</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Official Third-Party Certificates & Client Approvals -->
+        <div>
+            <div class="d-flex flex-wrap align-items-end justify-content-between mb-4 gap-3">
+                <div>
+                    <span class="badge px-3 py-1.5 rounded-pill font-monospace fw-bold text-uppercase mb-2"
+                        style="background: var(--theme-subtle); color: var(--theme-primary); font-size: 12px; letter-spacing: 1px;">
+                        Verified Credentials
+                    </span>
+                    <h3 class="fw-bold text-dark text-uppercase mb-0" style="font-family:'Oswald', sans-serif; font-size: clamp(22px, 2.5vw, 28px);">
+                        Third-Party &amp; Quality Approvals / Certificates
+                    </h3>
+                    <p class="text-muted small mt-1 mb-0">
+                        Click on any certificate to view the verified official PDF document in the secure preview viewer.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- 1. RDSO Technical Approval -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".1s">
+                    <div class="tpi-cert-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <span class="badge rounded-pill px-3 py-1.5 small fw-semibold" style="background: rgba(220, 38, 38, 0.12); color: #dc2626;">
+                                    <i class="fa-solid fa-train me-1"></i> RDSO BS-131
+                                </span>
+                                <i class="fa-solid fa-file-pdf text-danger fs-4"></i>
+                            </div>
+                            <h5 class="fw-bold text-dark mb-2" style="font-family:'Oswald', sans-serif; font-size:18px;">
+                                RDSO Technical Approval
+                            </h5>
+                            <p class="small text-muted mb-3" style="line-height:1.6; font-size:13px;">
+                                Research Designs and Standards Organisation (Indian Railways) official approval and test compliance conforming to RDSO BS-131 specifications.
+                            </p>
+                        </div>
+                        <button type="button" class="btn btn-outline-danger btn-sm rounded-pill w-100 fw-bold open-testing-doc-modal d-flex align-items-center justify-content-center gap-1.5"
+                            data-doc-url="assets/pp_data/Page 01/POLYMER DETAILS/NEW_RDSO.pdf"
+                            data-doc-title="RDSO Indian Railways Technical Approval &amp; Inspection Regime"
+                            data-doc-type="pdf">
+                            <i class="fa-solid fa-eye"></i> <span>View RDSO Certificate</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 2. NHAI Quality Assurance Plan (QAP) -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".15s">
+                    <div class="tpi-cert-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <span class="badge rounded-pill px-3 py-1.5 small fw-semibold" style="background: rgba(2, 132, 199, 0.12); color: var(--theme-primary);">
+                                    <i class="fa-solid fa-road me-1"></i> IRC:83 (Part II) 2018
+                                </span>
+                                <i class="fa-solid fa-file-pdf text-danger fs-4"></i>
+                            </div>
+                            <h5 class="fw-bold text-dark mb-2" style="font-family:'Oswald', sans-serif; font-size:18px;">
+                                NHAI Quality Assurance Plan
+                            </h5>
+                            <p class="small text-muted mb-3" style="line-height:1.6; font-size:13px;">
+                                Official stage-wise Quality Assurance Plan approved for National Highway (NHAI) bridge projects detailing routine and acceptance test witness.
+                            </p>
+                        </div>
+                        <button type="button" class="btn btn-outline-primary btn-sm rounded-pill w-100 fw-bold open-testing-doc-modal d-flex align-items-center justify-content-center gap-1.5"
+                            data-doc-url="assets/pp_data/Page 06/QAP-IRC-_2018 (R).pdf"
+                            data-doc-title="NHAI Quality Assurance Plan (QAP-IRC:83-2018)"
+                            data-doc-type="pdf">
+                            <i class="fa-solid fa-eye"></i> <span>View NHAI QAP Format</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 3. RDSO Railway Witness Checklist Format -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                    <div class="tpi-cert-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <span class="badge rounded-pill px-3 py-1.5 small fw-semibold" style="background: rgba(14, 165, 233, 0.12); color: #0284c7;">
+                                    <i class="fa-solid fa-clipboard-check me-1"></i> Railway QAP Format
+                                </span>
+                                <i class="fa-solid fa-file-pdf text-danger fs-4"></i>
+                            </div>
+                            <h5 class="fw-bold text-dark mb-2" style="font-family:'Oswald', sans-serif; font-size:18px;">
+                                RDSO Inspection Checklist &amp; QAP
+                            </h5>
+                            <p class="small text-muted mb-3" style="line-height:1.6; font-size:13px;">
+                                Official Indian Railways RDSO stage-wise inspection checklist format specifying test frequency, permissible limits, and witness signatures.
+                            </p>
+                        </div>
+                        <button type="button" class="btn btn-outline-primary btn-sm rounded-pill w-100 fw-bold open-testing-doc-modal d-flex align-items-center justify-content-center gap-1.5"
+                            data-doc-url="assets/pp_data/Page 06/Elastomeric QAP 2018 RDSO NEW - blank format.pdf"
+                            data-doc-title="RDSO Indian Railways Inspection &amp; Witness Format"
+                            data-doc-type="pdf">
+                            <i class="fa-solid fa-eye"></i> <span>View Railway Format</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 4. ISO 9001:2015 Certification -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".25s">
+                    <div class="tpi-cert-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <span class="badge rounded-pill px-3 py-1.5 small fw-semibold" style="background: rgba(22, 163, 74, 0.12); color: #16a34a;">
+                                    <i class="fa-solid fa-certificate me-1"></i> ISO 9001:2015
+                                </span>
+                                <i class="fa-solid fa-file-image text-success fs-4"></i>
+                            </div>
+                            <h5 class="fw-bold text-dark mb-2" style="font-family:'Oswald', sans-serif; font-size:18px;">
+                                ISO 9001:2015 Certification
+                            </h5>
+                            <p class="small text-muted mb-3" style="line-height:1.6; font-size:13px;">
+                                Accredited Quality Management System certificate for manufacturing, inspection, proof-load testing, and supply of elastomeric bridge bearings.
+                            </p>
+                        </div>
+                        <button type="button" class="btn btn-outline-success btn-sm rounded-pill w-100 fw-bold open-testing-doc-modal d-flex align-items-center justify-content-center gap-1.5"
+                            data-doc-url="assets/pp_data/Page 01/POLYMER DETAILS/ISO CERTIFICATE 2027.png"
+                            data-doc-title="ISO 9001:2015 Quality Management System Certificate"
+                            data-doc-type="image">
+                            <i class="fa-solid fa-eye"></i> <span>View ISO Certificate</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 5. Ashoka Buildcon Witness & Client Approval -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="tpi-cert-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <span class="badge rounded-pill px-3 py-1.5 small fw-semibold" style="background: rgba(217, 119, 6, 0.12); color: #d97706;">
+                                    <i class="fa-solid fa-building me-1"></i> EPC Bridge Package
+                                </span>
+                                <i class="fa-solid fa-file-pdf text-danger fs-4"></i>
+                            </div>
+                            <h5 class="fw-bold text-dark mb-2" style="font-family:'Oswald', sans-serif; font-size:18px;">
+                                Ashoka Buildcon Ltd. Approval
+                            </h5>
+                            <p class="small text-muted mb-3" style="line-height:1.6; font-size:13px;">
+                                Official project engineer witness clearance and acceptance letter for high-tonnage elastomeric bearings supplied for National Highway bridge corridors.
+                            </p>
+                        </div>
+                        <button type="button" class="btn btn-outline-warning btn-sm rounded-pill w-100 fw-bold text-dark open-testing-doc-modal d-flex align-items-center justify-content-center gap-1.5"
+                            data-doc-url="assets/pp_data/Page 01/POLYMER DETAILS/NH APPROVED LETTERS/LETTER/ashoka-3.pdf"
+                            data-doc-title="Ashoka Buildcon Ltd. - Bridge Bearing Witness Approval Letter"
+                            data-doc-type="pdf">
+                            <i class="fa-solid fa-eye"></i> <span>View Client Clearance</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 6. GHV India Witness & Supplier Clearance -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".35s">
+                    <div class="tpi-cert-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <span class="badge rounded-pill px-3 py-1.5 small fw-semibold" style="background: rgba(100, 116, 139, 0.12); color: #475569;">
+                                    <i class="fa-solid fa-bridge-water me-1"></i> Expressway Corridor
+                                </span>
+                                <i class="fa-solid fa-file-pdf text-danger fs-4"></i>
+                            </div>
+                            <h5 class="fw-bold text-dark mb-2" style="font-family:'Oswald', sans-serif; font-size:18px;">
+                                GHV (India) Pvt. Ltd. Approval
+                            </h5>
+                            <p class="small text-muted mb-3" style="line-height:1.6; font-size:13px;">
+                                Approved bridge bearing supplier letter verifying compliance with IRC:83 (Part II) specifications and third-party witness inspection acceptance.
+                            </p>
+                        </div>
+                        <button type="button" class="btn btn-outline-secondary btn-sm rounded-pill w-100 fw-bold open-testing-doc-modal d-flex align-items-center justify-content-center gap-1.5"
+                            data-doc-url="assets/pp_data/Page 01/POLYMER DETAILS/NH APPROVED LETTERS/LETTERS/GHV  3.10.23.pdf"
+                            data-doc-title="GHV (India) Pvt. Ltd. - Expressway Bearing Inspection Clearance"
+                            data-doc-type="pdf">
+                            <i class="fa-solid fa-eye"></i> <span>View Client Clearance</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Schedule Witness Support Callout -->
+        <div class="mt-5 p-4 rounded-4 border shadow-sm wow fadeInUp" data-wow-delay=".2s" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
             <div class="row align-items-center">
                 <div class="col-lg-8">
-                    <h5 class="fw-bold text-dark mb-2" style="font-family:'Oswald', sans-serif; font-size:20px;">
-                        <i class="fa-solid fa-users-viewfinder text-primary me-2"></i>Third-Party Witness Inspection Support
+                    <h5 class="fw-bold text-white mb-2" style="font-family:'Oswald', sans-serif; font-size:21px;">
+                        <i class="fa-solid fa-users-viewfinder text-primary me-2"></i>Schedule Third-Party Witness Testing or Plant Audit
                     </h5>
-                    <p class="small text-muted mb-0" style="line-height:1.7;">
-                        We regularly facilitate third-party inspection agencies including <strong>RITES, DNV, SGS, EIL, TUV, BVQI</strong>, and client engineers for physical sampling, shear modulus testing, and proof-load testing at our Nashik facility.
+                    <p class="small mb-0" style="color: #cbd5e1; line-height:1.7;">
+                        We arrange complete facilities for visiting inspection officers from <strong>RITES, DNV, SGS, EIL, TUV, BVQI</strong>, and client quality teams, providing computerized calibration certificates, calibrated test rigs, and complete stage-wise inspection documentation at our Nashik plant.
                     </p>
                 </div>
                 <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
                     <a href="contact.php" class="btn btn-primary rounded-pill px-4 py-2.5 fw-bold text-uppercase shadow-sm"
                         style="background:var(--theme-primary); border-color:var(--theme-primary); font-size:12.5px; letter-spacing:0.5px;">
-                        <i class="fa-solid fa-phone me-2"></i>Request Test Witness
+                        <i class="fa-solid fa-calendar-check me-2"></i>Request Test Witness
                     </a>
                 </div>
             </div>
