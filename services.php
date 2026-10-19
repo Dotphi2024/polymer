@@ -517,7 +517,7 @@ function render_bearing_gallery($images, $title, $carousel_id) {
             <a href="#type-e" class="bearing-nav-pill"><i class="fa-solid fa-square-binary text-primary"></i> Type E</a>
             <a href="#type-f" class="bearing-nav-pill"><i class="fa-solid fa-anchor text-primary"></i> Type F</a>
             <a href="#type-g" class="bearing-nav-pill"><i class="fa-solid fa-gauge-high text-primary"></i> Type G</a>
-            <a href="#type-h" class="bearing-nav-pill"><i class="fa-solid fa-arrows-left-right text-primary"></i> Type H</a>
+            <a href="#type-h" class="bearing-nav-pill"><i class="fa-solid fa-arrows-left-right text-primary"></i> Type H</a>  
             <a href="#type-i" class="bearing-nav-pill"><i class="fa-solid fa-wave-square text-primary"></i> Type I</a>
             <a href="#type-rdso" class="bearing-nav-pill"><i class="fa-solid fa-train text-primary"></i> Type RDSO</a>
             <a href="#pot-ptfe" class="bearing-nav-pill"><i class="fa-solid fa-circle-dot text-primary"></i> POT / PTFE</a>
@@ -526,7 +526,7 @@ function render_bearing_gallery($images, $title, $carousel_id) {
         </div>
 
         <!-- IRC:83 Master Classification Reference Box -->
-        <div class="mb-5 wow fadeInUp" data-wow-delay=".2s">
+        <!-- <div class="mb-5 wow fadeInUp" data-wow-delay=".2s">
             <div class="irc-table-box p-3 p-md-4 shadow-sm">
                 <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-3">
                     <div>
@@ -552,7 +552,7 @@ function render_bearing_gallery($images, $title, $carousel_id) {
                     <div class="small text-muted mt-2"><i class="fa-solid fa-hand-pointer text-primary me-1"></i>Click table image to view full high-resolution specifications</div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- ============================================================
              Product 01: Type A Plain Pad / Strip Bearings
