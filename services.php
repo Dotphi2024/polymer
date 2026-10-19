@@ -4,6 +4,140 @@ $meta_description = "Complete range of IRC:83 (Part II) 2018 & RDSO BS-131 appro
 include_once 'partials/header.php'; 
 ?>
 
+<?php
+/**
+ * Bearing Gallery Renderer
+ * - 1 image: Standard static card image with lightbox modal trigger (No slider)
+ * - 2+ images: Smooth auto-changing Bootstrap slider within card size, with
+ *   pause-on-hover, prev/next arrows, dot indicators, count badge, and lightbox support.
+ *
+ * Easy image addition:
+ * Pass an array of strings: ['path/to/img1.webp', 'path/to/img2.webp']
+ * OR array with labels:     [['src' => '...', 'label' => 'Technical Diagram'], ...]
+ */
+function render_bearing_gallery($images, $title, $carousel_id) {
+    if (empty($images)) return;
+    
+    $normalized = [];
+    foreach ($images as $img) {
+        if (is_array($img)) {
+            $normalized[] = [
+                'src' => $img['src'] ?? '',
+                'label' => $img['label'] ?? ''
+            ];
+        } else {
+            $normalized[] = [
+                'src' => (string)$img,
+                'label' => ''
+            ];
+        }
+    }
+    
+    $count = count($normalized);
+    if ($count === 0) return;
+    
+    $safeTitle = htmlspecialchars($title, ENT_QUOTES, 'UTF-8');
+    
+    // CASE 1: Single image -> Standard static card image (No slider needed)
+    if ($count === 1) {
+        $single = $normalized[0];
+        $src = htmlspecialchars($single['src'], ENT_QUOTES, 'UTF-8');
+        $label = htmlspecialchars($single['label'], ENT_QUOTES, 'UTF-8');
+        ?>
+        <div class="product-img-wrapper shadow-sm open-bearing-modal-btn"
+            role="button"
+            tabindex="0"
+            data-img-src="<?= $src ?>"
+            data-img-title="<?= $safeTitle ?>">
+            <?php if (!empty($label)): ?>
+                <span class="product-slide-label-badge"><i class="fa-solid fa-tag me-1"></i><?= $label ?></span>
+            <?php endif; ?>
+            <img src="<?= $src ?>" alt="<?= $safeTitle ?> - Polymer Products"
+                class="img-fluid product-img-zoom" loading="lazy">
+            <span class="product-img-overlay-btn"><i class="fa-solid fa-magnifying-glass-plus me-1"></i> View</span>
+        </div>
+        <?php
+        return;
+    }
+    
+    // CASE 2: 2 or more images -> Smooth Auto-changing Slider in exact Card Size
+    $safeId = htmlspecialchars($carousel_id, ENT_QUOTES, 'UTF-8');
+    ?>
+    <div class="product-img-wrapper product-img-slider-wrapper shadow-sm position-relative">
+        <!-- Live Slide Counter Badge -->
+        <span class="product-slider-count-badge">
+            <i class="fa-solid fa-images me-1"></i> <span class="current-slide-num">1</span>/<?= $count ?>
+        </span>
+
+        <!-- Bootstrap Carousel Container with Auto-slide & Pause on Hover -->
+        <div id="<?= $safeId ?>" class="carousel slide carousel-fade bearing-carousel w-100 h-100"
+            data-bs-ride="carousel"
+            data-bs-interval="3500"
+            data-bs-pause="hover"
+            data-bs-wrap="true">
+            
+            <!-- Carousel Slides -->
+            <div class="carousel-inner h-100">
+                <?php foreach ($normalized as $idx => $item): 
+                    $src = htmlspecialchars($item['src'], ENT_QUOTES, 'UTF-8');
+                    $label = htmlspecialchars($item['label'], ENT_QUOTES, 'UTF-8');
+                    $isActive = ($idx === 0) ? ' active' : '';
+                ?>
+                    <div class="carousel-item<?= $isActive ?> h-100" data-bs-interval="3500">
+                        <div class="product-slide-inner open-bearing-modal-btn w-100 h-100 d-flex align-items-center justify-content-center position-relative"
+                            role="button"
+                            tabindex="0"
+                            data-img-src="<?= $src ?>"
+                            data-img-title="<?= $safeTitle ?><?= !empty($label) ? ' - ' . $label : '' ?>">
+                            
+                            <?php if (!empty($label)): ?>
+                                <span class="product-slide-label-badge"><i class="fa-solid fa-tag me-1"></i><?= $label ?></span>
+                            <?php endif; ?>
+
+                            <img src="<?= $src ?>" alt="<?= $safeTitle ?> (View <?= $idx + 1 ?>) - Polymer Products"
+                                class="img-fluid product-img-zoom" loading="lazy">
+                            
+                            <span class="product-img-overlay-btn"><i class="fa-solid fa-magnifying-glass-plus me-1"></i> View</span>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+
+            <!-- Indicators (dots) -->
+            <div class="product-carousel-indicators">
+                <?php for ($i = 0; $i < $count; $i++): ?>
+                    <button type="button"
+                        data-bs-target="#<?= $safeId ?>"
+                        data-bs-slide-to="<?= $i ?>"
+                        class="<?= ($i === 0) ? 'active' : '' ?>"
+                        aria-current="<?= ($i === 0) ? 'true' : 'false' ?>"
+                        aria-label="Slide <?= $i + 1 ?>"
+                        onclick="event.stopPropagation();">
+                    </button>
+                <?php endfor; ?>
+            </div>
+
+            <!-- Navigation Controls (Prev / Next) -->
+            <button class="product-carousel-nav-btn nav-btn-prev" type="button"
+                data-bs-target="#<?= $safeId ?>"
+                data-bs-slide="prev"
+                aria-label="Previous Image"
+                onclick="event.stopPropagation();">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="product-carousel-nav-btn nav-btn-next" type="button"
+                data-bs-target="#<?= $safeId ?>"
+                data-bs-slide="next"
+                aria-label="Next Image"
+                onclick="event.stopPropagation();">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+    <?php
+}
+?>
+
 <style>
 .services-hero-badge {
     background: var(--theme-subtle);
@@ -33,7 +167,8 @@ include_once 'partials/header.php';
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 340px;
+    min-height: 350px;
+    height: 350px;
     transition: all 0.35s ease;
     cursor: pointer;
     position: relative;
@@ -45,9 +180,9 @@ include_once 'partials/header.php';
 }
 .product-img-zoom {
     transition: transform 0.4s ease;
-    max-height: 300px;
+    max-height: 290px;
     width: auto;
-    max-width: 100%;
+    max-width: 88%;
     object-fit: contain;
     filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.08));
 }
@@ -60,6 +195,7 @@ include_once 'partials/header.php';
     right: 12px;
     background: rgba(15, 23, 42, 0.75);
     backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     color: #ffffff;
     padding: 5px 12px;
     border-radius: 20px;
@@ -67,10 +203,158 @@ include_once 'partials/header.php';
     font-weight: 600;
     opacity: 0;
     transition: opacity 0.3s ease;
+    z-index: 6;
 }
 .product-item-card:hover .product-img-overlay-btn {
     opacity: 1;
 }
+
+/* --- Product Image Slider in Card Size Styles --- */
+.product-img-slider-wrapper {
+    cursor: default;
+    padding: 0 !important;
+}
+.product-img-slider-wrapper .carousel,
+.product-img-slider-wrapper .carousel-inner,
+.product-img-slider-wrapper .carousel-item {
+    height: 100%;
+}
+.product-slide-inner {
+    padding: 18px;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+}
+.product-slider-count-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    color: #ffffff;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    z-index: 8;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    pointer-events: none;
+}
+.product-slide-label-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(2, 132, 199, 0.90);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    color: #ffffff;
+    padding: 4px 11px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    z-index: 8;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 8px rgba(2, 132, 199, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    pointer-events: none;
+}
+.product-carousel-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    z-index: 9;
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    opacity: 0.7;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 0;
+}
+.product-item-card:hover .product-carousel-nav-btn {
+    opacity: 0.95;
+}
+.product-carousel-nav-btn:hover {
+    background: var(--theme-primary, #0284c7);
+    color: #ffffff;
+    opacity: 1 !important;
+    transform: translateY(-50%) scale(1.12);
+    box-shadow: 0 6px 16px rgba(2, 132, 199, 0.45);
+}
+.product-carousel-nav-btn.nav-btn-prev {
+    left: 10px;
+}
+.product-carousel-nav-btn.nav-btn-next {
+    right: 10px;
+}
+.product-carousel-indicators {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 9px;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 20px;
+    z-index: 9;
+    margin: 0;
+    list-style: none;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.product-carousel-indicators button {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.55);
+    padding: 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.product-carousel-indicators button.active {
+    width: 22px;
+    border-radius: 10px;
+    background: var(--theme-primary, #38bdf8);
+}
+@media (max-width: 767.98px) {
+    .product-img-wrapper {
+        min-height: 290px;
+        height: 290px;
+        padding: 12px;
+    }
+    .product-slide-inner {
+        min-height: 290px;
+        padding: 12px;
+    }
+    .product-img-zoom {
+        max-height: 240px;
+        max-width: 85%;
+    }
+    .product-carousel-nav-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 11px;
+    }
+}
+
 .spec-box {
     background: #f0f7ff;
     border: 1px solid #e2e8f0;
@@ -147,7 +431,7 @@ include_once 'partials/header.php';
      1. Modern Hero Banner
      ============================================================ -->
 <section class="ht-services-hero position-relative d-flex align-items-center"
-    style="background: linear-gradient(135deg, rgba(9, 20, 36, 0.75) 0%, rgba(14, 34, 61, 0.65) 60%, rgba(6, 13, 24, 0.70) 100%), url('assets/img/img/banner/services-banner-1.webp') center center / cover no-repeat; padding-top: 175px; padding-bottom: 75px; margin-top: -160px; min-height: 480px;">
+    style="background: linear-gradient(135deg, rgba(9, 20, 36, 0.45) 0%, rgba(14, 34, 61, 0.45) 60%, rgba(6, 13, 24, 0.45) 90%), url('assets/img/img/products/product-banner.webp') center center / cover no-repeat; padding-top: 175px; padding-bottom: 75px; margin-top: -160px; min-height: 480px;">
     
     <div class="container-fluid px-3 px-lg-5 position-relative" style="z-index: 2;">
         <div class="row align-items-center justify-content-between g-4">
@@ -198,32 +482,7 @@ include_once 'partials/header.php';
                 </div>
             </div>
 
-            <!-- Right Column: Product Showcase Card & Breadcrumb -->
-            <div class="col-lg-5 text-center text-lg-end wow fadeInRight" data-wow-delay=".3s">
-                <nav aria-label="breadcrumb" class="mb-3 d-none d-lg-block">
-                    <ol class="breadcrumb justify-content-lg-end mb-0 bg-transparent p-0">
-                        <li class="breadcrumb-item"><a href="index.php" class="text-white-50 text-decoration-none"><i class="fa-solid fa-house me-1"></i>Home</a></li>
-                        <li class="breadcrumb-item active text-white fw-semibold" aria-current="page">Proposed Bearing Types</li>
-                    </ol>
-                </nav>
-
-                <div class="services-hero-showcase d-inline-block text-center">
-                    <div class="services-hero-img-box p-3 p-md-4 rounded-4 position-relative">
-                        <img src="assets/img/img/banner/Final-Elastomeric-bearing-banner-right.webp" alt="Elastomeric Bridge Bearing Showcase - Polymer Products" class="img-fluid"
-                            style="max-height: 290px; width: auto; object-fit: contain;">
-                        <div class="d-flex align-items-center justify-content-between gap-2 mt-3 pt-2.5 border-top border-white border-opacity-10 text-start">
-                            <div>
-                                <span class="badge bg-primary text-white rounded-pill px-2.5 py-1 small fw-bold mb-1">
-                                    <i class="fa-solid fa-shield-check me-1"></i>IRC:83 &bull; RDSO Approved
-                                </span>
-                                <h6 class="text-white fw-bold mb-0 small" style="font-family: 'Oswald', sans-serif; letter-spacing: 0.3px;">
-                                    Steel-Laminated Bridge Bearings (Estd. 1978)
-                                </h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
 
         </div>
     </div>
@@ -375,16 +634,17 @@ include_once 'partials/header.php';
                     </a>
                 </div>
 
+                <!-- ============================================================
+                     IMAGE AREA (Add / Edit images for this card below)
+                     - 1 image: Automatically displays as standard static image (no slider)
+                     - 2+ images: Automatically activates smooth auto-changing slider in card size
+                     ============================================================ -->
                 <div class="col-lg-6 p-4 p-lg-5">
-                    <div class="product-img-wrapper shadow-sm open-bearing-modal-btn"
-                        role="button"
-                        tabindex="0"
-                        data-img-src="assets/pp_data/Page%2002/Bearing%20types/TYPE-A-PAD.png"
-                        data-img-title="Type A: Plain Pad / Strip Bearings">
-                        <img src="assets/pp_data/Page%2002/Bearing%20types/TYPE-A-PAD.png" alt="Type A Plain Pad Bearing - Polymer Products"
-                            class="img-fluid product-img-zoom">
-                        <span class="product-img-overlay-btn"><i class="fa-solid fa-magnifying-glass-plus me-1"></i> View</span>
-                    </div>
+                    <?php 
+                    render_bearing_gallery([
+                        'assets/pp_data/Page 02/Bearing types/TYPE-A-PAD.png',
+                    ], 'Type A: Plain Pad / Strip Bearings', 'carousel-type-a'); 
+                    ?>
                 </div>
             </div>
         </div>
@@ -469,16 +729,18 @@ include_once 'partials/header.php';
                     </a>
                 </div>
 
+                <!-- ============================================================
+                     IMAGE AREA (Add / Edit images for this card below)
+                     - 1 image: Automatically displays as standard static image (no slider)
+                     - 2+ images: Automatically activates smooth auto-changing slider in card size
+                     ============================================================ -->
                 <div class="col-lg-6 p-4 p-lg-5">
-                    <div class="product-img-wrapper shadow-sm open-bearing-modal-btn"
-                        role="button"
-                        tabindex="0"
-                        data-img-src="assets/img/img/banner/type-b.webp"
-                        data-img-title="Type B: Laminated Elastomeric Bearings">
-                        <img src="assets/img/img/banner/type-b.webp" alt="Type B Laminated Elastomeric Bearing - Polymer Products"
-                            class="img-fluid product-img-zoom">
-                        <span class="product-img-overlay-btn"><i class="fa-solid fa-magnifying-glass-plus me-1"></i> View</span>
-                    </div>
+                    <?php 
+                    render_bearing_gallery([
+                        ['src' => 'assets/img/img/products/type-B-2.webp', 'label' => 'Side Profile View'],
+                        ['src' => 'assets/img/img/products/type-B-1.webp', 'label' => 'Elastomeric Bearing'],
+                    ], 'Type B: Laminated Elastomeric Bearings', 'carousel-type-b'); 
+                    ?>
                 </div>
             </div>
         </div>
@@ -539,16 +801,18 @@ include_once 'partials/header.php';
                     </a>
                 </div>
 
+                <!-- ============================================================
+                     IMAGE AREA (Add / Edit images for this card below)
+                     - 1 image: Automatically displays as standard static image (no slider)
+                     - 2+ images: Automatically activates smooth auto-changing slider in card size
+                     ============================================================ -->
                 <div class="col-lg-6 p-4 p-lg-5">
-                    <div class="product-img-wrapper shadow-sm open-bearing-modal-btn"
-                        role="button"
-                        tabindex="0"
-                        data-img-src="assets/img/bearings/slide-type-c.png"
-                        data-img-title="Type C: Laminated Bearings with Thicker End Laminates">
-                        <img src="assets/img/bearings/slide-type-c.png" alt="Type C Laminated Bearing with Thicker End Laminates - Polymer Products"
-                            class="img-fluid product-img-zoom">
-                        <span class="product-img-overlay-btn"><i class="fa-solid fa-magnifying-glass-plus me-1"></i> View Diagram</span>
-                    </div>
+                    <?php 
+                    render_bearing_gallery([
+                        ['src' => 'assets/img/img/products/type-C-1.webp', 'label' => 'Finished Bearing'],
+                        // ['src' => 'assets/img/bearings/slide-type-c.png', 'label' => 'IRC:83 Diagram'],
+                    ], 'Type C: Laminated Bearings with Thicker End Laminates', 'carousel-type-c'); 
+                    ?>
                 </div>
             </div>
         </div>
@@ -609,16 +873,18 @@ include_once 'partials/header.php';
                     </a>
                 </div>
 
+                <!-- ============================================================
+                     IMAGE AREA (Add / Edit images for this card below)
+                     - 1 image: Automatically displays as standard static image (no slider)
+                     - 2+ images: Automatically activates smooth auto-changing slider in card size
+                     ============================================================ -->
                 <div class="col-lg-6 p-4 p-lg-5">
-                    <div class="product-img-wrapper shadow-sm open-bearing-modal-btn"
-                        role="button"
-                        tabindex="0"
-                        data-img-src="assets/img/bearings/slide-type-d.png"
-                        data-img-title="Type D: Laminated Bearings with Thicker End Laminates Exposed">
-                        <img src="assets/img/bearings/slide-type-d.png" alt="Type D Laminated Bearing with Thicker End Laminates Exposed - Polymer Products"
-                            class="img-fluid product-img-zoom">
-                        <span class="product-img-overlay-btn"><i class="fa-solid fa-magnifying-glass-plus me-1"></i> View Diagram</span>
-                    </div>
+                    <?php 
+                    render_bearing_gallery([
+                        ['src' => 'assets/img/img/products/type-D.webp', 'label' => 'Exposed Steel Bearing'],
+                        // ['src' => 'assets/img/bearings/slide-type-d.png', 'label' => 'IRC:83 Diagram'],
+                    ], 'Type D: Laminated Bearings with Thicker End Laminates Exposed', 'carousel-type-d'); 
+                    ?>
                 </div>
             </div>
         </div>
@@ -679,16 +945,18 @@ include_once 'partials/header.php';
                     </a>
                 </div>
 
+                <!-- ============================================================
+                     IMAGE AREA (Add / Edit images for this card below)
+                     - 1 image: Automatically displays as standard static image (no slider)
+                     - 2+ images: Automatically activates smooth auto-changing slider in card size
+                     ============================================================ -->
                 <div class="col-lg-6 p-4 p-lg-5">
-                    <div class="product-img-wrapper shadow-sm open-bearing-modal-btn"
-                        role="button"
-                        tabindex="0"
-                        data-img-src="assets/img/bearings/slide-type-e.png"
-                        data-img-title="Type E: Bearings with Separate Steel Plate Directly Vulcanised">
-                        <img src="assets/img/bearings/slide-type-e.png" alt="Type E Bearing with Separate Steel Plate Directly Vulcanised - Polymer Products"
-                            class="img-fluid product-img-zoom">
-                        <span class="product-img-overlay-btn"><i class="fa-solid fa-magnifying-glass-plus me-1"></i> View Diagram</span>
-                    </div>
+                    <?php 
+                    render_bearing_gallery([
+                        ['src' => 'assets/img/img/products/type-E.webp', 'label' => 'Vulcanised Plate Bearing'],
+                        // ['src' => 'assets/img/bearings/slide-type-e.png', 'label' => 'IRC:83 Diagram'],
+                    ], 'Type E: Bearings with Separate Steel Plate Directly Vulcanised', 'carousel-type-e'); 
+                    ?>
                 </div>
             </div>
         </div>
@@ -749,16 +1017,18 @@ include_once 'partials/header.php';
                     </a>
                 </div>
 
+                <!-- ============================================================
+                     IMAGE AREA (Add / Edit images for this card below)
+                     - 1 image: Automatically displays as standard static image (no slider)
+                     - 2+ images: Automatically activates smooth auto-changing slider in card size
+                     ============================================================ -->
                 <div class="col-lg-6 p-4 p-lg-5">
-                    <div class="product-img-wrapper shadow-sm open-bearing-modal-btn"
-                        role="button"
-                        tabindex="0"
-                        data-img-src="assets/img/bearings/slide-type-f.png"
-                        data-img-title="Type F: Bearings with Positive Anchorage">
-                        <img src="assets/img/bearings/slide-type-f.png" alt="Type F Bearing with Positive Anchorage - Polymer Products"
-                            class="img-fluid product-img-zoom">
-                        <span class="product-img-overlay-btn"><i class="fa-solid fa-magnifying-glass-plus me-1"></i> View Diagram</span>
-                    </div>
+                    <?php 
+                    render_bearing_gallery([
+                        ['src' => 'assets/img/img/products/type-F.webp', 'label' => 'Anchorage Assembly'],
+                        // ['src' => 'assets/img/bearings/slide-type-f.png', 'label' => 'IRC:83 Diagram'],
+                    ], 'Type F: Bearings with Positive Anchorage', 'carousel-type-f'); 
+                    ?>
                 </div>
             </div>
         </div>
@@ -819,16 +1089,19 @@ include_once 'partials/header.php';
                     </a>
                 </div>
 
+                <!-- ============================================================
+                     IMAGE AREA (Add / Edit images for this card below)
+                     - 1 image: Automatically displays as standard static image (no slider)
+                     - 2+ images: Automatically activates smooth auto-changing slider in card size
+                     ============================================================ -->
                 <div class="col-lg-6 p-4 p-lg-5">
-                    <div class="product-img-wrapper shadow-sm open-bearing-modal-btn"
-                        role="button"
-                        tabindex="0"
-                        data-img-src="assets/img/bearings/slide-type-g.png"
-                        data-img-title="Type G: Bearings with PTFE Bonded to the Elastomer">
-                        <img src="assets/img/bearings/slide-type-g.png" alt="Type G PTFE Bonded Bearing - Polymer Products"
-                            class="img-fluid product-img-zoom">
-                        <span class="product-img-overlay-btn"><i class="fa-solid fa-magnifying-glass-plus me-1"></i> View Diagram</span>
-                    </div>
+                    <?php 
+                    render_bearing_gallery([
+                        ['src' => 'assets/img/img/products/type-G.webp', 'label' => 'PTFE Sliding Bearing'],
+                        ['src' => 'assets/img/img/products/type-G-(2).webp', 'label' => 'Slide Surface View'],
+                        // ['src' => 'assets/img/bearings/slide-type-g.png', 'label' => 'IRC:83 Diagram'],
+                    ], 'Type G: Bearings with PTFE Bonded to the Elastomer', 'carousel-type-g'); 
+                    ?>
                 </div>
             </div>
         </div>
@@ -889,16 +1162,19 @@ include_once 'partials/header.php';
                     </a>
                 </div>
 
+                <!-- ============================================================
+                     IMAGE AREA (Add / Edit images for this card below)
+                     - 1 image: Automatically displays as standard static image (no slider)
+                     - 2+ images: Automatically activates smooth auto-changing slider in card size
+                     ============================================================ -->
                 <div class="col-lg-6 p-4 p-lg-5">
-                    <div class="product-img-wrapper shadow-sm open-bearing-modal-btn"
-                        role="button"
-                        tabindex="0"
-                        data-img-src="assets/img/bearings/slide-type-h.png"
-                        data-img-title="Type H: Bearings with Sliding Interface">
-                        <img src="assets/img/bearings/slide-type-h.png" alt="Type H Bearing with Sliding Interface - Polymer Products"
-                            class="img-fluid product-img-zoom">
-                        <span class="product-img-overlay-btn"><i class="fa-solid fa-magnifying-glass-plus me-1"></i> View Diagram</span>
-                    </div>
+                    <?php 
+                    render_bearing_gallery([
+                        ['src' => 'assets/img/img/products/type-H.webp', 'label' => 'Sliding Interface'],
+                        ['src' => 'assets/img/img/products/type-H-1.webp', 'label' => 'Bearing Plate View'],
+                        // ['src' => 'assets/img/bearings/slide-type-h.png', 'label' => 'IRC:83 Diagram'],
+                    ], 'Type H: Bearings with Sliding Interface', 'carousel-type-h'); 
+                    ?>
                 </div>
             </div>
         </div>
@@ -959,16 +1235,18 @@ include_once 'partials/header.php';
                     </a>
                 </div>
 
+                <!-- ============================================================
+                     IMAGE AREA (Add / Edit images for this card below)
+                     - 1 image: Automatically displays as standard static image (no slider)
+                     - 2+ images: Automatically activates smooth auto-changing slider in card size
+                     ============================================================ -->
                 <div class="col-lg-6 p-4 p-lg-5">
-                    <div class="product-img-wrapper shadow-sm open-bearing-modal-btn"
-                        role="button"
-                        tabindex="0"
-                        data-img-src="assets/img/bearings/slide-type-i.png"
-                        data-img-title="Type I: Bearings with Restraint Against Translation (Central Pin / Side Restraint)">
-                        <img src="assets/img/bearings/slide-type-i.png" alt="Type I Restrained Bearing - Polymer Products"
-                            class="img-fluid product-img-zoom">
-                        <span class="product-img-overlay-btn"><i class="fa-solid fa-magnifying-glass-plus me-1"></i> View Diagram</span>
-                    </div>
+                    <?php 
+                    render_bearing_gallery([
+                        ['src' => 'assets/img/img/products/type-i.webp', 'label' => 'Restrained Bearing'],
+                        ['src' => 'assets/img/img/products/type-i-1.webp', 'label' => 'IRC:83 Diagram'],
+                    ], 'Type I: Bearings with Restraint Against Translation', 'carousel-type-i'); 
+                    ?>
                 </div>
             </div>
         </div>
@@ -1049,16 +1327,17 @@ include_once 'partials/header.php';
                     </a>
                 </div>
 
+                <!-- ============================================================
+                     IMAGE AREA (Add / Edit images for this card below)
+                     - 1 image: Automatically displays as standard static image (no slider)
+                     - 2+ images: Automatically activates smooth auto-changing slider in card size
+                     ============================================================ -->
                 <div class="col-lg-6 p-4 p-lg-5">
-                    <div class="product-img-wrapper shadow-sm open-bearing-modal-btn"
-                        role="button"
-                        tabindex="0"
-                        data-img-src="assets/img/bearings/type-rdso.jpg"
-                        data-img-title="Type RDSO: Indian Railways Heavy Axle Bearings">
-                        <img src="assets/img/bearings/type-rdso.jpg" alt="Type RDSO Railway Heavy Axle Bearing - Polymer Products"
-                            class="img-fluid product-img-zoom">
-                        <span class="product-img-overlay-btn"><i class="fa-solid fa-magnifying-glass-plus me-1"></i> View</span>
-                    </div>
+                    <?php 
+                    render_bearing_gallery([
+                        'assets/img/img/products/type-rdso.webp',
+                    ], 'Type RDSO: Indian Railways Heavy Axle Bearings', 'carousel-type-rdso'); 
+                    ?>
                 </div>
             </div>
         </div>
@@ -1139,16 +1418,17 @@ include_once 'partials/header.php';
                     </a>
                 </div>
 
+                <!-- ============================================================
+                     IMAGE AREA (Add / Edit images for this card below)
+                     - 1 image: Automatically displays as standard static image (no slider)
+                     - 2+ images: Automatically activates smooth auto-changing slider in card size
+                     ============================================================ -->
                 <div class="col-lg-6 p-4 p-lg-5">
-                    <div class="product-img-wrapper shadow-sm open-bearing-modal-btn"
-                        role="button"
-                        tabindex="0"
-                        data-img-src="assets/img/bearings/pot-ptfe.jpg"
-                        data-img-title="POT / PTFE PAD Bearings">
-                        <img src="assets/img/bearings/pot-ptfe.jpg" alt="POT PTFE Bridge Bearing Assembly - Polymer Products"
-                            class="img-fluid product-img-zoom">
-                        <span class="product-img-overlay-btn"><i class="fa-solid fa-magnifying-glass-plus me-1"></i> View</span>
-                    </div>
+                    <?php 
+                    render_bearing_gallery([
+                        'assets/img/bearings/pot-ptfe.jpg',
+                    ], 'POT / PTFE PAD Bearings (Fixed, Guided & Free)', 'carousel-pot-ptfe'); 
+                    ?>
                 </div>
             </div>
         </div>
@@ -1229,16 +1509,17 @@ include_once 'partials/header.php';
                     </a>
                 </div>
 
+                <!-- ============================================================
+                     IMAGE AREA (Add / Edit images for this card below)
+                     - 1 image: Automatically displays as standard static image (no slider)
+                     - 2+ images: Automatically activates smooth auto-changing slider in card size
+                     ============================================================ -->
                 <div class="col-lg-6 p-4 p-lg-5">
-                    <div class="product-img-wrapper shadow-sm open-bearing-modal-btn"
-                        role="button"
-                        tabindex="0"
-                        data-img-src="assets/img/bearings/rubber-bunk.jpg"
-                        data-img-title="Rubber Bunk: Buffer & End Bunk Shock Absorber Pads">
-                        <img src="assets/img/bearings/rubber-bunk.jpg" alt="Rubber Bunk Buffer Shock Absorber Pad - Polymer Products"
-                            class="img-fluid product-img-zoom">
-                        <span class="product-img-overlay-btn"><i class="fa-solid fa-magnifying-glass-plus me-1"></i> View</span>
-                    </div>
+                    <?php 
+                    render_bearing_gallery([
+                        'assets/img/bearings/rubber-bunk.jpg',
+                    ], 'Rubber Bunk: Buffer & End Bunk Shock Absorber Pads', 'carousel-rubber-bunk'); 
+                    ?>
                 </div>
             </div>
         </div>
@@ -1319,16 +1600,17 @@ include_once 'partials/header.php';
                     </a>
                 </div>
 
+                <!-- ============================================================
+                     IMAGE AREA (Add / Edit images for this card below)
+                     - 1 image: Automatically displays as standard static image (no slider)
+                     - 2+ images: Automatically activates smooth auto-changing slider in card size
+                     ============================================================ -->
                 <div class="col-lg-6 p-4 p-lg-5">
-                    <div class="product-img-wrapper shadow-sm open-bearing-modal-btn"
-                        role="button"
-                        tabindex="0"
-                        data-img-src="assets/img/bearings/locator.jpg"
-                        data-img-title="Locator: Seismic Guide Pins & Lateral Restraints">
-                        <img src="assets/img/bearings/locator.jpg" alt="Seismic Locator Guide Pin Restraint - Polymer Products"
-                            class="img-fluid product-img-zoom">
-                        <span class="product-img-overlay-btn"><i class="fa-solid fa-magnifying-glass-plus me-1"></i> View</span>
-                    </div>
+                    <?php 
+                    render_bearing_gallery([
+                        'assets/img/bearings/locator.jpg',
+                    ], 'Locator: Seismic Guide Pins & Lateral Restraints', 'carousel-locator'); 
+                    ?>
                 </div>
             </div>
         </div>
@@ -1397,6 +1679,29 @@ include_once 'partials/header.php';
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
+    // 1. Initialize all Bearing Carousels with auto-slide & hover pause
+    document.querySelectorAll('.bearing-carousel').forEach(function (carouselEl) {
+        if (typeof bootstrap !== 'undefined' && bootstrap.Carousel) {
+            bootstrap.Carousel.getOrCreateInstance(carouselEl, {
+                interval: 3500,
+                ride: 'carousel',
+                pause: 'hover',
+                wrap: true
+            });
+        }
+
+        // Live update active slide counter (e.g. 1/2 -> 2/2)
+        carouselEl.addEventListener('slid.bs.carousel', function (e) {
+            const wrapper = carouselEl.closest('.product-img-slider-wrapper');
+            if (!wrapper) return;
+            const countSpan = wrapper.querySelector('.current-slide-num');
+            if (countSpan) {
+                countSpan.textContent = e.to + 1;
+            }
+        });
+    });
+
+    // 2. Lightbox Modal Handling
     const modalEl = document.getElementById('bearingImgModal');
     if (!modalEl) return;
 
@@ -1411,34 +1716,48 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.style.removeProperty('padding-right');
         document.documentElement.style.removeProperty('overflow');
         document.documentElement.style.removeProperty('overflow-y');
-        document.querySelectorAll('.modal-backdrop').forEach(function(b) { b.remove(); });
+        document.querySelectorAll('.modal-backdrop').forEach(function (b) { b.remove(); });
     }
 
-    document.querySelectorAll('.open-bearing-modal-btn').forEach(function (btn) {
-        function triggerModal(e) {
-            e.preventDefault();
-            const src = btn.getAttribute('data-img-src');
-            const title = btn.getAttribute('data-img-title') || 'Bearing Technical Diagram';
-            if (!src) return;
-
-            modalTitle.textContent = title;
-            modalImg.src = src;
-
-            if (typeof bootstrap !== 'undefined' && bootstrap.Modal) {
-                bootstrap.Modal.getOrCreateInstance(modalEl).show();
-            } else if (typeof $ !== 'undefined') {
-                $(modalEl).modal('show');
-            }
+    // Event delegation for opening the lightbox modal
+    document.addEventListener('click', function (e) {
+        // Ignore clicks on carousel navigation controls or indicators
+        if (e.target.closest('.product-carousel-nav-btn') || e.target.closest('.product-carousel-indicators')) {
+            return;
         }
 
-        btn.addEventListener('click', triggerModal);
-        btn.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter' || e.key === ' ') triggerModal(e);
-        });
+        const btn = e.target.closest('.open-bearing-modal-btn');
+        if (!btn) return;
+
+        e.preventDefault();
+        const src = btn.getAttribute('data-img-src');
+        const title = btn.getAttribute('data-img-title') || 'Bearing Technical Diagram';
+        if (!src) return;
+
+        modalTitle.textContent = title;
+        modalImg.src = src;
+
+        if (typeof bootstrap !== 'undefined' && bootstrap.Modal) {
+            bootstrap.Modal.getOrCreateInstance(modalEl).show();
+        } else if (typeof $ !== 'undefined') {
+            $(modalEl).modal('show');
+        }
     });
 
-    modalEl.querySelectorAll('[data-bs-dismiss="modal"]').forEach(function(btn) {
-        btn.addEventListener('click', function() {
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+            const activeEl = document.activeElement;
+            if (activeEl && activeEl.classList.contains('open-bearing-modal-btn')) {
+                if (!activeEl.closest('.product-carousel-nav-btn') && !activeEl.closest('.product-carousel-indicators')) {
+                    e.preventDefault();
+                    activeEl.click();
+                }
+            }
+        }
+    });
+
+    modalEl.querySelectorAll('[data-bs-dismiss="modal"]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
             if (typeof bootstrap !== 'undefined' && bootstrap.Modal) {
                 bootstrap.Modal.getOrCreateInstance(modalEl).hide();
             } else if (typeof $ !== 'undefined') {
