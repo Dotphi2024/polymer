@@ -232,7 +232,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                                         </ul>
                                     </li>
                                     
-                                    <li class="has-dropdown <?php echo in_array($current_page, ['process.php', 'process.html', 'testing.php', 'testing.html', 'identification.php', 'identification.html']) ? 'active' : ''; ?>">
+                                    <li class="has-dropdown <?php echo in_array($current_page, ['process.php', 'process.html', 'identification.php', 'identification.html']) ? 'active' : ''; ?>">
                                         <a href="process.php" class="fw-semibold nav-link-item">
                                             Manufacturing & QC <i class="fa-solid fa-chevron-down dropdown-icon"></i>
                                         </a>
