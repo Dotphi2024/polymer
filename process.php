@@ -310,6 +310,36 @@ $process_images = [
 .mfp-img {
     border-radius: 8px !important;
 }
+
+/* De Mattia Flex Tester Feature Card Styles */
+.de-mattia-spec-card {
+    transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+.de-mattia-spec-card:hover {
+    box-shadow: 0 18px 40px rgba(54, 145, 191, 0.15) !important;
+    border-color: var(--theme-primary, #3691bf) !important;
+}
+.de-mattia-img-box {
+    background: #f0f7ff !important;
+    border: 1px solid #bae6fd !important;
+    transition: all 0.35s ease;
+}
+.de-mattia-img-box:hover {
+    border-color: var(--theme-primary, #3691bf) !important;
+    box-shadow: 0 12px 28px rgba(54, 145, 191, 0.18) !important;
+}
+.de-mattia-img-box img {
+    transition: transform 0.45s ease;
+}
+.de-mattia-img-box:hover img {
+    transform: scale(1.05);
+}
+.de-mattia-table tr:hover {
+    background-color: #f0f7ff !important;
+}
 </style>
 
 <!-- ============================================================
@@ -643,7 +673,7 @@ $process_images = [
                     <a href="assets/pp_data/Machine_Images/20/image-1.webp" class="popup-image d-block mb-3 overflow-hidden rounded-3" title="Hydraulic Vulcanizing Press - High tonnage multi-daylight heated hydraulic presses with PLC digital temperature controls.">
                         <img src="assets/pp_data/Machine_Images/20/image-1.webp" alt="Hydraulic Press" class="img-fluid" style="height:170px; width:100%; object-fit:cover; transition: transform 0.3s ease; cursor: pointer;">
                     </a>
-                    <h6 class="fw-bold text-dark mb-1">Hydraulic Vulcanizing Press</h6>
+                    <h6 class="fw-bold text-dark mb-1">Hydraulic Marking/Lot Stamping Press</h6>
                     <small class="text-muted">High tonnage multi-daylight heated hydraulic presses with PLC digital temperature controls.</small>
                 </div>
             </div>
@@ -653,7 +683,7 @@ $process_images = [
                     <a href="assets/pp_data/Machine_Images/20/image-9.webp" class="popup-image d-block mb-3 overflow-hidden rounded-3" title="Two-Roll Rubber Mixing Mill - Heavy-duty water-cooled open mixing mill for compound mastication.">
                         <img src="assets/pp_data/Machine_Images/20/image-9.webp" alt="Two-Roll Mixing Mill" class="img-fluid" style="height:170px; width:100%; object-fit:cover; transition: transform 0.3s ease; cursor: pointer;">
                     </a>
-                    <h6 class="fw-bold text-dark mb-1">Two-Roll Rubber Mixing Mill</h6>
+                    <h6 class="fw-bold text-dark mb-1">Two-Roll Mixing Mill/Rubber Mixing Mill</h6>
                     <small class="text-muted">Heavy-duty water-cooled open mixing mill for compound mastication and additive homogenization.</small>
                 </div>
             </div>
@@ -663,7 +693,7 @@ $process_images = [
                     <a href="assets/pp_data/Machine_Images/20/image-4.webp" class="popup-image d-block mb-3 overflow-hidden rounded-3" title="Straighting m/c for H.r Sheet &Plates - Steel plate guillotine shearing and enclosed grit shot-blasting chamber.">
                         <img src="assets/pp_data/Machine_Images/20/image-4.webp" alt="Steel Preparation" class="img-fluid" style="height:170px; width:100%; object-fit:cover; transition: transform 0.3s ease; cursor: pointer;">
                     </a>
-                    <h6 class="fw-bold text-dark mb-1">Plate Shearing &amp; Shot Blasting</h6>
+                    <h6 class="fw-bold text-dark mb-1">Straighting m/c for H.r Sheet & Plates</h6>
                     <small class="text-muted">Steel plate guillotine shearing, edge radiusing grinders, and enclosed grit shot-blasting chamber.</small>
                 </div>
             </div>
@@ -675,6 +705,124 @@ $process_images = [
                     </a>
                     <h6 class="fw-bold text-dark mb-1">Shearing M/c for H.R Sheet</h6>
                     <small class="text-muted">Computerized compressive load test frame calibrated for up to 1.5x design load verification.</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             De Mattia Flex Tester - Dedicated Machine Feature Card
+             ============================================================ -->
+        <div class="card border-0 rounded-4 mb-5 overflow-hidden de-mattia-spec-card" style="border-top: 4px solid var(--theme-primary, #3691bf) !important;">
+            <div class="card-body p-4 p-lg-5">
+                <div class="row g-4 g-lg-5 align-items-center">
+                    
+                    <!-- Left: High-Res Machine Image Showcase & Light Blue Background -->
+                    <div class="col-lg-5">
+                        <div class="position-relative rounded-4 overflow-hidden shadow-sm border text-center de-mattia-img-box p-3 p-md-4 d-flex align-items-center justify-content-center" style="min-height: 350px;">
+                            <!-- Lightbox Zoom Link with Magnific Popup -->
+                            <a href="assets/img/img/products/de-mettia.webp" class="popup-image d-block position-relative w-100" title="De Mattia Flex Tester (Model: IK/DMFT/01) - 300 cpm Dynamic Flex Cracking &amp; Cut Growth Resistance Testing Machine">
+                                <img src="assets/img/img/products/de-mettia.webp" alt="De Mattia Flex Tester Model IK/DMFT/01" class="img-fluid" style="max-height: 310px; width: auto; max-width: 100%; object-fit: contain; cursor: pointer; filter: drop-shadow(0 10px 22px rgba(54, 145, 191, 0.15));">
+                                <div class="position-absolute top-0 start-0 m-3">
+                                    <span class="badge px-3 py-2 text-uppercase fw-bold rounded-pill shadow-sm" style="background: var(--theme-primary, #3691bf); color: #ffffff; font-size: 11px; letter-spacing: 0.8px;">
+                                        <i class="fa-solid fa-microchip me-1.5"></i>Model: IK/DMFT/01
+                                    </span>
+                                </div>
+                                <span class="gallery-zoom-btn" title="Click to View Fullscreen" style="bottom: 14px; right: 14px; top: auto; background: var(--theme-primary, #3691bf);">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Technical Specifications Table & Application Info -->
+                    <div class="col-lg-7">
+                        <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                            <span class="badge px-3 py-1.5 rounded-pill text-uppercase font-monospace" style="background: var(--theme-subtle); color: var(--theme-primary); border: 1px solid var(--theme-primary); font-size: 11.5px; letter-spacing: 0.8px; font-weight: 700;">
+                                <i class="fa-solid fa-vial-circle-check me-1.5"></i>Rubber Testing Apparatus
+                            </span>
+                            <span class="badge bg-light text-secondary border px-2.5 py-1 rounded-pill small">
+                                In-House QC Laboratory
+                            </span>
+                        </div>
+
+                        <h3 class="fw-bold text-dark mb-1" style="font-family: 'Oswald', sans-serif; font-size: clamp(24px, 2.5vw, 32px); letter-spacing: 0.5px;">
+                            De Mattia Flex Tester
+                        </h3>
+                        <p class="text-muted mb-3" style="font-size: 14.5px; line-height: 1.6;">
+                            Specialized dynamic flexing and fatigue endurance testing apparatus engineered to evaluate surface crack initiation and cut growth resistance of vulcanized rubber compounds in accordance with <strong>ASTM D430</strong>, <strong>ISO 132</strong>, and <strong>IS:3400 (Part 8)</strong>.
+                        </p>
+
+                        <!-- Complete Technical Specifications Grid -->
+                        <div class="table-responsive rounded-3 border mb-3">
+                            <table class="table table-sm table-striped align-middle mb-0 de-mattia-table" style="font-size: 13px;">
+                                <tbody>
+                                    <tr>
+                                        <th class="ps-3 py-2 text-secondary" style="width: 42%;"><i class="fa-solid fa-fingerprint text-primary me-2"></i>Model Number / Name</th>
+                                        <td class="pe-3 py-2"><span class="badge bg-dark font-monospace px-2.5 py-1">IK/DMFT/01</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="ps-3 py-2 text-secondary"><i class="fa-solid fa-arrows-spin text-primary me-2"></i>Flexing Frequency</th>
+                                        <td class="pe-3 py-2 fw-semibold text-dark">300 cpm</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="ps-3 py-2 text-secondary"><i class="fa-solid fa-arrows-left-right-to-line text-primary me-2"></i>Maximum Opening Between Grips</th>
+                                        <td class="pe-3 py-2 fw-semibold text-dark">75 mm</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="ps-3 py-2 text-secondary"><i class="fa-solid fa-arrows-left-right text-primary me-2"></i>Minimum Opening Between Grips</th>
+                                        <td class="pe-3 py-2 fw-semibold text-dark">10 mm</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="ps-3 py-2 text-secondary"><i class="fa-solid fa-rotate text-primary me-2"></i>Flexing Angle</th>
+                                        <td class="pe-3 py-2 fw-semibold text-dark">300 cpm</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="ps-3 py-2 text-secondary"><i class="fa-solid fa-grip text-primary me-2"></i>Grips</th>
+                                        <td class="pe-3 py-2 fw-semibold text-dark">75 mm (adjustable)/ 57.15 mm (adjustable)</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="ps-3 py-2 text-secondary"><i class="fa-solid fa-bolt text-primary me-2"></i>Motor Power</th>
+                                        <td class="pe-3 py-2 fw-semibold text-dark">0.5 hp</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="ps-3 py-2 text-secondary"><i class="fa-solid fa-plug text-primary me-2"></i>Voltage</th>
+                                        <td class="pe-3 py-2 fw-semibold text-dark">230 v</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="ps-3 py-2 text-secondary"><i class="fa-solid fa-charging-station text-primary me-2"></i>Power Source</th>
+                                        <td class="pe-3 py-2 fw-semibold text-dark">Electric</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="ps-3 py-2 text-secondary"><i class="fa-solid fa-gears text-primary me-2"></i>Motor</th>
+                                        <td class="pe-3 py-2 fw-semibold text-dark">compression set apparatus</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="ps-3 py-2 text-secondary"><i class="fa-solid fa-circle-minus text-primary me-2"></i>Power</th>
+                                        <td class="pe-3 py-2 text-muted">NIL</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="ps-3 py-2 text-secondary"><i class="fa-solid fa-swatchbook text-primary me-2"></i>Color</th>
+                                        <td class="pe-3 py-2">
+                                            <span class="badge bg-light text-dark border px-2.5 py-1 font-monospace fw-bold">
+                                                GOLDEN
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Standards & Compliance Tags -->
+                        <div class="d-flex flex-wrap align-items-center gap-2 pt-1">
+                            <span class="small fw-bold text-secondary me-1"><i class="fa-solid fa-certificate text-primary me-1"></i>Test Compliance:</span>
+                            <span class="badge bg-light text-dark border px-2 py-1 font-monospace" style="font-size: 11px;">ASTM D430</span>
+                            <span class="badge bg-light text-dark border px-2 py-1 font-monospace" style="font-size: 11px;">ISO 132</span>
+                            <span class="badge bg-light text-dark border px-2 py-1 font-monospace" style="font-size: 11px;">IS:3400 (Part 8)</span>
+                            <span class="badge bg-light text-dark border px-2 py-1 font-monospace" style="font-size: 11px;">IRC:83 (Part II)</span>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -754,6 +902,13 @@ $process_images = [
                             <td><span class="badge bg-primary">Multiple</span></td>
                             <td>Calibrated with Master Test Blocks</td>
                             <td>Routine QC &amp; Stage-Wise Inspection</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold text-center">9</td>
+                            <td class="fw-semibold">De Mattia Flex Tester (Model: IK/DMFT/01)</td>
+                            <td><span class="badge bg-primary">1 Unit</span></td>
+                            <td>300 cpm &bull; 75 mm Opening &bull; 0.5 hp &bull; 230 v Electric (Golden)</td>
+                            <td>Dynamic Rubber Flex Cracking &amp; Cut Growth Resistance (ASTM D430 / ISO 132)</td>
                         </tr>
                     </tbody>
                 </table>
@@ -889,7 +1044,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         // Machinery Cards Popup Gallery with Next/Previous Navigation
-        jQuery('#machinery .row').magnificPopup({
+        jQuery('#machinery').magnificPopup({
             delegate: 'a.popup-image',
             type: 'image',
             gallery: {
