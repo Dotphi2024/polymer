@@ -7,7 +7,7 @@ include_once 'partials/header.php';
 $process_images = [
     ["file" => "image-1.webp", "title" => "Hydraulic Vulcanizing Press", "cat" => "presses", "desc" => "Multi-daylight hydraulic vulcanizing press with digital PLC temperature controls."],
     ["file" => "image-2.webp", "title" => "Two-Roll Mixing Mill/Rubber Mixing Mill", "cat" => "presses", "desc" => "Heavy-duty hydraulic clamping for complete elastomeric cross-linking."],
-    ["file" => "image-3.webp", "title" => "Two-Roll Rubber Mixing Mill", "cat" => "compounding", "desc" => "Water-cooled open mixing mill for precision polymer compounding."],    
+    // ["file" => "image-3.webp", "title" => "Two-Roll Rubber Mixing Mill", "cat" => "compounding", "desc" => "Water-cooled open mixing mill for precision polymer compounding."],    
     ["file" => "image-4.webp", "title" => "Hydraulic Pressure Control Panel", "cat" => "presses", "desc" => "Digital pressure and cycle timer instrumentation on main press line."],
     ["file" => "image-5.webp", "title" => "Steel Plate Shearing Station", "cat" => "steel", "desc" => "Precision guillotine shearing of IS:2062 internal steel laminates."],
     ["file" => "image-6.webp", "title" => "Grit Shot-Blasting Chamber", "cat" => "steel", "desc" => "Enclosed grit blasting achieving Sa 2.5 profile for maximum bond."],

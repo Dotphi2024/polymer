@@ -683,7 +683,7 @@ include_once 'partials/header.php';
                     </tr>
                     <tr>
                         <td class="px-4 fw-bold text-dark"><i class="fa-solid fa-stamp text-primary me-2"></i>4. Bearing Unit</td>
-                        <td><span class="badge bg-primary text-white">PP/SIZE/LOT/UID</span></td>
+                        <td><span class="badge bg-light text-dark border">PP/SIZE/LOT/UID</span></td>
                         <td>Indelible Side Marking &amp; Serialized UID</td>
                         <td>Finished Goods Inspection Log</td>
                         <td class="text-center"><span class="badge bg-success">Permanent</span></td>

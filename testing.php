@@ -93,10 +93,10 @@ $testing_slider_images = [
 .witness-photo-card:hover {
     transform: translateY(-5px);
     border-color: var(--theme-primary);
-    box-shadow: 0 16px 32px rgba(2, 132, 199, 0.14);
+    box-shadow: 0 16px 32px rgba(2, 132, 199, 0.16);
 }
 .witness-photo-wrap {
-    height: 220px;
+    height: 250px;
     position: relative;
     overflow: hidden;
     background: #0f172a;
@@ -105,10 +105,19 @@ $testing_slider_images = [
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
     transition: transform 0.5s ease;
 }
 .witness-photo-card:hover .witness-photo-wrap img {
-    transform: scale(1.08);
+    transform: scale(1.06);
+}
+.witness-photo-card:hover .testing-slider-overlay {
+    opacity: 1;
+}
+@media (max-width: 575.98px) {
+    .witness-photo-wrap {
+        height: 210px;
+    }
 }
 .tpi-cert-card {
     background: #ffffff;
@@ -331,7 +340,7 @@ $testing_slider_images = [
 
                 <div class="testing-hero-showcase d-inline-block text-center">
                     <div class="testing-hero-img-box p-3 p-md-4 rounded-4 position-relative">
-                        <img src="assets/img/img/banner/demo-testing.webp" alt="Proof Load & Material Testing Rig - Polymer Products" class="img-fluid"
+                        <img src="assets/img/testing/testing-right.webp" alt="Proof Load & Material Testing Rig - Polymer Products" class="img-fluid"
                             style="max-height: 300px; width: auto; object-fit: contain;">
                     </div>
                 </div>
@@ -615,7 +624,7 @@ $testing_slider_images = [
                         <td><span class="badge bg-light text-dark border">IRC:83 (Part II) / RDSO</span></td>
                         <td>No cracking, zero splitting, no de-lamination</td>
                         <td>No cracking, zero splitting, no de-lamination</td>
-                        <td><span class="badge bg-danger-subtle text-danger fw-semibold">100% of Supplied Bearings</span></td>
+                        <td><span class="badge bg-success-subtle text-success fw-semibold">100% of Supplied Bearings</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -921,114 +930,252 @@ $testing_slider_images = [
 
             <div class="row g-3">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".1s">
-                    <div class="witness-photo-card open-testing-doc-modal h-100 shadow-sm"
-                        data-doc-url="assets/img/img/banner/3.webp"
-                        data-doc-title="Client Engineers & Inspecting Officers Witnessing Dual-Bearing Shear Modulus Test"
+                    <div class="witness-photo-card open-testing-doc-modal shadow-sm"
+                        data-doc-url="assets/img/testing/2.webp"
+                        data-doc-title="Client Engineers &amp; Inspecting Officers Witnessing Dual-Bearing Shear Modulus Test"
                         data-doc-type="image"
                         role="button"
                         tabindex="0">
                         <div class="witness-photo-wrap">
-                            <img src="assets/img/img/banner/3.webp" alt="Client Engineers & Inspecting Officers Witnessing Test" loading="lazy">
+                            <img src="assets/img/testing/2.webp" alt="Client Engineers &amp; Inspecting Officers Witnessing Dual-Bearing Shear Modulus Test" loading="lazy">
                             <div class="testing-slider-overlay">
                                 <span class="btn btn-light btn-sm rounded-pill fw-bold px-3 py-1.5 shadow">
                                     <i class="fa-solid fa-magnifying-glass-plus me-1 text-primary"></i> View Photo
                                 </span>
                             </div>
-                        </div>
-                        <div class="p-3 bg-white">
-                            <span class="badge rounded-pill px-2.5 py-1 small mb-1 fw-semibold" style="background: rgba(2, 132, 199, 0.12); color: var(--theme-primary);">Shear Modulus Test</span>
-                            <h6 class="fw-bold text-dark mb-1" style="font-size:14.5px;">Client Engineers Witnessing Dual-Bearing Test</h6>
-                            <small class="text-muted" style="font-size:12px;">Inspection team observing horizontal shear deflection readings</small>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".15s">
-                    <div class="witness-photo-card open-testing-doc-modal h-100 shadow-sm"
-                        data-doc-url="assets/img/img/banner/4.webp"
+                    <div class="witness-photo-card open-testing-doc-modal shadow-sm"
+                        data-doc-url="assets/img/testing/3.webp"
                         data-doc-title="Stage-Wise Inspection on 750-Ton Computerized Hydraulic Test Rig"
                         data-doc-type="image"
                         role="button"
                         tabindex="0">
                         <div class="witness-photo-wrap">
-                            <img src="assets/img/img/banner/4.webp" alt="Stage-Wise Inspection on Test Rig" loading="lazy">
+                            <img src="assets/img/testing/3.webp" alt="Stage-Wise Inspection on 750-Ton Computerized Hydraulic Test Rig" loading="lazy">
                             <div class="testing-slider-overlay">
                                 <span class="btn btn-light btn-sm rounded-pill fw-bold px-3 py-1.5 shadow">
                                     <i class="fa-solid fa-magnifying-glass-plus me-1 text-primary"></i> View Photo
                                 </span>
                             </div>
-                        </div>
-                        <div class="p-3 bg-white">
-                            <span class="badge rounded-pill px-2.5 py-1 small mb-1 fw-semibold" style="background: rgba(2, 132, 199, 0.12); color: var(--theme-primary);">1.5x Proof Load</span>
-                            <h6 class="fw-bold text-dark mb-1" style="font-size:14.5px;">Stage-Wise Hydraulic Press Inspection</h6>
-                            <small class="text-muted" style="font-size:12px;">Vertical proof-load verification under full hydraulic pressure</small>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
-                    <div class="witness-photo-card open-testing-doc-modal h-100 shadow-sm"
-                        data-doc-url="assets/img/img/banner/6.webp"
-                        data-doc-title="Load & Deflection Data Logging with Project Authority Officials"
+                    <div class="witness-photo-card open-testing-doc-modal shadow-sm"
+                        data-doc-url="assets/img/testing/4.webp"
+                        data-doc-title="Load &amp; Deflection Data Logging with Project Authority Officials"
                         data-doc-type="image"
                         role="button"
                         tabindex="0">
                         <div class="witness-photo-wrap">
-                            <img src="assets/img/img/banner/6.webp" alt="Load & Deflection Data Logging" loading="lazy">
+                            <img src="assets/img/testing/4.webp" alt="Load &amp; Deflection Data Logging with Project Authority Officials" loading="lazy">
                             <div class="testing-slider-overlay">
                                 <span class="btn btn-light btn-sm rounded-pill fw-bold px-3 py-1.5 shadow">
                                     <i class="fa-solid fa-magnifying-glass-plus me-1 text-primary"></i> View Photo
                                 </span>
                             </div>
-                        </div>
-                        <div class="p-3 bg-white">
-                            <span class="badge rounded-pill px-2.5 py-1 small mb-1 fw-semibold" style="background: rgba(2, 132, 199, 0.12); color: var(--theme-primary);">Pressure Verification</span>
-                            <h6 class="fw-bold text-dark mb-1" style="font-size:14.5px;">Live Pressure Gauge &amp; Load Logging</h6>
-                            <small class="text-muted" style="font-size:12px;">Calibrated digital pressure transducer and dial recording</small>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".25s">
-                    <div class="witness-photo-card open-testing-doc-modal h-100 shadow-sm"
-                        data-doc-url="assets/img/img/banner/5.webp"
-                        data-doc-title="Deflection Dial Gauge & Platen Parallelism Inspection"
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".25s">
+                    <div class="witness-photo-card open-testing-doc-modal shadow-sm"
+                        data-doc-url="assets/img/testing/5.webp"
+                        data-doc-title="Deflection Dial Gauge &amp; Platen Parallelism Inspection"
                         data-doc-type="image"
                         role="button"
                         tabindex="0">
-                        <div class="witness-photo-wrap" style="height:200px;">
-                            <img src="assets/img/img/banner/5.webp" alt="Deflection Dial Gauge & Platen Parallelism Inspection" loading="lazy">
+                        <div class="witness-photo-wrap">
+                            <img src="assets/img/testing/5.webp" alt="Deflection Dial Gauge &amp; Platen Parallelism Inspection" loading="lazy">
                             <div class="testing-slider-overlay">
                                 <span class="btn btn-light btn-sm rounded-pill fw-bold px-3 py-1.5 shadow">
                                     <i class="fa-solid fa-magnifying-glass-plus me-1 text-primary"></i> View Photo
                                 </span>
                             </div>
-                        </div>
-                        <div class="p-3 bg-white">
-                            <h6 class="fw-bold text-dark mb-1" style="font-size:14.5px;">Platen Parallelism &amp; Dial Gauge Verification</h6>
-                            <small class="text-muted" style="font-size:12px;">Verifying zero bulging failure and absence of elastomer splitting</small>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
-                    <div class="witness-photo-card open-testing-doc-modal h-100 shadow-sm"
-                        data-doc-url="assets/img/img/banner/2.webp"
-                        data-doc-title="High-Capacity 750-Ton Shear & Compressive Proof Load Testing Machine"
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="witness-photo-card open-testing-doc-modal shadow-sm"
+                        data-doc-url="assets/img/testing/6.webp"
+                        data-doc-title="High-Capacity 750-Ton Shear &amp; Compressive Proof Load Testing Machine"
                         data-doc-type="image"
                         role="button"
                         tabindex="0">
-                        <div class="witness-photo-wrap" style="height:200px;">
-                            <img src="assets/img/img/banner/2.webp" alt="High-Capacity 750-Ton Shear & Compressive Proof Load Testing Machine" loading="lazy">
+                        <div class="witness-photo-wrap">
+                            <img src="assets/img/testing/6.webp" alt="High-Capacity 750-Ton Shear &amp; Compressive Proof Load Testing Machine" loading="lazy">
                             <div class="testing-slider-overlay">
                                 <span class="btn btn-light btn-sm rounded-pill fw-bold px-3 py-1.5 shadow">
                                     <i class="fa-solid fa-magnifying-glass-plus me-1 text-primary"></i> View Photo
                                 </span>
                             </div>
                         </div>
-                        <div class="p-3 bg-white">
-                            <h6 class="fw-bold text-dark mb-1" style="font-size:14.5px;">750-Ton Shear &amp; Compression Testing Frame</h6>
-                            <small class="text-muted" style="font-size:12px;">Equipped with dual horizontal jacks for simultaneous pair shear testing</small>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".35s">
+                    <div class="witness-photo-card open-testing-doc-modal shadow-sm"
+                        data-doc-url="assets/img/testing/7.webp"
+                        data-doc-title="Client Witness Proof-Load Hydraulic Verification on Test Rig"
+                        data-doc-type="image"
+                        role="button"
+                        tabindex="0">
+                        <div class="witness-photo-wrap">
+                            <img src="assets/img/testing/7.webp" alt="Client Witness Proof-Load Hydraulic Verification on Test Rig" loading="lazy">
+                            <div class="testing-slider-overlay">
+                                <span class="btn btn-light btn-sm rounded-pill fw-bold px-3 py-1.5 shadow">
+                                    <i class="fa-solid fa-magnifying-glass-plus me-1 text-primary"></i> View Photo
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".35s">
+                    <div class="witness-photo-card open-testing-doc-modal shadow-sm"
+                        data-doc-url="assets/img/testing/8.webp"
+                        data-doc-title="Client Witness Proof-Load Hydraulic Verification on Test Rig"
+                        data-doc-type="image"
+                        role="button"
+                        tabindex="0">
+                        <div class="witness-photo-wrap">
+                            <img src="assets/img/testing/8.webp" alt="Client Witness Proof-Load Hydraulic Verification on Test Rig" loading="lazy">
+                            <div class="testing-slider-overlay">
+                                <span class="btn btn-light btn-sm rounded-pill fw-bold px-3 py-1.5 shadow">
+                                    <i class="fa-solid fa-magnifying-glass-plus me-1 text-primary"></i> View Photo
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".35s">
+                    <div class="witness-photo-card open-testing-doc-modal shadow-sm"
+                        data-doc-url="assets/img/testing/9.webp"
+                        data-doc-title="Client Witness Proof-Load Hydraulic Verification on Test Rig"
+                        data-doc-type="image"
+                        role="button"
+                        tabindex="0">
+                        <div class="witness-photo-wrap">
+                            <img src="assets/img/testing/9.webp" alt="Client Witness Proof-Load Hydraulic Verification on Test Rig" loading="lazy">
+                            <div class="testing-slider-overlay">
+                                <span class="btn btn-light btn-sm rounded-pill fw-bold px-3 py-1.5 shadow">
+                                    <i class="fa-solid fa-magnifying-glass-plus me-1 text-primary"></i> View Photo
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".35s">
+                    <div class="witness-photo-card open-testing-doc-modal shadow-sm"
+                        data-doc-url="assets/img/testing/10.webp"
+                        data-doc-title="Client Witness Proof-Load Hydraulic Verification on Test Rig"
+                        data-doc-type="image"
+                        role="button"
+                        tabindex="0">
+                        <div class="witness-photo-wrap">
+                            <img src="assets/img/testing/10.webp" alt="Client Witness Proof-Load Hydraulic Verification on Test Rig" loading="lazy">
+                            <div class="testing-slider-overlay">
+                                <span class="btn btn-light btn-sm rounded-pill fw-bold px-3 py-1.5 shadow">
+                                    <i class="fa-solid fa-magnifying-glass-plus me-1 text-primary"></i> View Photo
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".35s">
+                    <div class="witness-photo-card open-testing-doc-modal shadow-sm"
+                        data-doc-url="assets/img/testing/11.webp"
+                        data-doc-title="Client Witness Proof-Load Hydraulic Verification on Test Rig"
+                        data-doc-type="image"
+                        role="button"
+                        tabindex="0">
+                        <div class="witness-photo-wrap">
+                            <img src="assets/img/testing/11.webp" alt="Client Witness Proof-Load Hydraulic Verification on Test Rig" loading="lazy">
+                            <div class="testing-slider-overlay">
+                                <span class="btn btn-light btn-sm rounded-pill fw-bold px-3 py-1.5 shadow">
+                                    <i class="fa-solid fa-magnifying-glass-plus me-1 text-primary"></i> View Photo
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".35s">
+                    <div class="witness-photo-card open-testing-doc-modal shadow-sm"
+                        data-doc-url="assets/img/testing/12.webp"
+                        data-doc-title="Client Witness Proof-Load Hydraulic Verification on Test Rig"
+                        data-doc-type="image"
+                        role="button"
+                        tabindex="0">
+                        <div class="witness-photo-wrap">
+                            <img src="assets/img/testing/12.webp" alt="Client Witness Proof-Load Hydraulic Verification on Test Rig" loading="lazy">
+                            <div class="testing-slider-overlay">
+                                <span class="btn btn-light btn-sm rounded-pill fw-bold px-3 py-1.5 shadow">
+                                    <i class="fa-solid fa-magnifying-glass-plus me-1 text-primary"></i> View Photo
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".35s">
+                    <div class="witness-photo-card open-testing-doc-modal shadow-sm"
+                        data-doc-url="assets/img/testing/13.webp"
+                        data-doc-title="Client Witness Proof-Load Hydraulic Verification on Test Rig"
+                        data-doc-type="image"
+                        role="button"
+                        tabindex="0">
+                        <div class="witness-photo-wrap">
+                            <img src="assets/img/testing/13.webp" alt="Client Witness Proof-Load Hydraulic Verification on Test Rig" loading="lazy">
+                            <div class="testing-slider-overlay">
+                                <span class="btn btn-light btn-sm rounded-pill fw-bold px-3 py-1.5 shadow">
+                                    <i class="fa-solid fa-magnifying-glass-plus me-1 text-primary"></i> View Photo
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".35s">
+                    <div class="witness-photo-card open-testing-doc-modal shadow-sm"
+                        data-doc-url="assets/img/testing/15.webp"
+                        data-doc-title="Client Witness Proof-Load Hydraulic Verification on Test Rig"
+                        data-doc-type="image"
+                        role="button"
+                        tabindex="0">
+                        <div class="witness-photo-wrap">
+                            <img src="assets/img/testing/15.webp" alt="Client Witness Proof-Load Hydraulic Verification on Test Rig" loading="lazy">
+                            <div class="testing-slider-overlay">
+                                <span class="btn btn-light btn-sm rounded-pill fw-bold px-3 py-1.5 shadow">
+                                    <i class="fa-solid fa-magnifying-glass-plus me-1 text-primary"></i> View Photo
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".35s">
+                    <div class="witness-photo-card open-testing-doc-modal shadow-sm"
+                        data-doc-url="assets/img/testing/16.webp"
+                        data-doc-title="Client Witness Proof-Load Hydraulic Verification on Test Rig"
+                        data-doc-type="image"
+                        role="button"
+                        tabindex="0">
+                        <div class="witness-photo-wrap">
+                            <img src="assets/img/testing/16.webp" alt="Client Witness Proof-Load Hydraulic Verification on Test Rig" loading="lazy">
+                            <div class="testing-slider-overlay">
+                                <span class="btn btn-light btn-sm rounded-pill fw-bold px-3 py-1.5 shadow">
+                                    <i class="fa-solid fa-magnifying-glass-plus me-1 text-primary"></i> View Photo
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
