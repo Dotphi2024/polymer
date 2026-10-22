@@ -631,7 +631,7 @@ The project credentials below highlight our experience across these sectors, inc
                             style="color:var(--theme-primary); font-size:13px; letter-spacing:2px;">Testimonials</span>
                         <h2 class="fw-bold text-dark mb-4"
                             style="font-size:38px; line-height:1.2; font-family:'Oswald', sans-serif; text-transform:uppercase; letter-spacing:-0.5px;">
-                            What Are They Saying About Us?
+                            Clients Feeback...
                         </h2>
                     </div>
 
