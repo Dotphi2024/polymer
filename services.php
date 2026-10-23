@@ -1,6 +1,6 @@
 <?php 
 $page_title = "Proposed Bearing Types & Applications - Polymer Products";
-$meta_description = "Complete range of IRC:83 (Part II) 2018 & RDSO BS-131 approved elastomeric bridge bearings: Type A, Type B, Type C, Type D, Type E, Type F, Type G PTFE Sliding, Type H Guided, Type I Seismic Isolation, RDSO Bearings, POT-PTFE, Rubber Bunk, and Locators.";
+$meta_description = "Complete range of IRC:83 (Part II) 2018 & RDSO BS-131 approved elastomeric bridge bearings: Type A, Type B, Type C, Type D, Type E, Type F, Type G PTFE Sliding, Type H Guided, Type I Seismic Isolation, RDSO Bearings, and POT-PTFE.";
 include_once 'partials/header.php'; 
 ?>
 
@@ -521,8 +521,6 @@ function render_bearing_gallery($images, $title, $carousel_id) {
             <a href="#type-i" class="bearing-nav-pill"><i class="fa-solid fa-wave-square text-primary"></i> Type I</a>
             <a href="#type-rdso" class="bearing-nav-pill"><i class="fa-solid fa-train text-primary"></i> Type RDSO</a>
             <a href="#pot-ptfe" class="bearing-nav-pill"><i class="fa-solid fa-circle-dot text-primary"></i> POT / PTFE</a>
-            <a href="#rubber-bunk" class="bearing-nav-pill"><i class="fa-solid fa-cube text-primary"></i> Rubber Bunk</a>
-            <a href="#locator" class="bearing-nav-pill"><i class="fa-solid fa-crosshairs text-primary"></i> Locator</a>
         </div>
 
         <!-- IRC:83 Master Classification Reference Box -->
@@ -1433,187 +1431,6 @@ function render_bearing_gallery($images, $title, $carousel_id) {
             </div>
         </div>
 
-        <!-- ============================================================
-             Product 12: Rubber Bunk (Buffer & End Bunk Shock Absorber Pads)
-             ============================================================ -->
-        <div class="card border-0 rounded-4 shadow-sm mb-5 overflow-hidden product-item-card wow fadeInUp" id="rubber-bunk" data-wow-delay=".4s">
-            <div class="row g-0 align-items-center flex-lg-row-reverse">
-                <div class="col-lg-6 p-4 p-md-5">
-                    <div class="d-flex align-items-center gap-2 mb-3">
-                        <span class="badge rounded-pill px-3 py-1.5 fw-bold text-uppercase"
-                            style="background: var(--theme-subtle); color: var(--theme-primary); font-size: 12px; letter-spacing: 1px;">
-                            Rubber Bunk
-                        </span>
-                        <span class="badge bg-light text-secondary rounded-pill px-3 py-1.5 border small fw-semibold">
-                            <i class="fa-solid fa-cube text-primary me-1"></i> Buffer &amp; Shock Absorber
-                        </span>
-                    </div>
-
-                    <h3 class="fw-bold text-dark mb-3" style="font-family: 'Oswald', sans-serif; font-size: 26px;">
-                        Rubber Bunk: Buffer &amp; End Bunk Shock Absorber Pads
-                    </h3>
-                    
-                    <p class="text-secondary mb-4" style="font-size: 14.5px; line-height: 1.8;">
-                        Rubber Bunk pads are heavy-duty moulded elastomeric buffer blocks designed to absorb high dynamic impact energy at bridge abutments, expansion gap ends, pier caps, and retaining walls. Manufactured from tough abrasion and ozone-resistant rubber compounds, they protect concrete substructures from damage during temperature extremes and braking surges.
-                    </p>
-
-                    <!-- Technical Specs Chips -->
-                    <div class="row g-3 mb-4">
-                        <div class="col-sm-6">
-                            <div class="spec-box h-100">
-                                <div class="d-flex align-items-center mb-1">
-                                    <i class="fa-solid fa-shield me-2" style="color: var(--theme-primary);"></i>
-                                    <h6 class="fw-bold mb-0" style="font-size: 13.5px; color: var(--theme-primary);">Energy Absorption</h6>
-                                </div>
-                                <small class="text-muted d-block" style="font-size: 12.5px;">High damping impact dissipation</small>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="spec-box h-100">
-                                <div class="d-flex align-items-center mb-1">
-                                    <i class="fa-solid fa-cubes-stacked me-2" style="color: var(--theme-primary);"></i>
-                                    <h6 class="fw-bold mb-0" style="font-size: 13.5px; color: var(--theme-primary);">Elastomer Type</h6>
-                                </div>
-                                <small class="text-muted d-block" style="font-size: 12.5px;">Weather &amp; UV resistant vulcanized block</small>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Applications List -->
-                    <h6 class="fw-bold text-dark mb-2" style="font-size: 13.5px; text-transform: uppercase; letter-spacing: 0.5px;">
-                        Typical Applications:
-                    </h6>
-                    <ul class="list-unstyled mb-4 text-secondary" style="font-size: 14px; line-height: 1.9;">
-                        <li class="d-flex align-items-start mb-1">
-                            <i class="fa-solid fa-circle-check me-2 mt-1" style="color: var(--theme-primary);"></i>
-                            <span>Bridge abutment expansion gap cushioning and deck end buffer protection</span>
-                        </li>
-                        <li class="d-flex align-items-start mb-1">
-                            <i class="fa-solid fa-circle-check me-2 mt-1" style="color: var(--theme-primary);"></i>
-                            <span>Ballast wall and pier cap anti-collision impact dampening blocks</span>
-                        </li>
-                        <li class="d-flex align-items-start mb-1">
-                            <i class="fa-solid fa-circle-check me-2 mt-1" style="color: var(--theme-primary);"></i>
-                            <span>Railway track buffer stops and railway terminal shock-absorbing blocks</span>
-                        </li>
-                        <li class="d-flex align-items-start">
-                            <i class="fa-solid fa-circle-check me-2 mt-1" style="color: var(--theme-primary);"></i>
-                            <span>Heavy gantry end-stops and industrial equipment shock isolation pads</span>
-                        </li>
-                    </ul>
-
-                    <a href="contact.php?product=Rubber-Bunk-Buffer-Pad" class="btn btn-primary rounded-pill px-4 py-2.5 fw-bold shadow-sm d-inline-flex align-items-center gap-2"
-                        style="background: var(--theme-primary); border-color: var(--theme-primary); font-size: 13.5px;">
-                        <span>Request Inquiry for Rubber Bunk</span>
-                        <i class="fa-solid fa-arrow-right" style="font-size: 12px;"></i>
-                    </a>
-                </div>
-
-                <!-- ============================================================
-                     IMAGE AREA (Add / Edit images for this card below)
-                     - 1 image: Automatically displays as standard static image (no slider)
-                     - 2+ images: Automatically activates smooth auto-changing slider in card size
-                     ============================================================ -->
-                <div class="col-lg-6 p-4 p-lg-5">
-                    <?php 
-                    render_bearing_gallery([
-                        'assets/img/bearings/rubber-bunk.jpg',
-                    ], 'Rubber Bunk: Buffer & End Bunk Shock Absorber Pads', 'carousel-rubber-bunk'); 
-                    ?>
-                </div>
-            </div>
-        </div>
-
-        <!-- ============================================================
-             Product 13: Seismic Locator (Guide Pins & Lateral Restraints)
-             ============================================================ -->
-        <div class="card border-0 rounded-4 shadow-sm mb-4 overflow-hidden product-item-card wow fadeInUp" id="locator" data-wow-delay=".45s">
-            <div class="row g-0 align-items-center">
-                <div class="col-lg-6 p-4 p-md-5">
-                    <div class="d-flex align-items-center gap-2 mb-3">
-                        <span class="badge rounded-pill px-3 py-1.5 fw-bold text-uppercase"
-                            style="background: var(--theme-subtle); color: var(--theme-primary); font-size: 12px; letter-spacing: 1px;">
-                            Locator
-                        </span>
-                        <span class="badge bg-light text-secondary rounded-pill px-3 py-1.5 border small fw-semibold">
-                            <i class="fa-solid fa-crosshairs text-primary me-1"></i> Seismic Restraint &bull; Guide Pin
-                        </span>
-                    </div>
-
-                    <h3 class="fw-bold text-dark mb-3" style="font-family: 'Oswald', sans-serif; font-size: 26px;">
-                        Locator: Seismic Guide Pins &amp; Lateral Restraints
-                    </h3>
-                    
-                    <p class="text-secondary mb-4" style="font-size: 14.5px; line-height: 1.8;">
-                        Seismic Locators and Shear Key Restraints consist of precision-machined high-strength alloy pins encased in durable elastomeric cushioning sleeves anchored to heavy steel socket bases. They transfer high horizontal earthquake and wind shear forces directly from the bridge superstructure to the pier cap while dampening vibrations and eliminating metallic chatter.
-                    </p>
-
-                    <!-- Technical Specs Chips -->
-                    <div class="row g-3 mb-4">
-                        <div class="col-sm-6">
-                            <div class="spec-box h-100">
-                                <div class="d-flex align-items-center mb-1">
-                                    <i class="fa-solid fa-crosshairs me-2" style="color: var(--theme-primary);"></i>
-                                    <h6 class="fw-bold mb-0" style="font-size: 13.5px; color: var(--theme-primary);">Shear Key Design</h6>
-                                </div>
-                                <small class="text-muted d-block" style="font-size: 12.5px;">High-strength alloy steel shear pin</small>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="spec-box h-100">
-                                <div class="d-flex align-items-center mb-1">
-                                    <i class="fa-solid fa-shield-halved me-2" style="color: var(--theme-primary);"></i>
-                                    <h6 class="fw-bold mb-0" style="font-size: 13.5px; color: var(--theme-primary);">Damping Sleeve</h6>
-                                </div>
-                                <small class="text-muted d-block" style="font-size: 12.5px;">Elastomeric ring cushions dynamic impact</small>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Applications List -->
-                    <h6 class="fw-bold text-dark mb-2" style="font-size: 13.5px; text-transform: uppercase; letter-spacing: 0.5px;">
-                        Typical Applications:
-                    </h6>
-                    <ul class="list-unstyled mb-4 text-secondary" style="font-size: 14px; line-height: 1.9;">
-                        <li class="d-flex align-items-start mb-1">
-                            <i class="fa-solid fa-circle-check me-2 mt-1" style="color: var(--theme-primary);"></i>
-                            <span>Seismic shear key restraints on highway and railway bridge pier caps</span>
-                        </li>
-                        <li class="d-flex align-items-start mb-1">
-                            <i class="fa-solid fa-circle-check me-2 mt-1" style="color: var(--theme-primary);"></i>
-                            <span>Transverse and longitudinal locator pin systems for continuous decks</span>
-                        </li>
-                        <li class="d-flex align-items-start mb-1">
-                            <i class="fa-solid fa-circle-check me-2 mt-1" style="color: var(--theme-primary);"></i>
-                            <span>Deck unseating prevention and earthquake displacement control</span>
-                        </li>
-                        <li class="d-flex align-items-start">
-                            <i class="fa-solid fa-circle-check me-2 mt-1" style="color: var(--theme-primary);"></i>
-                            <span>Metro elevated viaducts and critical transit flyovers</span>
-                        </li>
-                    </ul>
-
-                    <a href="contact.php?product=Seismic-Locator" class="btn btn-primary rounded-pill px-4 py-2.5 fw-bold shadow-sm d-inline-flex align-items-center gap-2"
-                        style="background: var(--theme-primary); border-color: var(--theme-primary); font-size: 13.5px;">
-                        <span>Request Inquiry for Locator</span>
-                        <i class="fa-solid fa-arrow-right" style="font-size: 12px;"></i>
-                    </a>
-                </div>
-
-                <!-- ============================================================
-                     IMAGE AREA (Add / Edit images for this card below)
-                     - 1 image: Automatically displays as standard static image (no slider)
-                     - 2+ images: Automatically activates smooth auto-changing slider in card size
-                     ============================================================ -->
-                <div class="col-lg-6 p-4 p-lg-5">
-                    <?php 
-                    render_bearing_gallery([
-                        'assets/img/bearings/locator.jpg',
-                    ], 'Locator: Seismic Guide Pins & Lateral Restraints', 'carousel-locator'); 
-                    ?>
-                </div>
-            </div>
-        </div>
 
     </div>
 </section>
