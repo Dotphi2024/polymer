@@ -223,8 +223,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
                                                     <li><a href="services.php#type-i"><i class="fa-solid fa-wave-square text-primary me-2"></i>Type I: Seismic Isolation</a></li>
                                                     <li><a href="services.php#type-rdso"><i class="fa-solid fa-train text-primary me-2"></i>Type RDSO: Railway Heavy Axle</a></li>
                                                     <li><a href="services.php#pot-ptfe"><i class="fa-solid fa-circle-dot text-primary me-2"></i>POT / PTFE PAD</a></li>
-                                                    <li><a href="services.php#rubber-bunk"><i class="fa-solid fa-cube text-primary me-2"></i>Rubber Bunk (Buffer Pad)</a></li>
-                                                    <li><a href="services.php#locator"><i class="fa-solid fa-crosshairs text-primary me-2"></i>Locator (Seismic Restraint)</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="material-used.php">Raw Materials Used</a></li>
@@ -335,8 +333,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
                                         <li><a href="services.php#type-i">&bull; Type I (Seismic Isolation)</a></li>
                                         <li><a href="services.php#type-rdso">&bull; Type RDSO (Railway Heavy Axle)</a></li>
                                         <li><a href="services.php#pot-ptfe">&bull; POT / PTFE PAD</a></li>
-                                        <li><a href="services.php#rubber-bunk">&bull; Rubber Bunk (Buffer Pad)</a></li>
-                                        <li><a href="services.php#locator">&bull; Locator (Seismic Restraint)</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="material-used.php">Raw Materials Used</a></li>
