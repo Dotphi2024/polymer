@@ -1,6 +1,6 @@
 <?php 
 $page_title = "Proposed Bearing Types & Applications - Polymer Products";
-$meta_description = "Complete range of IRC:83 (Part II) 2018 & RDSO BS-131 approved elastomeric bridge bearings: Type A, Type B, Type C, Type D, Type E, Type F, Type G PTFE Sliding, Type H Guided, Type I Seismic Isolation, RDSO Bearings, and POT-PTFE.";
+$meta_description = "Complete range of IRC:83 (Part II) 2018 & RDSO BS-131 approved elastomeric bridge bearings: Type A, Type B, Type C, Type D, Type E, Type F, Type G PTFE Sliding, Type H Guided, Type I Seismic Isolation, RDSO Bearings, and Elastomeric Bearings.";
 include_once 'partials/header.php'; 
 ?>
 
@@ -520,7 +520,7 @@ function render_bearing_gallery($images, $title, $carousel_id) {
             <a href="#type-h" class="bearing-nav-pill"><i class="fa-solid fa-arrows-left-right text-primary"></i> Type H</a>  
             <a href="#type-i" class="bearing-nav-pill"><i class="fa-solid fa-wave-square text-primary"></i> Type I</a>
             <a href="#type-rdso" class="bearing-nav-pill"><i class="fa-solid fa-train text-primary"></i> Type RDSO</a>
-            <a href="#pot-ptfe" class="bearing-nav-pill"><i class="fa-solid fa-circle-dot text-primary"></i> POT / PTFE</a>
+            <a href="##elastomeric-bearings" class="bearing-nav-pill"><i class="fa-solid fa-circle-dot text-primary"></i> Elastomeric Bearings</a>
         </div>
 
         <!-- IRC:83 Master Classification Reference Box -->
@@ -1343,13 +1343,13 @@ function render_bearing_gallery($images, $title, $carousel_id) {
         <!-- ============================================================
              Product 11: POT / PTFE Bearings (Fixed, Guided & Free Sliding)
              ============================================================ -->
-        <div class="card border-0 rounded-4 shadow-sm mb-5 overflow-hidden product-item-card wow fadeInUp" id="pot-ptfe" data-wow-delay=".35s">
+        <div class="card border-0 rounded-4 shadow-sm mb-5 overflow-hidden product-item-card wow fadeInUp" id="elastomeric-bearings" data-wow-delay=".35s">
             <div class="row g-0 align-items-center">
                 <div class="col-lg-6 p-4 p-md-5">
                     <div class="d-flex align-items-center gap-2 mb-3">
                         <span class="badge rounded-pill px-3 py-1.5 fw-bold text-uppercase"
                             style="background: var(--theme-subtle); color: var(--theme-primary); font-size: 12px; letter-spacing: 1px;">
-                            POT / PTFE
+                            Elastomeric Bearings
                         </span>
                         <span class="badge bg-light text-secondary rounded-pill px-3 py-1.5 border small fw-semibold">
                             <i class="fa-solid fa-circle-dot text-primary me-1"></i> High Load Capacity
@@ -1357,11 +1357,11 @@ function render_bearing_gallery($images, $title, $carousel_id) {
                     </div>
 
                     <h3 class="fw-bold text-dark mb-3" style="font-family: 'Oswald', sans-serif; font-size: 26px;">
-                        POT / PTFE PAD Bearings (Fixed, Guided &amp; Free)
+                        Elastomeric Bearings (Fixed, Guided &amp; Free)
                     </h3>
                     
                     <p class="text-secondary mb-4" style="font-size: 14.5px; line-height: 1.8;">
-                        POT-PTFE bearings are engineered for exceptional vertical load capacities ranging from 1,000 kN to over 50,000 kN. The bearing confines an elastomeric disc within a heavy machined steel pot cylinder, causing it to act as an incompressible hydraulic fluid permitting multi-directional rotation. For sliding requirements, an integrated dimpled PTFE disc pairs with mirror-polished austenitic stainless steel.
+                        Elastomeric  bearings are engineered for exceptional vertical load capacities ranging from 1,000 kN to over 50,000 kN. The bearing confines an elastomeric disc within a heavy machined steel pot cylinder, causing it to act as an incompressible hydraulic fluid permitting multi-directional rotation. For sliding requirements, an integrated dimpled PTFE disc pairs with mirror-polished austenitic stainless steel.
                     </p>
 
                     <!-- Technical Specs Chips -->
@@ -1411,7 +1411,7 @@ function render_bearing_gallery($images, $title, $carousel_id) {
 
                     <a href="contact.php?product=POT-PTFE-Bearings" class="btn btn-primary rounded-pill px-4 py-2.5 fw-bold shadow-sm d-inline-flex align-items-center gap-2"
                         style="background: var(--theme-primary); border-color: var(--theme-primary); font-size: 13.5px;">
-                        <span>Request Inquiry for POT-PTFE</span>
+                        <span>Request Inquiry for Elastomeric Bearings</span>
                         <i class="fa-solid fa-arrow-right" style="font-size: 12px;"></i>
                     </a>
                 </div>
@@ -1425,7 +1425,7 @@ function render_bearing_gallery($images, $title, $carousel_id) {
                     <?php 
                     render_bearing_gallery([
                         'assets/img/bearings/pot-ptfe.jpg',
-                    ], 'POT / PTFE PAD Bearings (Fixed, Guided & Free)', 'carousel-pot-ptfe'); 
+                    ], 'Elastomeric   Bearings (Fixed, Guided & Free)', 'carousel-Elastomeric Bearings'); 
                     ?>
                 </div>
             </div>

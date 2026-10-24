@@ -222,7 +222,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                                                     <li><a href="services.php#type-h"><i class="fa-solid fa-arrows-left-right text-primary me-2"></i>Type H: Guided Restraints</a></li>
                                                     <li><a href="services.php#type-i"><i class="fa-solid fa-wave-square text-primary me-2"></i>Type I: Seismic Isolation</a></li>
                                                     <li><a href="services.php#type-rdso"><i class="fa-solid fa-train text-primary me-2"></i>Type RDSO: Railway Heavy Axle</a></li>
-                                                    <li><a href="services.php#pot-ptfe"><i class="fa-solid fa-circle-dot text-primary me-2"></i>POT / PTFE PAD</a></li>
+                                                    <li><a href="services.php#elastomeric-bearings"><i class="fa-solid fa-circle-dot text-primary me-2"></i>Elastomeric Bearings</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="material-used.php">Raw Materials Used</a></li>
@@ -332,7 +332,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                                         <li><a href="services.php#type-h">&bull; Type H (Guided Restraint)</a></li>
                                         <li><a href="services.php#type-i">&bull; Type I (Seismic Isolation)</a></li>
                                         <li><a href="services.php#type-rdso">&bull; Type RDSO (Railway Heavy Axle)</a></li>
-                                        <li><a href="services.php#pot-ptfe">&bull; POT / PTFE PAD</a></li>
+                                        <li><a href="services.php#elastomeric-bearings">&bull; Elastomeric Bearings</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="material-used.php">Raw Materials Used</a></li>
