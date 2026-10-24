@@ -326,9 +326,9 @@ include_once 'partials/header.php';
                     <div class="text-primary fs-2 mb-3">
                         <i class="fa-solid fa-microscope"></i>
                     </div>
-                    <h5 class="fw-bold text-dark mb-2" style="font-family: 'Oswald', sans-serif;">RITES &amp; Third-Party Tested</h5>
+                    <h5 class="fw-bold text-dark mb-2" style="font-family: 'Oswald', sans-serif;">RITES, NHAI CLIENT'S & THIRD-PARTY TESTED</h5>
                     <p class="text-muted small mb-0">
-                        100% witnessed testing by RITES, RDSO, SGS, and leading government-approved testing agencies.
+                        100% witnessed testing by NHAI Clients, RITES, CEIL, RDSO, SGS,l, TÜV Austria, and other NABL & Government-approved agencies.
                     </p>
                 </div>
             </div>

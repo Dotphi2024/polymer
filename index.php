@@ -557,7 +557,7 @@ The project credentials below highlight our experience across these sectors, inc
                     </div>
                     <div class="card-body p-4">
                         <h4 class="card-title fw-bold text-dark mb-2"
-                            style="font-family:'Oswald', sans-serif; font-size:22px;">Indian Railways & ROBs
+                            style="font-family:'Oswald', sans-serif; font-size:22px;">Indian Railways & RDSO
                         </h4>
                         <p class="card-text text-muted small mb-0" style="line-height:1.7;">
                         <strong>Polymer Products</strong> has a long-standing association with<strong> Railway Infrastructure</strong>, including Railway Bridges and Railway Over Bridges (ROBs). Our experience covers supplies for projects associated with Indian Railways and various railway infrastructure contractors. The credentials below highlight the projects undertaken and the range of bearing sizes supplied. 
