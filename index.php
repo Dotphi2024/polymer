@@ -548,7 +548,9 @@ The project credentials below highlight our experience across these sectors, inc
                 <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden bg-white sector-card position-relative"
                     style="transition: all 0.35s ease;">
                     <div class="position-relative overflow-hidden" style="height: 230px;">
-                        <img src="assets/img/img/banner/image-1.png" class="card-img-top w-100 h-100 sector-img"
+                        <!-- old-image -->
+                        <!-- assets/img/img/banner/image-1.png -->
+                        <img src="assets/img/img/products/type-rdso.webp"  class="card-img-top w-100 h-100 sector-img"
                             alt="Indian Railways & ROBs" style="object-fit: cover; transition: transform 0.5s ease;">
                         <span
                             class="badge bg-primary position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill fw-bold shadow">
