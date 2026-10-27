@@ -33,7 +33,7 @@ include_once 'partials/header.php';
     letter-spacing: 1px;
 }
 
-/* Sticky Navigation Pills (No Slider Bar, Clean Multi-Line Wrap) */
+/* Sticky Navigation Pills (Smart Hide on Scroll Down, Show on Scroll Up) */
 .rdso-nav-wrapper {
     position: sticky;
     top: 80px;
@@ -43,6 +43,15 @@ include_once 'partials/header.php';
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid #e2e8f0;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    transform: translateY(0);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+    will-change: transform;
+}
+
+.rdso-nav-wrapper.rdso-nav-hidden {
+    transform: translateY(-130%);
+    opacity: 0;
+    pointer-events: none;
 }
 
 .rdso-nav-pills {
@@ -1202,7 +1211,7 @@ include_once 'partials/header.php';
                 </div>
             </div>
 
-            <!-- Direct Official PDF Download & Viewer Card -->
+            <!-- Direct Official PDF Viewer Card -->
             <div class="col-lg-5">
                 <div class="rdso-card h-100 shadow-sm p-4 d-flex flex-column justify-content-between" style="background: linear-gradient(180deg, #ffffff 0%, #f0f7ff 100%);">
                     <div>
@@ -1236,20 +1245,15 @@ include_once 'partials/header.php';
                         </div>
                     </div>
 
-                    <div class="d-flex flex-column gap-2">
+                    <div>
                         <button type="button" class="btn btn-primary w-100 py-3 rounded-pill fw-bold shadow-sm open-rdso-modal d-flex align-items-center justify-content-center gap-2"
                             data-doc-url="assets/pp_data/Page 01/POLYMER DETAILS/NEW_RDSO.pdf"
                             data-doc-title="RDSO Indian Railways Technical Approval Certificate"
                             data-doc-type="pdf"
                             style="background: var(--theme-primary, #0284c7); border-color: var(--theme-primary, #0284c7); font-size: 14px;">
                             <i class="fa-solid fa-eye"></i>
-                            <span>Preview Official RDSO Approval Document</span>
+                            <span>View Official RDSO Approval Document</span>
                         </button>
-                        
-                        <a href="assets/pp_data/Page 01/POLYMER DETAILS/NEW_RDSO.pdf" download
-                            class="btn btn-outline-primary w-100 py-2.5 rounded-pill fw-semibold text-center small">
-                            <i class="fa-solid fa-download me-1"></i> Download RDSO Document (PDF)
-                        </a>
                     </div>
                 </div>
             </div>
@@ -1571,7 +1575,7 @@ include_once 'partials/header.php';
                     </div>
 
                     <button type="button" class="btn btn-primary w-100 rounded-pill py-2.5 fw-bold small open-rdso-modal"
-                        data-doc-url="assets/pp_data/Page 08/METRO CLIENTS.pdf"
+                        data-doc-url="assets/pp_data/Page 08/NEW METRO CLIENTS.pdf"
                         data-doc-title="Metro Rail Transit Supply Register (23+ Packages)"
                         data-doc-type="pdf">
                         <i class="fa-solid fa-file-lines me-1"></i> View Metro Clients Register
@@ -1644,9 +1648,6 @@ include_once 'partials/header.php';
                     </h5>
                 </div>
                 <div class="d-flex align-items-center gap-2">
-                    <a id="rdsoModalDownloadBtn" href="" download class="btn btn-sm btn-outline-light rounded-pill px-3 py-1 fw-semibold" style="font-size: 12px;">
-                        <i class="fa-solid fa-download me-1"></i> Download
-                    </a>
                     <button type="button" class="btn btn-light btn-sm rounded-circle p-2 d-flex align-items-center justify-content-center" data-bs-dismiss="modal" aria-label="Close" style="width: 32px; height: 32px;">
                         <i class="fa-solid fa-xmark text-dark fs-6"></i>
                     </button>
@@ -1662,12 +1663,15 @@ include_once 'partials/header.php';
                     <p class="text-white-50 small mb-0">Loading document preview...</p>
                 </div>
 
-                <!-- Iframe for PDFs -->
+                <!-- PDF Canvas Viewer Container (Protected View-Only, No Browser Context Menu) -->
+                <div id="rdsoModalCanvasWrap" class="p-3" style="display: none; height: 78vh; min-height: 520px; overflow-y: auto; background: #0f172a; -webkit-overflow-scrolling: touch;" oncontextmenu="return false;"></div>
+
+                <!-- Iframe for PDFs (Fallback) -->
                 <iframe id="rdsoModalIframe" src="" style="width: 100%; height: 78vh; border: none; display: none; background: #fff;" allowfullscreen></iframe>
 
                 <!-- Image Wrapper for JPG/PNG -->
-                <div id="rdsoModalImgWrap" class="p-2 p-md-3" style="display: none; height: 78vh; min-height: 520px; overflow-y: auto; background: #0f172a; align-items: center; justify-content: center;">
-                    <img id="rdsoModalImage" src="" alt="Certificate Image" style="max-height: 74vh; max-width: 95%; width: auto; height: auto; object-fit: contain; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: 8px; background: #fff; margin: auto; display: block;">
+                <div id="rdsoModalImgWrap" class="p-2 p-md-3" style="display: none; height: 78vh; min-height: 520px; overflow-y: auto; background: #0f172a; align-items: center; justify-content: center;" oncontextmenu="return false;">
+                    <img id="rdsoModalImage" src="" alt="Certificate Image" style="max-height: 74vh; max-width: 95%; width: auto; height: auto; object-fit: contain; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: 8px; background: #fff; margin: auto; display: block;" oncontextmenu="return false;" ondragstart="return false;">
                 </div>
             </div>
 
@@ -1681,25 +1685,34 @@ include_once 'partials/header.php';
     </div>
 </div>
 
-<!-- ============================================================
-     10. Client-Side JavaScript for Active Scrollspy & Modal Preview
-     ============================================================ -->
+<!-- PDF.js Library for View-Only Protected PDF Rendering -->
+<script src="assets/js/pdf.min.js"></script>
 <script>
+if (typeof pdfjsLib !== 'undefined') {
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'assets/js/pdf.worker.min.js';
+}
+
 document.addEventListener('DOMContentLoaded', function () {
-    // Modal Preview Handler
+    // Modal Preview Handler (View-Only Mode)
     const modalEl = document.getElementById('rdsoDocModal');
     if (modalEl) {
         const modalTitle = document.getElementById('rdsoDocModalLabel');
         const modalIframe = document.getElementById('rdsoModalIframe');
+        const modalCanvasWrap = document.getElementById('rdsoModalCanvasWrap');
         const modalImgWrap = document.getElementById('rdsoModalImgWrap');
         const modalImage = document.getElementById('rdsoModalImage');
         const modalLoader = document.getElementById('rdsoModalLoader');
-        const modalDownload = document.getElementById('rdsoModalDownloadBtn');
+
+        let currentRenderTasks = [];
 
         function cleanModal() {
+            currentRenderTasks.forEach(t => { try { t.cancel(); } catch (e) {} });
+            currentRenderTasks = [];
+
+            if (modalCanvasWrap) modalCanvasWrap.innerHTML = '';
+            if (modalCanvasWrap) modalCanvasWrap.style.display = 'none';
             modalIframe.src = '';
             modalImage.src = '';
-            modalDownload.href = '';
             modalLoader.style.display = 'none';
             modalIframe.style.display = 'none';
             modalImgWrap.style.display = 'none';
@@ -1720,6 +1733,85 @@ document.addEventListener('DOMContentLoaded', function () {
             cleanModal();
         });
 
+        // Secure PDF Renderer via HTML5 Canvas (Eliminates Browser PDF Plugin & "Save as...")
+        async function renderSecurePdf(url) {
+            currentRenderTasks.forEach(t => { try { t.cancel(); } catch (e) {} });
+            currentRenderTasks = [];
+
+            modalCanvasWrap.innerHTML = '';
+            modalLoader.style.display = 'block';
+            modalCanvasWrap.style.display = 'none';
+            modalIframe.style.display = 'none';
+            modalImgWrap.style.display = 'none';
+
+            if (typeof pdfjsLib === 'undefined') {
+                modalIframe.src = url + '#toolbar=0&navpanes=0';
+                modalIframe.onload = function () {
+                    modalLoader.style.display = 'none';
+                    modalIframe.style.display = 'block';
+                };
+                return;
+            }
+
+            try {
+                const loadingTask = pdfjsLib.getDocument({
+                    url: url,
+                    cMapUrl: 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/cmaps/',
+                    cMapPacked: true
+                });
+                const pdf = await loadingTask.promise;
+
+                modalLoader.style.display = 'none';
+                modalCanvasWrap.style.display = 'block';
+
+                const containerWidth = Math.min(modalCanvasWrap.clientWidth || 880, 960);
+
+                for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+                    const page = await pdf.getPage(pageNum);
+                    const unscaledViewport = page.getViewport({ scale: 1 });
+                    
+                    const targetWidth = containerWidth - 28;
+                    const displayScale = Math.max(targetWidth / unscaledViewport.width, 0.95);
+                    const renderScale = displayScale * (window.devicePixelRatio || 1.5);
+                    
+                    const viewport = page.getViewport({ scale: renderScale });
+                    const displayViewport = page.getViewport({ scale: displayScale });
+
+                    const canvas = document.createElement('canvas');
+                    canvas.className = 'pdf-page-canvas shadow-lg mb-3';
+                    canvas.style.display = 'block';
+                    canvas.style.margin = '0 auto 16px auto';
+                    canvas.style.maxWidth = '100%';
+                    canvas.style.width = displayViewport.width + 'px';
+                    canvas.style.height = displayViewport.height + 'px';
+                    canvas.style.borderRadius = '6px';
+                    canvas.style.background = '#ffffff';
+                    canvas.oncontextmenu = function (e) { e.preventDefault(); return false; };
+
+                    const context = canvas.getContext('2d');
+                    canvas.width = viewport.width;
+                    canvas.height = viewport.height;
+
+                    modalCanvasWrap.appendChild(canvas);
+
+                    const renderTask = page.render({
+                        canvasContext: context,
+                        viewport: viewport
+                    });
+                    currentRenderTasks.push(renderTask);
+                    await renderTask.promise;
+                }
+            } catch (err) {
+                if (err && err.name === 'RenderingCancelledException') return;
+                console.warn('PDF.js rendering fallback to iframe:', err);
+                modalIframe.src = url + '#toolbar=0&navpanes=0';
+                modalIframe.onload = function () {
+                    modalLoader.style.display = 'none';
+                    modalIframe.style.display = 'block';
+                };
+            }
+        }
+
         document.querySelectorAll('.open-rdso-modal').forEach(function (btn) {
             btn.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1729,9 +1821,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 const type = this.getAttribute('data-doc-type') || (url.toLowerCase().match(/\.(png|jpg|jpeg|webp)$/) ? 'image' : 'pdf');
 
                 modalTitle.textContent = title;
-                modalDownload.href = url;
                 modalLoader.style.display = 'block';
                 modalIframe.style.display = 'none';
+                modalCanvasWrap.style.display = 'none';
                 modalImgWrap.style.display = 'none';
 
                 if (typeof bootstrap !== 'undefined' && bootstrap.Modal) {
@@ -1746,19 +1838,76 @@ document.addEventListener('DOMContentLoaded', function () {
                     };
                     modalImage.onerror = function () {
                         modalLoader.style.display = 'none';
-                        modalImgWrap.innerHTML = '<div class="text-white text-center py-5">Unable to load image. <a href="' + url + '" target="_blank" style="color: var(--theme-primary, #0284c7); text-decoration: underline;">Download File</a></div>';
+                        modalImgWrap.innerHTML = '<div class="text-white text-center py-5">Unable to display preview. Please try again later.</div>';
                         modalImgWrap.style.display = 'flex';
                     };
                     modalImage.src = url;
                 } else {
-                    modalIframe.onload = function () {
-                        modalLoader.style.display = 'none';
-                        modalIframe.style.display = 'block';
-                    };
-                    modalIframe.src = url;
+                    renderSecurePdf(url);
                 }
             });
         });
+
+        // Disable right-click context menu on modal to remove "Save as..."
+        modalEl.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+            return false;
+        }, true);
+
+        // Disable Ctrl+S / Ctrl+P while viewing
+        window.addEventListener('keydown', function (e) {
+            if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'S' || e.key === 'p' || e.key === 'P')) {
+                if (modalEl.classList.contains('show')) {
+                    e.preventDefault();
+                    return false;
+                }
+            }
+        }, true);
+    }
+
+    // Smart Sticky Navigation: Hide on Scroll Down, Show on Scroll Up
+    const navWrapper = document.querySelector('.rdso-nav-wrapper');
+    if (navWrapper) {
+        let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+        let isPillClicking = false;
+        const scrollDelta = 8; // sensitivity threshold to prevent micro-jitter
+
+        // Prevent hiding immediately when user clicks a navigation pill
+        document.querySelectorAll('.rdso-pill-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                isPillClicking = true;
+                navWrapper.classList.remove('rdso-nav-hidden');
+                setTimeout(() => {
+                    isPillClicking = false;
+                    lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+                }, 800);
+            });
+        });
+
+        window.addEventListener('scroll', function () {
+            if (isPillClicking) return;
+
+            const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+
+            // When near the top of the page, always keep the bar fully visible
+            if (currentScrollY <= 380) {
+                navWrapper.classList.remove('rdso-nav-hidden');
+                lastScrollY = currentScrollY;
+                return;
+            }
+
+            // Detect scroll direction beyond threshold
+            if (Math.abs(currentScrollY - lastScrollY) > scrollDelta) {
+                if (currentScrollY > lastScrollY) {
+                    // Scrolling DOWN -> Hide smoothly
+                    navWrapper.classList.add('rdso-nav-hidden');
+                } else {
+                    // Scrolling UP (top side) -> Show smoothly
+                    navWrapper.classList.remove('rdso-nav-hidden');
+                }
+                lastScrollY = currentScrollY;
+            }
+        }, { passive: true });
     }
 
     // Active Pill Scrollspy Highlight

@@ -409,6 +409,9 @@ include_once 'partials/header.php';
                     <p class="text-white-50 small mb-0">Loading document register preview...</p>
                 </div>
 
+                <!-- Protected PDF Canvas Container (No Browser Plugin, No Right-Click "Save as...") -->
+                <div id="expDocModalCanvasWrap" class="p-3" style="display: none; height: 75vh; min-height: 520px; overflow-y: auto; background: #0f172a; -webkit-overflow-scrolling: touch;" oncontextmenu="return false;"></div>
+
                 <iframe id="expDocModalIframe" src="" style="width: 100%; height: 75vh; border: none; display: none; background: #fff;" allowfullscreen></iframe>
             </div>
 
@@ -422,15 +425,23 @@ include_once 'partials/header.php';
     </div>
 </div>
 
-<!-- Modal Script with Smooth Scroll Unlock -->
+<!-- PDF.js Library for View-Only Protected PDF Rendering -->
+<script src="assets/js/pdf.min.js"></script>
 <script>
+if (typeof pdfjsLib !== 'undefined') {
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'assets/js/pdf.worker.min.js';
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     const docModalEl = document.getElementById('experienceDocModal');
     if (!docModalEl) return;
 
     const modalTitle = document.getElementById('experienceDocModalLabel');
     const modalIframe = document.getElementById('expDocModalIframe');
+    const modalCanvasWrap = document.getElementById('expDocModalCanvasWrap');
     const modalLoader = document.getElementById('expDocModalLoader');
+
+    let currentRenderTasks = [];
 
     function getModalInstance() {
         if (typeof bootstrap !== 'undefined' && bootstrap.Modal) {
@@ -440,6 +451,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function unlockPageScroll() {
+        currentRenderTasks.forEach(t => { try { t.cancel(); } catch (e) {} });
+        currentRenderTasks = [];
+
+        if (modalCanvasWrap) modalCanvasWrap.innerHTML = '';
+        if (modalCanvasWrap) modalCanvasWrap.style.display = 'none';
         modalIframe.src = '';
         modalLoader.style.display = 'none';
         modalIframe.style.display = 'none';
@@ -456,6 +472,85 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Secure PDF Renderer via HTML5 Canvas (Eliminates Browser PDF Plugin & "Save as...")
+    async function renderSecurePdf(url) {
+        currentRenderTasks.forEach(t => { try { t.cancel(); } catch (e) {} });
+        currentRenderTasks = [];
+
+        modalCanvasWrap.innerHTML = '';
+        modalLoader.style.display = 'block';
+        modalCanvasWrap.style.display = 'none';
+        modalIframe.style.display = 'none';
+
+        if (typeof pdfjsLib === 'undefined') {
+            // Fallback to iframe if pdfjsLib not available
+            modalIframe.src = url + '#toolbar=0&navpanes=0';
+            modalIframe.onload = function () {
+                modalLoader.style.display = 'none';
+                modalIframe.style.display = 'block';
+            };
+            return;
+        }
+
+        try {
+            const loadingTask = pdfjsLib.getDocument({
+                url: url,
+                cMapUrl: 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/cmaps/',
+                cMapPacked: true
+            });
+            const pdf = await loadingTask.promise;
+
+            modalLoader.style.display = 'none';
+            modalCanvasWrap.style.display = 'block';
+
+            const containerWidth = Math.min(modalCanvasWrap.clientWidth || 880, 960);
+
+            for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+                const page = await pdf.getPage(pageNum);
+                const unscaledViewport = page.getViewport({ scale: 1 });
+                
+                const targetWidth = containerWidth - 28;
+                const displayScale = Math.max(targetWidth / unscaledViewport.width, 0.95);
+                const renderScale = displayScale * (window.devicePixelRatio || 1.5);
+                
+                const viewport = page.getViewport({ scale: renderScale });
+                const displayViewport = page.getViewport({ scale: displayScale });
+
+                const canvas = document.createElement('canvas');
+                canvas.className = 'pdf-page-canvas shadow-lg mb-3';
+                canvas.style.display = 'block';
+                canvas.style.margin = '0 auto 16px auto';
+                canvas.style.maxWidth = '100%';
+                canvas.style.width = displayViewport.width + 'px';
+                canvas.style.height = displayViewport.height + 'px';
+                canvas.style.borderRadius = '6px';
+                canvas.style.background = '#ffffff';
+                canvas.oncontextmenu = function (e) { e.preventDefault(); return false; };
+
+                const context = canvas.getContext('2d');
+                canvas.width = viewport.width;
+                canvas.height = viewport.height;
+
+                modalCanvasWrap.appendChild(canvas);
+
+                const renderTask = page.render({
+                    canvasContext: context,
+                    viewport: viewport
+                });
+                currentRenderTasks.push(renderTask);
+                await renderTask.promise;
+            }
+        } catch (err) {
+            if (err && err.name === 'RenderingCancelledException') return;
+            console.warn('PDF.js rendering fallback to iframe:', err);
+            modalIframe.src = url + '#toolbar=0&navpanes=0';
+            modalIframe.onload = function () {
+                modalLoader.style.display = 'none';
+                modalIframe.style.display = 'block';
+            };
+        }
+    }
+
     document.querySelectorAll('.open-exp-doc-modal').forEach(function (btn) {
         btn.addEventListener('click', function (e) {
             e.preventDefault();
@@ -466,23 +561,9 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!url) return;
 
             modalTitle.textContent = title;
-            modalLoader.style.display = 'block';
-            modalIframe.style.display = 'none';
-            modalIframe.src = '';
-
             const cleanUrl = url.split('#')[0];
-            const pdfViewerUrl = cleanUrl + '#toolbar=0&navpanes=0&scrollbar=0';
 
-            modalIframe.onload = function () {
-                modalLoader.style.display = 'none';
-                modalIframe.style.display = 'block';
-            };
-            modalIframe.src = pdfViewerUrl;
-            
-            setTimeout(function () {
-                modalLoader.style.display = 'none';
-                modalIframe.style.display = 'block';
-            }, 600);
+            renderSecurePdf(cleanUrl);
 
             const bsModal = getModalInstance();
             if (bsModal) {
@@ -510,6 +591,22 @@ document.addEventListener('DOMContentLoaded', function () {
     docModalEl.addEventListener('hide.bs.modal', function () {
         setTimeout(unlockPageScroll, 150);
     });
+
+    // Disable right-click context menu on modal to remove "Save as..."
+    docModalEl.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+        return false;
+    }, true);
+
+    // Disable Ctrl+S / Ctrl+P while viewing
+    window.addEventListener('keydown', function (e) {
+        if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'S' || e.key === 'p' || e.key === 'P')) {
+            if (docModalEl.classList.contains('show')) {
+                e.preventDefault();
+                return false;
+            }
+        }
+    }, true);
 });
 </script>
 
