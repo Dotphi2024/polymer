@@ -377,7 +377,7 @@ include_once 'partials/header.php';
      2. Sticky Horizontal Navigation Bar for Fast Section Access
      ============================================================ -->
 <div class="rdso-nav-wrapper">
-    <div class="container-fluid px-3 px-lg-5">
+    <div class="container-fluid px-3 px-lg-5 py-2">
         <div class="rdso-nav-pills">
             <a href="#ownership-details" class="rdso-pill-btn active">
                 <i class="fa-solid fa-id-card"></i> 1. Ownership &amp; Corporate Governance
