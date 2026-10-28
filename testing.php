@@ -767,7 +767,7 @@ $testing_slider_images = [
         <!-- Accredited Third-Party Inspection Agencies Grid -->
         <div class="row g-4 mb-5">
             <!-- 1. RITES Ltd. -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".1s">
+            <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".1s">
                 <div class="tpi-agency-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
                     <div>
                         <div class="d-flex align-items-center justify-content-between mb-3">
@@ -788,10 +788,10 @@ $testing_slider_images = [
                         <i class="fa-solid fa-circle-check me-1.5"></i> Regular Stage-Wise Witness
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- 2. DNV GL -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".15s">
+            <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".15s">
                 <div class="tpi-agency-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
                     <div>
                         <div class="d-flex align-items-center justify-content-between mb-3">
@@ -812,10 +812,10 @@ $testing_slider_images = [
                         <i class="fa-solid fa-circle-check me-1.5"></i> Third-Party Surveillance
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- 3. SGS India -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+            <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
                 <div class="tpi-agency-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
                     <div>
                         <div class="d-flex align-items-center justify-content-between mb-3">
@@ -836,10 +836,10 @@ $testing_slider_images = [
                         <i class="fa-solid fa-circle-check me-1.5"></i> Chemical &amp; Tensile Witness
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- 4. Engineers India Limited (EIL) -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".25s">
+            <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".25s">
                 <div class="tpi-agency-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
                     <div>
                         <div class="d-flex align-items-center justify-content-between mb-3">
@@ -860,10 +860,10 @@ $testing_slider_images = [
                         <i class="fa-solid fa-circle-check me-1.5"></i> Major Infrastructure Witness
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- 5. TÜV Rheinland / TÜV SÜD -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+            <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                 <div class="tpi-agency-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
                     <div>
                         <div class="d-flex align-items-center justify-content-between mb-3">
@@ -884,10 +884,10 @@ $testing_slider_images = [
                         <i class="fa-solid fa-circle-check me-1.5"></i> Rig Calibration &amp; Audit
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- 6. Bureau Veritas (BVQI) -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".35s">
+            <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".35s">
                 <div class="tpi-agency-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
                     <div>
                         <div class="d-flex align-items-center justify-content-between mb-3">
@@ -908,9 +908,88 @@ $testing_slider_images = [
                         <i class="fa-solid fa-circle-check me-1.5"></i> Release Note Verification
                     </div>
                 </div>
-            </div>
+            </div> -->
+             
+             <!-- 7. RDSO Technical Approval -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".1s">
+                    <div class="tpi-cert-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <span class="badge rounded-pill px-3 py-1.5 small fw-semibold" style="background: rgba(2, 132, 199, 0.12); color: var(--theme-primary);">
+                                    <i class="fa-solid fa-train me-1"></i> RDSO BS-131
+                                </span>
+                                <i class="fa-solid fa-file-pdf fs-4" style="color: var(--theme-primary);"></i>
+                            </div>
+                            <h5 class="fw-bold text-dark mb-2" style="font-family:'Oswald', sans-serif; font-size:18px;">
+                                RDSO Technical Approval
+                            </h5>
+                            <p class="small text-muted mb-3" style="line-height:1.6; font-size:13px;">
+                                Research Designs and Standards Organisation (Indian Railways) official approval and test compliance conforming to RDSO BS-131 specifications.
+                            </p>
+                        </div>
+                        <button type="button" class="btn btn-outline-primary btn-sm rounded-pill w-100 fw-bold open-testing-doc-modal d-flex align-items-center justify-content-center gap-1.5"
+                            data-doc-url="assets/pp_data/Page 01/POLYMER DETAILS/NEW_RDSO.pdf"
+                            data-doc-title="RDSO Indian Railways Technical Approval &amp; Inspection Regime"
+                            data-doc-type="pdf">
+                            <i class="fa-solid fa-eye"></i> <span>View RDSO Certificate</span>
+                        </button>
+                    </div>
+                </div>
 
-            <!-- 7. IRMRI Membership Certificate -->
+                <!-- 8. NHAI Quality Assurance Plan (QAP) -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".15s">
+                    <div class="tpi-cert-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <span class="badge rounded-pill px-3 py-1.5 small fw-semibold" style="background: rgba(2, 132, 199, 0.12); color: var(--theme-primary);">
+                                    <i class="fa-solid fa-road me-1"></i> IRC:83 (Part II) 2018
+                                </span>
+                                <i class="fa-solid fa-file-pdf fs-4" style="color: var(--theme-primary);"></i>
+                            </div>
+                            <h5 class="fw-bold text-dark mb-2" style="font-family:'Oswald', sans-serif; font-size:18px;">
+                                NHAI Quality Assurance Plan
+                            </h5>
+                            <p class="small text-muted mb-3" style="line-height:1.6; font-size:13px;">
+                                Official stage-wise Quality Assurance Plan approved for National Highway (NHAI) bridge projects detailing routine and acceptance test witness.
+                            </p>
+                        </div>
+                        <button type="button" class="btn btn-outline-primary btn-sm rounded-pill w-100 fw-bold open-testing-doc-modal d-flex align-items-center justify-content-center gap-1.5"
+                            data-doc-url="assets/pp_data/Page 06/QAP-IRC-_2018 (R).pdf"
+                            data-doc-title="NHAI Quality Assurance Plan (QAP-IRC:83-2018)"
+                            data-doc-type="pdf">
+                            <i class="fa-solid fa-eye"></i> <span>View NHAI QAP Format</span>
+                        </button>
+                    </div>
+                </div>
+
+                 <!-- 9. Ashoka Buildcon Witness & Client Approval -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="tpi-cert-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <span class="badge rounded-pill px-3 py-1.5 small fw-semibold" style="background: rgba(2, 132, 199, 0.12); color: var(--theme-primary);">
+                                    <i class="fa-solid fa-building me-1"></i> EPC Bridge Package
+                                </span>
+                                <i class="fa-solid fa-file-pdf fs-4" style="color: var(--theme-primary);"></i>
+                            </div>
+                            <h5 class="fw-bold text-dark mb-2" style="font-family:'Oswald', sans-serif; font-size:18px;">
+                                Ashoka Buildcon Ltd. Approval
+                            </h5>
+                            <p class="small text-muted mb-3" style="line-height:1.6; font-size:13px;">
+                                Official project engineer witness clearance and acceptance letter for high-tonnage elastomeric bearings supplied for National Highway bridge corridors.
+                            </p>
+                        </div>
+                        <button type="button" class="btn btn-outline-primary btn-sm rounded-pill w-100 fw-bold open-testing-doc-modal d-flex align-items-center justify-content-center gap-1.5"
+                            data-doc-url="assets/pp_data/Page 01/POLYMER DETAILS/NH APPROVED LETTERS/LETTER/ashoka-3.pdf"
+                            data-doc-title="Ashoka Buildcon Ltd. - Bridge Bearing Witness Approval Letter"
+                            data-doc-type="pdf">
+                            <i class="fa-solid fa-eye"></i> <span>View Client Clearance</span>
+                        </button>
+                    </div>
+                </div>
+
+
+            <!-- 10. IRMRI Membership Certificate -->
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
                 <div class="tpi-cert-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
                     <div>
@@ -943,7 +1022,7 @@ $testing_slider_images = [
                 </div>
             </div>
 
-            <!-- 8. R K Technologies Certificate -->
+            <!-- 11. R K Technologies Certificate -->
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".45s">
                 <div class="tpi-cert-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
                     <div>
@@ -976,7 +1055,7 @@ $testing_slider_images = [
                 </div>
             </div>
 
-            <!-- 9. V-Chem Polymer Products Bond -->
+            <!-- 12. V-Chem Polymer Products Bond -->
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
                 <div class="tpi-cert-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
                     <div>
@@ -1283,7 +1362,7 @@ $testing_slider_images = [
         </div>
 
         <!-- Official Third-Party Certificates & Client Approvals -->
-        <div>
+        <!-- <div>
             <div class="d-flex flex-wrap align-items-end justify-content-between mb-4 gap-3">
                 <div>
                     <span class="badge px-3 py-1.5 rounded-pill font-monospace fw-bold text-uppercase mb-2"
@@ -1300,7 +1379,7 @@ $testing_slider_images = [
             </div>
 
             <div class="row g-4">
-                <!-- 1. RDSO Technical Approval -->
+                
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".1s">
                     <div class="tpi-cert-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
                         <div>
@@ -1326,7 +1405,7 @@ $testing_slider_images = [
                     </div>
                 </div>
 
-                <!-- 2. NHAI Quality Assurance Plan (QAP) -->
+               
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".15s">
                     <div class="tpi-cert-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
                         <div>
@@ -1352,8 +1431,8 @@ $testing_slider_images = [
                     </div>
                 </div>
 
-                <!-- 3. RDSO Railway Witness Checklist Format -->
-                <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                 
+               <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
                     <div class="tpi-cert-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
                         <div>
                             <div class="d-flex align-items-center justify-content-between mb-3">
@@ -1376,10 +1455,10 @@ $testing_slider_images = [
                             <i class="fa-solid fa-eye"></i> <span>View Railway Format</span>
                         </button>
                     </div>
-                </div> -->
+                </div>  
 
-                <!-- 4. ISO 9001:2015 Certification -->
-                <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".25s">
+               
+               <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".25s">
                     <div class="tpi-cert-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
                         <div>
                             <div class="d-flex align-items-center justify-content-between mb-3">
@@ -1402,9 +1481,9 @@ $testing_slider_images = [
                             <i class="fa-solid fa-eye"></i> <span>View ISO Certificate</span>
                         </button>
                     </div>
-                </div> -->
+                </div>  
 
-                <!-- 5. Ashoka Buildcon Witness & Client Approval -->
+                 
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                     <div class="tpi-cert-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
                         <div>
@@ -1430,7 +1509,7 @@ $testing_slider_images = [
                     </div>
                 </div>
 
-                <!-- 6. GHV India Witness & Supplier Clearance -->
+                6. GHV India Witness & Supplier Clearance -->
                 <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".35s">
                     <div class="tpi-cert-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
                         <div>
@@ -1454,12 +1533,12 @@ $testing_slider_images = [
                             <i class="fa-solid fa-eye"></i> <span>View Client Clearance</span>
                         </button>
                     </div>
-                </div> -->
+                </div>  
             </div>
-        </div>
+        </div>  
 
-        <!-- Schedule Witness Support Callout -->
-        <div class="mt-5 p-4 rounded-4 border shadow-sm wow fadeInUp" data-wow-delay=".2s" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
+       
+         <div class="mt-5 p-4 rounded-4 border shadow-sm wow fadeInUp" data-wow-delay=".2s" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
             <div class="row align-items-center">
                 <div class="col-lg-8">
                     <h5 class="fw-bold text-white mb-2" style="font-family:'Oswald', sans-serif; font-size:21px;">
@@ -1476,9 +1555,8 @@ $testing_slider_images = [
                     </a>
                 </div>
             </div>
-        </div>
-
-    </div>
+        </div> 
+    </div>-->
 </section>
 
 <!-- ============================================================
