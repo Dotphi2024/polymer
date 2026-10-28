@@ -340,7 +340,7 @@ $testing_slider_images = [
 
                 <div class="testing-hero-showcase d-inline-block text-center">
                     <div class="testing-hero-img-box p-3 p-md-4 rounded-4 position-relative">
-                        <img src="assets/img/testing/testing-right.webp" alt="Proof Load & Material Testing Rig - Polymer Products" class="img-fluid"
+                        <img src="assets/img/testing/testing-image.png" alt="Proof Load & Material Testing Rig - Polymer Products" class="img-fluid"
                             style="max-height: 300px; width: auto; object-fit: contain;">
                     </div>
                 </div>
@@ -909,6 +909,106 @@ $testing_slider_images = [
                     </div>
                 </div>
             </div>
+
+            <!-- 7. IRMRI Membership Certificate -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                <div class="tpi-cert-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <span class="badge rounded-pill px-3 py-1.5 small fw-semibold"
+                                style="background: rgba(2, 132, 199, 0.12); color: var(--theme-primary);">
+                                <i class="fa-solid fa-users me-1"></i> Membership
+                            </span>
+                            <i class="fa-solid fa-file-pdf fs-4" style="color: var(--theme-primary);"></i>
+                        </div>
+
+                        <h5 class="fw-bold text-dark mb-2"
+                            style="font-family:'Oswald', sans-serif; font-size:18px;">
+                            IRMRI Membership Certificate
+                        </h5>
+
+                        <p class="small text-muted mb-3" style="line-height:1.6; font-size:13px;">
+                            Official IRMRI membership certificate documenting membership credentials.
+                        </p>
+                    </div>
+
+                    <button type="button"
+                            class="btn btn-outline-primary btn-sm rounded-pill w-100 fw-bold open-testing-doc-modal d-flex align-items-center justify-content-center gap-1.5"
+                            data-doc-url="assets/pp_data/IRMRI MEMBERSHIP CERTIFICATE (1) (1).pdf"
+                            data-doc-title="IRMRI Membership Certificate"
+                            data-doc-type="pdf">
+                        <i class="fa-solid fa-eye"></i>
+                        <span>View Membership Certificate</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 8. R K Technologies Certificate -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".45s">
+                <div class="tpi-cert-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <span class="badge rounded-pill px-3 py-1.5 small fw-semibold"
+                                style="background: rgba(2, 132, 199, 0.12); color: var(--theme-primary);">
+                                <i class="fa-solid fa-certificate me-1"></i> Technical Certificate
+                            </span>
+                            <i class="fa-solid fa-file-pdf fs-4" style="color: var(--theme-primary);"></i>
+                        </div>
+
+                        <h5 class="fw-bold text-dark mb-2"
+                            style="font-family:'Oswald', sans-serif; font-size:18px;">
+                            R K Technologies Certificate
+                        </h5>
+
+                        <p class="small text-muted mb-3" style="line-height:1.6; font-size:13px;">
+                            Certificate document issued by R K Technologies.
+                        </p>
+                    </div>
+
+                    <button type="button"
+                            class="btn btn-outline-primary btn-sm rounded-pill w-100 fw-bold open-testing-doc-modal d-flex align-items-center justify-content-center gap-1.5"
+                            data-doc-url="assets/pp_data/R K Technologies Certificate (1).pdf"
+                            data-doc-title="R K Technologies Certificate"
+                            data-doc-type="pdf">
+                        <i class="fa-solid fa-eye"></i>
+                        <span>View Certificate</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 9. V-Chem Polymer Products Bond -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                <div class="tpi-cert-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <span class="badge rounded-pill px-3 py-1.5 small fw-semibold"
+                                style="background: rgba(2, 132, 199, 0.12); color: var(--theme-primary);">
+                                <i class="fa-solid fa-file-contract me-1"></i> Bond Agreement
+                            </span>
+                            <i class="fa-solid fa-file-pdf fs-4" style="color: var(--theme-primary);"></i>
+                        </div>
+
+                        <h5 class="fw-bold text-dark mb-2"
+                            style="font-family:'Oswald', sans-serif; font-size:18px;">
+                            V-Chem Polymer Products Bond
+                        </h5>
+
+                        <p class="small text-muted mb-3" style="line-height:1.6; font-size:13px;">
+                            Official bond document between V-Chem and Polymer Products.
+                        </p>
+                    </div>
+
+                    <button type="button"
+                            class="btn btn-outline-primary btn-sm rounded-pill w-100 fw-bold open-testing-doc-modal d-flex align-items-center justify-content-center gap-1.5"
+                            data-doc-url="assets/pp_data/V-CHEM POLYMER PRODUCT BOND(1).pdf"
+                            data-doc-title="V-Chem Polymer Products Bond"
+                            data-doc-type="pdf">
+                        <i class="fa-solid fa-eye"></i>
+                        <span>View Bond Document</span>
+                    </button>
+                </div>
+            </div>
+
         </div>
 
         <!-- Factory Third-Party Witness Testing Photographs -->
@@ -1253,7 +1353,7 @@ $testing_slider_images = [
                 </div>
 
                 <!-- 3. RDSO Railway Witness Checklist Format -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
                     <div class="tpi-cert-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
                         <div>
                             <div class="d-flex align-items-center justify-content-between mb-3">
@@ -1276,10 +1376,10 @@ $testing_slider_images = [
                             <i class="fa-solid fa-eye"></i> <span>View Railway Format</span>
                         </button>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- 4. ISO 9001:2015 Certification -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".25s">
+                <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".25s">
                     <div class="tpi-cert-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
                         <div>
                             <div class="d-flex align-items-center justify-content-between mb-3">
@@ -1302,7 +1402,7 @@ $testing_slider_images = [
                             <i class="fa-solid fa-eye"></i> <span>View ISO Certificate</span>
                         </button>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- 5. Ashoka Buildcon Witness & Client Approval -->
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
@@ -1331,7 +1431,7 @@ $testing_slider_images = [
                 </div>
 
                 <!-- 6. GHV India Witness & Supplier Clearance -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".35s">
+                <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".35s">
                     <div class="tpi-cert-card p-4 h-100 shadow-sm d-flex flex-column justify-content-between">
                         <div>
                             <div class="d-flex align-items-center justify-content-between mb-3">
@@ -1354,7 +1454,7 @@ $testing_slider_images = [
                             <i class="fa-solid fa-eye"></i> <span>View Client Clearance</span>
                         </button>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
 

@@ -549,17 +549,17 @@ The project credentials below highlight our experience across these sectors, inc
                     style="transition: all 0.35s ease;">
                     <div class="position-relative overflow-hidden" style="height: 230px;">
                         <!-- old-image -->
-                        <!-- assets/img/img/banner/image-1.png -->
-                        <img src="assets/img/img/products/type-rdso.webp"  class="card-img-top w-100 h-100 sector-img"
+                        <!-- assets/img/img/products/type-rdso.webp -->
+                        <img src="assets/img/img/banner/image-1.png"  class="card-img-top w-100 h-100 sector-img"
                             alt="Indian Railways & ROBs" style="object-fit: cover; transition: transform 0.5s ease;">
                         <span
                             class="badge bg-primary position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill fw-bold shadow">
-                            <i class="fa-solid fa-train me-1"></i> RDSO Compliant
+                            <i class="fa-solid fa-train me-1"></i> ROBs Compliant
                         </span>
                     </div>
                     <div class="card-body p-4">
                         <h4 class="card-title fw-bold text-dark mb-2"
-                            style="font-family:'Oswald', sans-serif; font-size:22px;">Indian Railways & RDSO
+                            style="font-family:'Oswald', sans-serif; font-size:22px;">Indian Railways & ROBs
                         </h4>
                         <p class="card-text text-muted small mb-0" style="line-height:1.7;">
                         <strong>Polymer Products</strong> has a long-standing association with<strong> Railway Infrastructure</strong>, including Railway Bridges and Railway Over Bridges (ROBs). Our experience covers supplies for projects associated with Indian Railways and various railway infrastructure contractors. The credentials below highlight the projects undertaken and the range of bearing sizes supplied. 

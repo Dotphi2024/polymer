@@ -23,7 +23,7 @@ Explore the documents below for details of our certifications, approvals and qua
         <div class="row g-4 justify-content-center">
             
             <!-- 1. GST Registration -->
-            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".1s">
+            <!-- <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".1s">
                 <div class="cert-modern-card p-4 bg-white rounded-4 shadow-sm border text-center h-100 d-flex flex-column justify-content-between position-relative">
                     <span class="position-absolute top-0 end-0 m-3 badge rounded-pill fw-bold" style="background: var(--theme-subtle); color: var(--theme-primary); font-size: 11px;">01</span>
                     <div>
@@ -43,10 +43,10 @@ Explore the documents below for details of our certifications, approvals and qua
                         <i class="fa-solid fa-file-pdf"></i> <span>View GST Certificate</span>
                     </a>
                 </div>
-            </div>
+            </div> -->
 
             <!-- 2. PAN Registration -->
-            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".15s">
+            <!-- <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".15s">
                 <div class="cert-modern-card p-4 bg-white rounded-4 shadow-sm border text-center h-100 d-flex flex-column justify-content-between position-relative">
                     <span class="position-absolute top-0 end-0 m-3 badge rounded-pill fw-bold" style="background: var(--theme-subtle); color: var(--theme-primary); font-size: 11px;">02</span>
                     <div>
@@ -66,10 +66,10 @@ Explore the documents below for details of our certifications, approvals and qua
                         <i class="fa-solid fa-file-shield"></i> <span>Verified PAN Record</span>
                     </a>
                 </div>
-            </div>
+            </div> -->
 
             <!-- 3. UDYAM Registration -->
-            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+            <!-- <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
                 <div class="cert-modern-card p-4 bg-white rounded-4 shadow-sm border text-center h-100 d-flex flex-column justify-content-between position-relative">
                     <span class="position-absolute top-0 end-0 m-3 badge rounded-pill fw-bold" style="background: var(--theme-subtle); color: var(--theme-primary); font-size: 11px;">03</span>
                     <div>
@@ -89,7 +89,7 @@ Explore the documents below for details of our certifications, approvals and qua
                         <i class="fa-solid fa-file-pdf"></i> <span>View Udyam Certificate</span>
                     </a>
                 </div>
-            </div>
+            </div> -->
 
             <!-- 4. Factory Plan Approval (DISH) -->
             <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".25s">
@@ -196,15 +196,60 @@ Explore the documents below for details of our certifications, approvals and qua
                             Official statutory technical collaboration and indemnity bond document between V-Chem and Polymer Products.
                         </p>
                     </div>
-                    <a href="assets/pp_data/Page 01/POLYMER DETAILS/BOND OF V CHEM AND POLYMER (1).pdf"
+                    <a href="assets/pp_data/V-CHEM POLYMER PRODUCT BOND(1).pdf"
                         class="btn btn-outline-primary btn-sm rounded-pill fw-bold open-cert-modal d-inline-flex align-items-center justify-content-center gap-1.5"
-                        data-doc-url="assets/pp_data/Page 01/POLYMER DETAILS/BOND OF V CHEM AND POLYMER (1).pdf"
+                        data-doc-url="assets/pp_data/V-CHEM POLYMER PRODUCT BOND(1).pdf"
                         data-doc-title="V-Chem &amp; Polymer Products Bond Agreement"
                         data-doc-type="pdf">
                         <i class="fa-solid fa-file-pdf"></i> <span>View Bond Document</span>
                     </a>
                 </div>
             </div>
+            <!-- 9.  Poluction Consent (MPCB) -->
+            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".45s">
+    <div class="cert-modern-card p-4 bg-white rounded-4 shadow-sm border text-center h-100 d-flex flex-column justify-content-between position-relative">
+
+        <span class="position-absolute top-0 end-0 m-3 badge rounded-pill fw-bold"
+              style="background: #3691bf1f; color: var(--theme-primary); font-size: 11px;">
+            MPCB Approved
+        </span>
+
+        <div>
+            <div class="cert-icon-circle d-inline-flex p-3 rounded-circle mb-3"
+                 style="background: #3691bf1f; color: var(--theme-primary); width: 64px; height: 64px; align-items: center; justify-content: center;">
+                <i class="fa-solid fa-leaf fa-2x"></i>
+            </div>
+
+            <h5 class="fw-bold text-dark mb-2"
+                style="font-family: 'Saira-Medium', sans-serif; font-size: 17px;">
+                Pollution Consent (MPCB)
+            </h5>
+
+            <p class="small text-muted mb-3"
+               style="font-size: 13px; line-height: 1.6;">
+                Maharashtra Pollution Control Board (MPCB) environmental consent and green emission standard compliance.
+            </p>
+
+            <div class="mb-3">
+                <span class="badge rounded-pill"
+                      style="background: #3691bf1f; color: var(--theme-primary); font-size: 11px;">
+                    Environmental Compliance
+                </span>
+            </div>
+        </div>
+
+        <a href="assets/pp_data/Page 01/POLYMER DETAILS/PP DETAILS/MPCB POLLUTION CERTIFICATE.pdf"
+           class="btn btn-outline-primary btn-sm rounded-pill fw-bold open-cert-modal d-inline-flex align-items-center justify-content-center gap-1"
+           data-doc-url="assets/pp_data/Page 01/POLYMER DETAILS/PP DETAILS/MPCB POLLUTION CERTIFICATE.pdf"
+           data-doc-title="Pollution Consent (MPCB)"
+           data-doc-type="pdf">
+
+            <i class="fa-solid fa-file-pdf"></i>
+            <span>View Certificate</span>
+        </a>
+
+    </div>
+</div>
 
         </div>
 

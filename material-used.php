@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 $page_title = "Raw Materials & Machinery Infrastructure - Polymer Products";
 $meta_description = "Complete specifications of raw materials (NR, CR, IS:2062 Steel, PTFE) and 42 manufacturing & testing machineries installed at Polymer Products, Nashik.";
 include_once 'partials/header.php'; 
@@ -432,7 +432,7 @@ include_once 'partials/header.php';
         </div>
 
         <!-- Official Plant Declaration Banner -->
-        <div class="p-4 rounded-4   border mb-5 d-flex align-items-center gap-3 shadow-sm" style="background:#f0f7ff; border-left: 5px solid var(--theme-primary) !important;">
+        <!-- <div class="p-4 rounded-4   border mb-5 d-flex align-items-center gap-3 shadow-sm" style="background:#f0f7ff; border-left: 5px solid var(--theme-primary) !important;">
             <i class="fa-solid fa-stamp fa-2x text-primary flex-shrink-0"></i>
             <div>
                 <h6 class="fw-bold text-dark mb-1" style="font-size: 16px;">Third-Party Inspection &amp; Certification Compliance</h6>
@@ -440,7 +440,7 @@ include_once 'partials/header.php';
                     We hereby confirm that all testing Machineries/Equipment stated below are maintained in calibrated, working condition. Testing of bridge bearings and rubber compounds is regularly witnessed by <strong>DGS&amp;D</strong>, <strong>RITES</strong>, and authorized client quality representatives.
                 </p>
             </div>
-        </div>
+        </div> -->
 
         <!-- Filter / Summary Row -->
         <div class="row g-3 mb-4 text-center">

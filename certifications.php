@@ -27,17 +27,17 @@ $quality_approvals = [
         "badge" => "MPCB Approved",
         "color" => "#16a34a"
     ],
-    [
-        "num" => "03",
-        "title" => "Plant Model & Infrastructure Plan",
-        "cat_label" => "Manufacturing Architecture",
-        "desc" => "Detailed civil and structural model layout of Nashik manufacturing floor, press bays, testing laboratory, and dispatch zones.",
-        "icon" => "fa-compass-drafting",
-        "doc" => "assets/pp_data/Page 01/POLYMER DETAILS/PP DETAILS/POLYMER MODEL PLAN.pdf",
-        "type" => "pdf",
-        "badge" => "DISH Plant Architecture",
-        "color" => "#0d9488"
-    ]
+    // [
+    //     "num" => "03",
+    //     "title" => "Plant Model & Infrastructure Plan",
+    //     "cat_label" => "Manufacturing Architecture",
+    //     "desc" => "Detailed civil and structural model layout of Nashik manufacturing floor, press bays, testing laboratory, and dispatch zones.",
+    //     "icon" => "fa-compass-drafting",
+    //     "doc" => "assets/pp_data/Page 01/POLYMER DETAILS/PP DETAILS/POLYMER MODEL PLAN.pdf",
+    //     "type" => "pdf",
+    //     "badge" => "DISH Plant Architecture",
+    //     "color" => "#0d9488"
+    // ]
 ]; 
 
 // NHAI & Major Infrastructure Client Approval Letters
@@ -295,7 +295,7 @@ $client_approvals = [
 <!-- ============================================================
      4. Specialized Technical & Quality Accreditations (RDSO, QAP, Sister Concern)
      ============================================================ -->
-<section class="py-5" id="technical-approvals" style="background: #f0f7ff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+<!-- <section class="py-5" id="technical-approvals" style="background: #f0f7ff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
     <div class="container-fluid px-3 px-lg-5 py-3">
         
         <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay=".1s">
@@ -353,7 +353,7 @@ $client_approvals = [
         </div>
 
     </div>
-</section>
+</section> -->
 
 <!-- ============================================================
      5. Universal Document & Image Lightbox Modal Viewer
