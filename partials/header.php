@@ -45,14 +45,57 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <!--<< Nice Select.css >>-->
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <!--<< Main.css >>-->
-    <link rel="stylesheet" href="assets/css/style.css?v=<?= time() ?>">
+    <link rel="stylesheet" href="assets/css/style.css?v=1.0.3">
     <!--<< Theme Switcher CSS >>-->
-    <link rel="stylesheet" href="assets/css/theme-switcher.css?v=<?= time() ?>">
+    <link rel="stylesheet" href="assets/css/theme-switcher.css?v=1.0.3">
     <!--<< Layout.css >>-->
-    <link rel="stylesheet" href="assets/css/layout.css?v=<?= time() ?>">
+    <link rel="stylesheet" href="assets/css/layout.css?v=1.0.3">
 
     <style>
-    /* Right-side Nested Submenu Flyout for Desktop Navigation */
+    
+    /* CRITICAL FIX: Prevent Mobile Drawer Flash of Unstyled Content (FOUC) on hard reload */
+    .ht-offcanvas {
+        position: fixed !important;
+        top: 0 !important;
+        right: 0 !important;
+        width: 380px !important;
+        max-width: 100vw !important;
+        height: 100% !important;
+        background: #ffffff !important;
+        transform: translateX(100%) !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        z-index: 99999 !important;
+        transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.3s ease, visibility 0.3s ease !important;
+        box-shadow: -10px 0 35px rgba(0, 0, 0, 0.15) !important;
+        overflow-y: auto !important;
+    }
+    .ht-offcanvas.ht-offcanvas-open {
+        transform: translateX(0) !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+    }
+    .ht-offcanvas-overlay {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background-color: rgba(0, 0, 0, 0.5) !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        z-index: 99998 !important;
+        transition: opacity 0.3s ease, visibility 0.3s ease !important;
+    }
+    .ht-offcanvas-overlay.ht-offcanvas-overlay-open {
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+    }
+/* Right-side Nested Submenu Flyout for Desktop Navigation */
     .ht-menu-main ul li .sub-menu {
         overflow: visible !important;
     }

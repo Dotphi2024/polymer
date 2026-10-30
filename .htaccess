@@ -1,5 +1,5 @@
 # ==============================================================================
-# Apache Configuration for polymerproducts.org
+# Apache Configuration for polymerproducts.org & Staging Environments
 # ==============================================================================
 
 # Set default directory index files
@@ -24,15 +24,14 @@ ErrorDocument 404 /404.php
 # ------------------------------------------------------------------------------
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /
 
-    # 1. Redirect www to non-www (canonical domain: https://polymerproducts.org/)
-    #    Also ensures HTTPS when coming from www
-    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-    RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+    # 1. Canonical domain: redirect www.polymerproducts.org to non-www https
+    RewriteCond %{HTTP_HOST} ^www\.polymerproducts\.org$ [NC]
+    RewriteRule ^ https://polymerproducts.org%{REQUEST_URI} [L,R=301]
 
     # 2. Enforce HTTPS (Fixes browser "Not Secure" warning)
     #    Works with direct SSL, cPanel, Cloudflare, and reverse proxies (X-Forwarded-Proto)
+    #    Excludes local environments (localhost, 127.0.0.1)
     RewriteCond %{HTTP_HOST} !^localhost [NC]
     RewriteCond %{HTTP_HOST} !^127\.0\.0\.1
     RewriteCond %{HTTP:X-Forwarded-Proto} !https
@@ -48,11 +47,10 @@ ErrorDocument 404 /404.php
 </IfModule>
 
 # ------------------------------------------------------------------------------
-# Security Headers
+# Security Headers & Cache-Control Headers
 # ------------------------------------------------------------------------------
 <IfModule mod_headers.c>
     # HTTP Strict Transport Security (HSTS)
-    # Tells browsers to always connect via HTTPS
     Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
 
     # Protect against clickjacking attacks
@@ -66,6 +64,16 @@ ErrorDocument 404 /404.php
 
     # Referrer policy
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Cache static assets for 1 year (Massively speeds up repeat visits)
+    <FilesMatch "\.(ico|jpg|jpeg|png|gif|webp|svg|js|css|woff|woff2|ttf|eot)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+
+    # Disable cache for dynamic PHP scripts so content updates instantly
+    <FilesMatch "\.(php)$">
+        Header set Cache-Control "private, no-cache, no-store, must-revalidate"
+    </FilesMatch>
 </IfModule>
 
 # ------------------------------------------------------------------------------
@@ -93,7 +101,7 @@ ErrorDocument 404 /404.php
 </FilesMatch>
 
 # ------------------------------------------------------------------------------
-# Gzip / Deflate Compression (Improves load speed)
+# Gzip / Deflate Compression (Reduces payload sizes by up to 70%)
 # ------------------------------------------------------------------------------
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE application/javascript
@@ -153,4 +161,3 @@ ErrorDocument 404 /404.php
     # Dynamic documents
     ExpiresByType text/html "access plus 0 seconds"
 </IfModule>
-
