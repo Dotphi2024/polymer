@@ -423,14 +423,14 @@ include_once 'partials/header.php';
                     <div class="team-card-modern h-100 d-flex flex-column justify-content-between position-relative shadow-sm">
                         <div>
                             <div class="team-photo-wrap large-height position-relative">
-                                <img src="assets/pp_data/Page 02/Emp Details/Directors/AMP Madam.jpg" alt="Mrs. Anita Maruti Prabhu - Lab Incharge" class="team-card-img">
+                                <img src="assets/pp_data/Page 02/Emp Details/Directors/AMP Madam.jpg" alt="Mrs. Anita Maruti Prabhu -  Head- Lab and Administration" class="team-card-img">
                                 <div class="team-photo-overlay"></div>
                                 <div class="team-badge-icon" title="Lab Incharge">
                                     <i class="fa-solid fa-flask-vial"></i>
                                 </div>
                                 <div class="team-role-tag">
                                     <span class="badge px-3 py-1.5 rounded-pill">
-                                        <i class="fa-solid fa-microscope me-1"></i> Lab Incharge
+                                        <i class="fa-solid fa-microscope me-1"></i>  Head- Lab and Administration
                                     </span>
                                 </div>
                             </div>
@@ -463,14 +463,14 @@ include_once 'partials/header.php';
                     <div class="team-card-modern h-100 d-flex flex-column justify-content-between position-relative shadow-sm">
                         <div>
                             <div class="team-photo-wrap large-height position-relative">
-                                <img src="assets/pp_data/Page 02/Emp Details/Directors/CMP Sir.jpg" alt="Chetan Maruti Prabhu - Production & Procurement Incharge" class="team-card-img">
+                                <img src="assets/pp_data/Page 02/Emp Details/Directors/CMP Sir.jpg" alt="Chetan Maruti Prabhu - Head- Technical" class="team-card-img">
                                 <div class="team-photo-overlay"></div>
-                                <div class="team-badge-icon" title="Production & Procurement Incharge">
+                                <div class="team-badge-icon" title="Head- Technical">
                                     <i class="fa-solid fa-gears"></i>
                                 </div>
                                 <div class="team-role-tag">
                                     <span class="badge px-3 py-1.5 rounded-pill">
-                                        <i class="fa-solid fa-industry me-1"></i> Production & Procurement Incharge
+                                        <i class="fa-solid fa-industry me-1"></i> Head- Technical
                                     </span>
                                 </div>
                             </div>
